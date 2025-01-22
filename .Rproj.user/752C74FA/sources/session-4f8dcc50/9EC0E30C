@@ -3,7 +3,7 @@
     "path": "C:/Users/chris/OneDrive - University College London/CASA/Remote Sensing/0_diary/learning_diary/01_intro.qmd",
     "project_path": "01_intro.qmd",
     "type": "quarto_markdown",
-    "hash": "0",
+    "hash": "2009617698",
     "contents": "",
     "dirty": false,
     "created": 1737456529446.0,
@@ -17,15 +17,15 @@
         "docOutlineVisible": "1",
         "rmdVisualCollapsedChunks": "",
         "rmdVisualModeLocation": "10:0",
-        "cursorPosition": "1,0",
+        "cursorPosition": "6,3",
         "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1737457060,
+    "lastKnownWriteTime": 1737555932,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1737457060449,
+    "last_content_update": 1737555932027,
     "read_only": false,
     "read_only_alternatives": []
 }

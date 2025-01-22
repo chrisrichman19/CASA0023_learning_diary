@@ -3,9 +3,9 @@ project:
   output-dir: docs
 
 book:
-  title: "learning_diary"
+  title: "Remotely Sensing Learning Diary"
   author: "Chris Richman"
-  date: "21/01/2025"
+  date: "01/21/2025"
   chapters:
     - index.qmd
     - 01_intro.qmd
