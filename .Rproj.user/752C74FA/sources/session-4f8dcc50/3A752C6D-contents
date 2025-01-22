@@ -1,0 +1,29 @@
+@article{knuth84,
+  author = {Knuth, Donald E.},
+  title = {Literate Programming},
+  year = {1984},
+  issue_date = {May 1984},
+  publisher = {Oxford University Press, Inc.},
+  address = {USA},
+  volume = {27},
+  number = {2},
+  issn = {0010-4620},
+  url = {https://doi.org/10.1093/comjnl/27.2.97},
+  doi = {10.1093/comjnl/27.2.97},
+  journal = {Comput. J.},
+  month = may,
+  pages = {97–111},
+  numpages = {15}
+}
+
+
+
+@book{tempfli2009,
+	title = {Principles of remote sensing: an introductory textbook},
+	author = {Tempfli, K. and Huurneman, G. C. and Bakker, W. H. and Janssen, L. L. F. and Feringa, W. F. and Gieske, A. S. M. and Grabmaier, K. A. and Hecker, C. A. and Horn, J. A. and Kerle, N. and Meer, F. D. van der and Parodi, G. N. and Pohl, C. and Reeves, C. V. and Ruitenbeek, F. J. A. van and Schetselaar, E. M. and Weir, M. J. C. and Westinga, E. and Woldai, T.},
+	year = {2009},
+	date = {2009},
+	publisher = {International Institute for Geo-Information Science and Earth Observation},
+	url = {https://research.utwente.nl/en/publications/principles-of-remote-sensing-an-introductory-textbook-4},
+	langid = {English}
+}

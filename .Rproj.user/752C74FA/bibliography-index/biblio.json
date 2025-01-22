@@ -27,6 +27,336 @@
             "title": "Literate programming",
             "type": "article-journal",
             "volume": "27"
+        },
+        {
+            "URL": "https://research.utwente.nl/en/publications/principles-of-remote-sensing-an-introductory-textbook-4",
+            "author": [
+                {
+                    "family": "Tempfli",
+                    "given": "K."
+                },
+                {
+                    "family": "Huurneman",
+                    "given": "G. C."
+                },
+                {
+                    "family": "Bakker",
+                    "given": "W. H."
+                },
+                {
+                    "family": "Janssen",
+                    "given": "L. L. F."
+                },
+                {
+                    "family": "Feringa",
+                    "given": "W. F."
+                },
+                {
+                    "family": "Gieske",
+                    "given": "A. S. M."
+                },
+                {
+                    "family": "Grabmaier",
+                    "given": "K. A."
+                },
+                {
+                    "family": "Hecker",
+                    "given": "C. A."
+                },
+                {
+                    "family": "Horn",
+                    "given": "J. A."
+                },
+                {
+                    "family": "Kerle",
+                    "given": "N."
+                },
+                {
+                    "dropping-particle": "van der",
+                    "family": "Meer",
+                    "given": "F. D."
+                },
+                {
+                    "family": "Parodi",
+                    "given": "G. N."
+                },
+                {
+                    "family": "Pohl",
+                    "given": "C."
+                },
+                {
+                    "family": "Reeves",
+                    "given": "C. V."
+                },
+                {
+                    "dropping-particle": "van",
+                    "family": "Ruitenbeek",
+                    "given": "F. J. A."
+                },
+                {
+                    "family": "Schetselaar",
+                    "given": "E. M."
+                },
+                {
+                    "family": "Weir",
+                    "given": "M. J. C."
+                },
+                {
+                    "family": "Westinga",
+                    "given": "E."
+                },
+                {
+                    "family": "Woldai",
+                    "given": "T."
+                }
+            ],
+            "id": "tempfli2009",
+            "issued": {
+                "date-parts": [
+                    [
+                        2009
+                    ]
+                ]
+            },
+            "language": "en-US",
+            "publisher": "International Institute for Geo-Information Science; Earth Observation",
+            "title": "Principles of remote sensing: An introductory textbook",
+            "title-short": "Principles of remote sensing",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Butcher",
+                    "given": "Ginger"
+                }
+            ],
+            "id": "butcher2016",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "language": "en",
+            "note": "Google-Books-ID: H76AUTGhBLMC",
+            "publisher": "Government Printing Office",
+            "title": "Tour of the Electromagnetic Spectrum",
+            "type": "book"
+        },
+        {
+            "URL": "https://www.usgs.gov/landsat-missions/landsat-8",
+            "id": "landsat",
+            "title": "Landsat 8 | u.s. Geological survey",
+            "type": ""
+        },
+        {
+            "URL": "https://www.mdpi.com/2504-3900/2/7/358",
+            "author": [
+                {
+                    "family": "Kaplan",
+                    "given": "Gordana"
+                },
+                {
+                    "family": "Avdan",
+                    "given": "Ugur"
+                },
+                {
+                    "family": "Avdan",
+                    "given": "Zehra Yigit"
+                }
+            ],
+            "id": "kaplan2018",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018,
+                        3,
+                        22
+                    ]
+                ]
+            },
+            "title": "Urban heat island analysis using the landsat 8 satellite data: A case study in skopje, macedonia",
+            "title-short": "Urban heat island analysis using the landsat 8 satellite data",
+            "type": ""
+        },
+        {
+            "DOI": "10.1016/j.rse.2015.11.023",
+            "URL": "https://www.sciencedirect.com/science/article/pii/S003442571530211X",
+            "author": [
+                {
+                    "family": "Fahnestock",
+                    "given": "Mark"
+                },
+                {
+                    "family": "Scambos",
+                    "given": "Ted"
+                },
+                {
+                    "family": "Moon",
+                    "given": "Twila"
+                },
+                {
+                    "family": "Gardner",
+                    "given": "Alex"
+                },
+                {
+                    "family": "Haran",
+                    "given": "Terry"
+                },
+                {
+                    "family": "Klinger",
+                    "given": "Marin"
+                }
+            ],
+            "collection-title": "Landsat 8 science results",
+            "container-title": "Remote Sensing of Environment",
+            "id": "fahnestock2016",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016,
+                        11,
+                        1
+                    ]
+                ]
+            },
+            "page": "84-94",
+            "title": "Rapid large-area mapping of ice flow using landsat 8",
+            "type": "article-journal",
+            "volume": "185"
+        },
+        {
+            "DOI": "10.1016/j.rse.2021.112634",
+            "URL": "https://www.sciencedirect.com/science/article/pii/S0034425721003540",
+            "author": [
+                {
+                    "family": "Jelének",
+                    "given": "Jan"
+                },
+                {
+                    "family": "Kopačková-Strnadová",
+                    "given": "Veronika"
+                }
+            ],
+            "container-title": "Remote Sensing of Environment",
+            "id": "jelének2021",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021,
+                        11,
+                        1
+                    ]
+                ]
+            },
+            "page": "112634",
+            "title": "Synergic use of sentinel-1 and sentinel-2 data for automatic detection of earthquake-triggered landscape changes: A case study of the 2016 kaikoura earthquake (mw 7.8), new zealand",
+            "title-short": "Synergic use of sentinel-1 and sentinel-2 data for automatic detection of earthquake-triggered landscape changes",
+            "type": "article-journal",
+            "volume": "265"
+        },
+        {
+            "URL": "https://www.mdpi.com/2072-4292/12/18/3062",
+            "author": [
+                {
+                    "family": "Chaves",
+                    "given": "Michel E. D."
+                },
+                {
+                    "family": "Picoli",
+                    "given": "Michelle C. A."
+                },
+                {
+                    "family": "Sanches",
+                    "given": "Ieda D."
+                }
+            ],
+            "id": "chaves2020",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020,
+                        9,
+                        18
+                    ]
+                ]
+            },
+            "title": "Recent applications of landsat 8/OLI and sentinel-2/MSI for land use and land cover mapping: A systematic review",
+            "title-short": "Recent applications of landsat 8/OLI and sentinel-2/MSI for land use and land cover mapping",
+            "type": ""
+        },
+        {
+            "DOI": "10.3390/rs8121014",
+            "URL": "https://www.mdpi.com/2072-4292/8/12/1014",
+            "author": [
+                {
+                    "family": "Mandanici",
+                    "given": "Emanuele"
+                },
+                {
+                    "family": "Bitelli",
+                    "given": "Gabriele"
+                }
+            ],
+            "container-title": "Remote Sensing",
+            "id": "mandanici2016",
+            "issue": "12",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016,
+                        12
+                    ]
+                ]
+            },
+            "language": "en",
+            "note": "Number: 12 Publisher: Multidisciplinary Digital Publishing Institute",
+            "page": "1014",
+            "title": "Preliminary Comparison of Sentinel-2 and Landsat 8 Imagery for a Combined Use",
+            "type": "article-journal",
+            "volume": "8"
+        },
+        {
+            "URL": "https://esamultimedia.esa.int/docs/EarthObservation/ESSC_ESA_EO_Groundbreaking_Science_Discoveries.pdf?ref=newsletter.terrawatchspace.com",
+            "author": [
+                {
+                    "family": "ESSC"
+                }
+            ],
+            "id": "esscesa2025",
+            "issued": {
+                "date-parts": [
+                    [
+                        2025
+                    ]
+                ]
+            },
+            "title": "ESSC ESA earth observation groundbreaking science discoveries",
+            "type": ""
+        },
+        {
+            "URL": "https://newsletter.terrawatchspace.com/last-week-in-earth-observation-january-20-2024/",
+            "author": [
+                {
+                    "family": "Aravind"
+                }
+            ],
+            "id": "aravind2025",
+            "issued": {
+                "date-parts": [
+                    [
+                        2025,
+                        1,
+                        21
+                    ]
+                ]
+            },
+            "language": "en",
+            "title": "Last Week in Earth Observation: January 20, 2024",
+            "title-short": "Last Week in Earth Observation",
+            "type": ""
         }
     ],
     "project_biblios": [

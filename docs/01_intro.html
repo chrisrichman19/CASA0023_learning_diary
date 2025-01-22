@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1&nbsp; 1. Introduction to Remote Sensing – learning_diary</title>
+<title>1&nbsp; Introduction to Remote Sensing – Remotely Sensing Learning Diary</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -81,7 +101,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01_intro.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">1. Introduction to Remote Sensing</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01_intro.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to Remote Sensing</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -96,7 +116,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">learning_diary</a> 
+      <a href="./">Remotely Sensing Learning Diary</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -115,7 +135,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./01_intro.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">1. Introduction to Remote Sensing</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to Remote Sensing</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -140,9 +160,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">1.1</span> 1.1 Summary</a></li>
-  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="header-section-number">1.2</span> 1.2 Application</a></li>
-  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">1.3</span> 1.3 Reflection</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">1.1</span> Summary</a></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="header-section-number">1.2</span> Application</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">1.3</span> Reflection</a></li>
   </ul>
 </nav>
     </div>
@@ -151,7 +171,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">1. Introduction to Remote Sensing</span></h1>
+<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to Remote Sensing</span></h1>
 </div>
 
 
@@ -169,15 +189,74 @@ ul.task-list li input[type="checkbox"] {
 
 
 <section id="summary" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">1.1</span> 1.1 Summary</h2>
+<h2 data-number="1.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">1.1</span> Summary</h2>
+<p>This week, we looked at the fundamentals of remote sensing focusing on its technical workings, and applications. The focus was on understanding how electromagnetic energy is used to gather data about the Earth’s surface. The lectures introduced key concepts, including the electromagnetic spectrum, sensor types, and image processing techniques.</p>
+<p>Remote sensing is the science of obtaining information about the Earth’s via sensors. This information is obtained by sensors that observe energy, usually from the sun, reflected or emitted from the earth’s surface <span class="citation" data-cites="tempfli2009">(<a href="references.html#ref-tempfli2009" role="doc-biblioref">Tempfli et al. 2009</a>)</span>. This energy can be modelled as waves, where the shorter the wavelength, the higher the frequency and energy. These sensors measure how different materials reflect or absorb energy at specific wavelengths. Remote sensing operates across bands on the electromagnetic spectrum, including wavelengths visible to the human eye and beyond, like near-infrared radiation. For example, healthy vegetation reflects a lot of near-infrared energy because of its cellular structure, while unhealthy vegetation reflects less <span class="citation" data-cites="butcher2016">(<a href="references.html#ref-butcher2016" role="doc-biblioref">Butcher 2016</a>)</span>. By analysing these spectral reflectance curves, scientists can identify spectral signatures for plant health, soil types, or water quality using specialised software such as SNAP and R (which we used in our practical).</p>
+<p>Sensors can be passive, relying on naturally reflected sunlight, or active, emitting their own energy (e.g., radar). This capability allows scientists to gather data on vegetation health, land use, and atmospheric conditions <span class="citation" data-cites="tempfli2009">(<a href="references.html#ref-tempfli2009" role="doc-biblioref">Tempfli et al. 2009</a>)</span>.</p>
 </section>
 <section id="application" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="application"><span class="header-section-number">1.2</span> 1.2 Application</h2>
+<h2 data-number="1.2" class="anchored" data-anchor-id="application"><span class="header-section-number">1.2</span> Application</h2>
+<p>In the practical we looked at data from Landsat 8 and Sentinel-2; two of the most widely used Earth observation missions that provide freely available satellite data.</p>
+<p>Landsat 8, launched in 2013, offers a spatial resolution of 30 meters and 16-day revisit intervals <span class="citation" data-cites="landsat">(<a href="references.html#ref-landsat" role="doc-biblioref"><span>“Landsat 8 | u.s. Geological Survey,”</span> n.d.</a>)</span>. It captures imagery across nine spectral bands using its sensor (Operational Land Imager). It differs from Sentinel-2 as it captures thermal data at a resolution of 100 meters, making Landsat 8 particularly useful for studying surface temperature related phenomena such as urban heat islands and mapping glacier melting <span class="citation" data-cites="kaplan2018 fahnestock2016">(<a href="references.html#ref-kaplan2018" role="doc-biblioref">Kaplan, Avdan, and Avdan 2018</a>; <a href="references.html#ref-fahnestock2016" role="doc-biblioref">Fahnestock et al. 2016</a>)</span></p>
+<p>Sentinel-2, launched in 2015 and 2017 as a dual-satellite mission, provides a more frequent revisit time of five days and captures data across 13 spectral bands at spatial resolutions ranging from 10 to 60 meters. Chaves et al., (2020) note how the red-edge bands are particularly good for assessing vegetation health. Sentinel-2 is excellent for detailed, real-time monitoring, making it a popular tool for researchers to assess natural disaster damage, and track seasonal changes in vegetation <span class="citation" data-cites="jelének2021 chaves2020">(<a href="references.html#ref-jelének2021" role="doc-biblioref">Jelének and Kopačková-Strnadová 2021</a>; <a href="references.html#ref-chaves2020" role="doc-biblioref">Chaves, Picoli, and Sanches 2020</a>)</span></p>
+<p>Both Landsat 8 and Sentinel-2 are great for monitoring Earth’s surface, but as mentioned in the paragraphs above, their sensors capture data slightly differently <span class="citation" data-cites="mandanici2016">(<a href="references.html#ref-mandanici2016" role="doc-biblioref">Mandanici and Bitelli 2016</a>)</span>. This means you need to be careful when combining data from the two sensors, taking into consideration the differences in bands and resolution.</p>
+<p>Overall, it is clear that this is an exciting time for remote sensing research - From a European Space Agency report, released at the beginning of 2025 research using ESA earth observation satellites has exploded since 2002 <span class="citation" data-cites="esscesa2025">(<a href="references.html#ref-esscesa2025" role="doc-biblioref">ESSC 2025</a>)</span>. “According to statistics provided by ESA, over 4,000 scientific publications utilising ESA and Sentinel satellites have been published in peer-reviewed journals in 2024 alone” <span class="citation" data-cites="esscesa2025">(<a href="references.html#ref-esscesa2025" role="doc-biblioref">ESSC 2025, 42</a>)</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="publications.png" class="img-fluid figure-img"></p>
+<figcaption>European Space Agency <span class="citation" data-cites="esscesa2025">(<a href="references.html#ref-esscesa2025" role="doc-biblioref">ESSC 2025</a>)</span></figcaption>
+</figure>
+</div>
+<p>Whilst Landsat and Sentinel satellites dominant research due to their availability, there are also plenty of private commercial earth observation missions being launched by commercial companies as shown below.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="eosatellitecompanies.png" class="img-fluid figure-img"></p>
+<figcaption>EO satellite companies <span class="citation" data-cites="aravind2025">(<a href="references.html#ref-aravind2025" role="doc-biblioref">Aravind 2025</a>)</span></figcaption>
+</figure>
+</div>
 </section>
 <section id="reflection" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">1.3</span> 1.3 Reflection</h2>
+<h2 data-number="1.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">1.3</span> Reflection</h2>
+<p>reflection on lecture material - elcetromagnetic blah</p>
+<p>reflection on practical - whilst i see the place for SNAP - not a fan</p>
+<p>reflection on remote sensing in general</p>
+<p>I am impressed by how much remote sensing data is freely available despite the million of pounds cost of launching satellites and all the research involved. They appear to have democratised remote sensing research, allowing for policy development and R&amp;D in many domains including agriculture and urban planning.</p>
+<p>New satellites being launched all the time – From the European Space Agenecy - sentinel 1c launched in November last year with a spatial resolution of 5m and a 12 day revisit time.</p>
+<p>I also found a very helpful newsletter by TerraWatch Space called <a href="https://newsletter.terrawatchspace.com/">Last Week in Observation</a> that releases weekly updates on the commercial and academic world in remote sensing, so I will keep an eye on that whilst I am doing this module. and maybe afterwards too . …</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-aravind2025" class="csl-entry" role="listitem">
+Aravind. 2025. <span>“Last Week in Earth Observation: January 20, 2024.”</span> <a href="https://newsletter.terrawatchspace.com/last-week-in-earth-observation-january-20-2024/">https://newsletter.terrawatchspace.com/last-week-in-earth-observation-january-20-2024/</a>.
+</div>
+<div id="ref-butcher2016" class="csl-entry" role="listitem">
+Butcher, Ginger. 2016. <em>Tour of the Electromagnetic Spectrum</em>. Government Printing Office.
+</div>
+<div id="ref-chaves2020" class="csl-entry" role="listitem">
+Chaves, Michel E. D., Michelle C. A. Picoli, and Ieda D. Sanches. 2020. <span>“Recent Applications of Landsat 8/OLI and Sentinel-2/MSI for Land Use and Land Cover Mapping: A Systematic Review.”</span> <a href="https://www.mdpi.com/2072-4292/12/18/3062">https://www.mdpi.com/2072-4292/12/18/3062</a>.
+</div>
+<div id="ref-esscesa2025" class="csl-entry" role="listitem">
+ESSC. 2025. <span>“ESSC ESA Earth Observation Groundbreaking Science Discoveries.”</span> <a href="https://esamultimedia.esa.int/docs/EarthObservation/ESSC_ESA_EO_Groundbreaking_Science_Discoveries.pdf?ref=newsletter.terrawatchspace.com">https://esamultimedia.esa.int/docs/EarthObservation/ESSC_ESA_EO_Groundbreaking_Science_Discoveries.pdf?ref=newsletter.terrawatchspace.com</a>.
+</div>
+<div id="ref-fahnestock2016" class="csl-entry" role="listitem">
+Fahnestock, Mark, Ted Scambos, Twila Moon, Alex Gardner, Terry Haran, and Marin Klinger. 2016. <span>“Rapid Large-Area Mapping of Ice Flow Using Landsat 8.”</span> <em>Remote Sensing of Environment</em>, Landsat 8 science results, 185 (November): 84–94. <a href="https://doi.org/10.1016/j.rse.2015.11.023">https://doi.org/10.1016/j.rse.2015.11.023</a>.
+</div>
+<div id="ref-jelének2021" class="csl-entry" role="listitem">
+Jelének, Jan, and Veronika Kopačková-Strnadová. 2021. <span>“Synergic Use of Sentinel-1 and Sentinel-2 Data for Automatic Detection of Earthquake-Triggered Landscape Changes: A Case Study of the 2016 Kaikoura Earthquake (Mw 7.8), New Zealand.”</span> <em>Remote Sensing of Environment</em> 265 (November): 112634. <a href="https://doi.org/10.1016/j.rse.2021.112634">https://doi.org/10.1016/j.rse.2021.112634</a>.
+</div>
+<div id="ref-kaplan2018" class="csl-entry" role="listitem">
+Kaplan, Gordana, Ugur Avdan, and Zehra Yigit Avdan. 2018. <span>“Urban Heat Island Analysis Using the Landsat 8 Satellite Data: A Case Study in Skopje, Macedonia.”</span> <a href="https://www.mdpi.com/2504-3900/2/7/358">https://www.mdpi.com/2504-3900/2/7/358</a>.
+</div>
+<div id="ref-landsat" class="csl-entry" role="listitem">
+<span>“Landsat 8 | u.s. Geological Survey.”</span> n.d. <a href="https://www.usgs.gov/landsat-missions/landsat-8">https://www.usgs.gov/landsat-missions/landsat-8</a>.
+</div>
+<div id="ref-mandanici2016" class="csl-entry" role="listitem">
+Mandanici, Emanuele, and Gabriele Bitelli. 2016. <span>“Preliminary Comparison of Sentinel-2 and Landsat 8 Imagery for a Combined Use.”</span> <em>Remote Sensing</em> 8 (12): 1014. <a href="https://doi.org/10.3390/rs8121014">https://doi.org/10.3390/rs8121014</a>.
+</div>
+<div id="ref-tempfli2009" class="csl-entry" role="listitem">
+Tempfli, K., G. C. Huurneman, W. H. Bakker, L. L. F. Janssen, W. F. Feringa, A. S. M. Gieske, K. A. Grabmaier, et al. 2009. <em>Principles of Remote Sensing: An Introductory Textbook</em>. International Institute for Geo-Information Science; Earth Observation. <a href="https://research.utwente.nl/en/publications/principles-of-remote-sensing-an-introductory-textbook-4">https://research.utwente.nl/en/publications/principles-of-remote-sensing-an-introductory-textbook-4</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
