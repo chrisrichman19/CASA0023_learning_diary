@@ -6,6 +6,10 @@ This week we were tasked to get to grips with Xaringan and Quarto ...
 
 Sentinel 1c - launched december 5th 2024
 
+```{=html}
+<iframe src="https://chrisrichman19.github.io/w2_presentation/#1" width="800" height="600"></iframe>
+```
+
 ## Reflection
 
 will take a while to get used to all the syntax but .. . .
