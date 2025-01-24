@@ -4,7 +4,7 @@ This week we were tasked to get to grips with Xaringan and Quarto ...
 
 ## Sentinel 1c
 
-Sentinel 1c - launched november 2024
+Sentinel 1c - launched december 5th 2024
 
 ## Reflection
 
