@@ -1,4 +1,9 @@
+---
+title: References
+---
+
 # References {.unnumbered}
 
 ::: {#refs}
+
 :::
