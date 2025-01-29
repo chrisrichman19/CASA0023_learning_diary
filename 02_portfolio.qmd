@@ -2,9 +2,7 @@
 
 This week we were tasked to get to grips with Xaringan and Quarto ...
 
-## Sentinel 1c
-
-Sentinel 1c - launched december 5th 2024
+## Sentinel-1c
 
 ```{=html}
 <iframe src="https://chrisrichman19.github.io/w2_presentation/#1" width="800" height="600"></iframe>
@@ -12,4 +10,8 @@ Sentinel 1c - launched december 5th 2024
 
 ## Reflection
 
-will take a while to get used to all the syntax but .. . .
+comparing to powerpoint does seem alot more complicated - especially when resizing images and restyling text etc.,
+
+I think it will take a while to get used to all the syntax before it becomes second nature .. . .
+
+i looked into the benefits of why xaringan is considered more powerful by its user (over powerpoint, google slides etc.,) :
