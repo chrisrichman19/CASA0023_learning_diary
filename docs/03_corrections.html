@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -182,14 +202,96 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="summary" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">3.1</span> Summary</h2>
+<p>This week, we explored the steps needed to turn raw satellite imagery into reliable, analysis-ready data. While remote sensing is powerful, I hadn’t fully appreciated just how technical image correction can be.</p>
+<p>Modern remote sensing products like Landsat’s Analysis Ready Data (ARD) come pre-corrected. But it important to know what corrections are applied to these products. For example, Landsat offers three processing levels: Level 0 (minor ancillary corrections), Level 1 (radiometrically and geometrically corrected) and Level 2 (atmospherically corrected and terrain-adjusted) <span class="citation" data-cites="haque2024">(<a href="references.html#ref-haque2024" role="doc-biblioref">Haque et al. 2024</a>)</span>.</p>
+<p>Depending on your needs</p>
+<ul>
+<li><p>level 1 for if you want control over atmospheric corrections</p></li>
+<li><p>level 2 - analysis ready - using ready made algorithms.</p></li>
+</ul>
+<section id="corrections" class="level4" data-number="3.1.0.1">
+<h4 data-number="3.1.0.1" class="anchored" data-anchor-id="corrections"><span class="header-section-number">3.1.0.1</span> Corrections:</h4>
+<p><strong>Geometric correction</strong></p>
+<p>Since satellites capture images from shifting orbits and angles, distortions can occur. This is often corrected by using Ground Control Points (GCPs) <span class="citation" data-cites="jensen2015">(<a href="references.html#ref-jensen2015" role="doc-biblioref">Jensen 2015</a>)</span>. Ground control points are location on the Earth’s surface that can be accurately located and act as reference points <span class="citation" data-cites="jensen2015">(<a href="references.html#ref-jensen2015" role="doc-biblioref">Jensen 2015</a>)</span>. Algorithms match these GCPs in the captured image, which guide the transformations needed on the raw image to fix any distortions.</p>
+<p>Both Landsat level 1 and 2 products match pixels from raw images to Earth’s coordinates using ground control points<span class="citation" data-cites="landsat2021">(<a href="references.html#ref-landsat2021" role="doc-biblioref">Landsat 2021</a>)</span>.</p>
+<p>though they note that “Scenes containing snow, ice, and clouds can prevent accurate registration of GCPs within a scene.” <span class="citation" data-cites="landsat2017">(<a href="references.html#ref-landsat2017" role="doc-biblioref"><span>“Landsat Levels of Processing | U.S. Geological Survey”</span> 2017</a>)</span></p>
+<p><strong>Atmospheric correction:</strong></p>
+<p>Light interacts with the atmosphere before reaching a sensor. Particles like dust, water vapor, and pollutants scatter and absorb light, affecting the captured image quality.</p>
+<p><strong>Dark Object Subtraction (DOS)</strong> is a common fix, which assumes that the darkest pixel represents atmospheric noise so that value is subtracted from every pixel.</p>
+<p>Another method is using stable surfaces, like roads or rooftops, that maintain consistent reflectance over time. These are called <strong>Pseudo-invariant features (PIFs)</strong>. By assuming that these features do not change between images, researchers use them to adjust images.</p>
+<p>These methods are refered to as <em>relative atmospheric correction</em> and is often used as an estimate in the absence of synchronised surface-reflectance data<span class="citation" data-cites="jensen2015">(<a href="references.html#ref-jensen2015" role="doc-biblioref">Jensen 2015</a>)</span>.</p>
+<p>Landsat level 2 removes atmospheric haze by adjusting for aerosols/water vapor data from a sensor (MODIS) onboard another NASA satellite <span class="citation" data-cites="landsat2021">(<a href="references.html#ref-landsat2021" role="doc-biblioref">Landsat 2021</a>)</span>. This method is more advanced than PIFs or DOS corrections because it uses real atmospheric measurements instead of assumptions or reference surfaces.</p>
+<p>This is known as an <em>absolute atmospheric correction</em> method <span class="citation" data-cites="jensen2015">(<a href="references.html#ref-jensen2015" role="doc-biblioref">Jensen 2015</a>)</span>.</p>
+<p><strong>Orthorectification correction</strong></p>
+<p>Elevation can distort imagery</p>
+<p>Digital Elevation Models (DEMs) adjust for terrain effects, ensuring images appear as if taken from directly above (nadir). Landsat 1 and 2 corrects terrain distortion using digital elevation models <span class="citation" data-cites="landsat2021">(<a href="references.html#ref-landsat2021" role="doc-biblioref">Landsat 2021</a>)</span>.</p>
+<p>However, tall buildings and bridges introduce their own artifacts, which are harder to correct as they are not included in standard DEMs <span class="citation" data-cites="earthsciencedatasystems2024">(<a href="references.html#ref-earthsciencedatasystems2024" role="doc-biblioref">Earth Science Data Systems 2024</a>)</span>.</p>
+<p><strong>Radiometric calibration</strong></p>
+<p>Converts raw sensor data to radiance values</p>
+</section>
 </section>
 <section id="application" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="application"><span class="header-section-number">3.2</span> Application</h2>
+<p><strong>Remote Sensing Challenges and Corrections in Urban Environments</strong></p>
+<p>I decided to focus on the distinct issues with remote sensing in urban areas, as I found that researchers often highlight challenges with collecting data in dense cities, so they often have to get creative with their solutions.</p>
+<p>And with satellite imagery being increasingly used in urban settings for detecting land use change, transport planning, environmental monitoring, it is important that these images accurately reflect the real environment <span class="citation" data-cites="pradhan2021">(<a href="references.html#ref-pradhan2021" role="doc-biblioref">Pradhan et al. 2021</a>)</span>.</p>
+<p>Urban areas often exhibit high intra-class variability, which mean that similar materials appear spectrally different, due to shadows, reflective surfaces and high-rise buildings, making classification challenging <span class="citation" data-cites="huang2011">(<a href="references.html#ref-huang2011" role="doc-biblioref">Huang, Zhang, and Gong 2011</a>)</span>.</p>
+<p>Some studies attempt to address this by fusing multi-angle satellite data (e.g., combining Landsat with Sentinel-2) or combining LiDAR data to create more accurate elevation models for cities. <span class="citation" data-cites="huang2011 miliaresis2007">(<a href="references.html#ref-huang2011" role="doc-biblioref">Huang, Zhang, and Gong 2011</a>; <a href="references.html#ref-miliaresis2007" role="doc-biblioref">Miliaresis and Kokkas 2007</a>)</span>.</p>
+<p><span class="citation" data-cites="huang2011">(<a href="references.html#ref-huang2011" role="doc-biblioref">Huang, Zhang, and Gong 2011</a>)</span> found that the height features obatined from LiDAR data significantly improved urban land-cover classification.</p>
+<p>Urban areas also introduce shadowing effects, where buildings cast shadows that obscure features on the ground, making it difficult to classify land cover accurately <span class="citation" data-cites="dare2005 le2020">(<a href="references.html#ref-dare2005" role="doc-biblioref">Dare 2005</a>; <a href="references.html#ref-le2020" role="doc-biblioref">Le and Samaras 2020</a>)</span>. Researchers have addressed this by applying shadow detection and removal algorithms that estimate surface reflectance in obscured areas <span class="citation" data-cites="su2016">(<a href="references.html#ref-su2016" role="doc-biblioref">Su et al. 2016</a>)</span>.</p>
+<p>Other</p>
+<ul>
+<li><p><strong>Adjacency Effect</strong>: Reflective surfaces (e.g., glass facades) scatter light into neighbouring pixels, skewing surface reflectance values.</p></li>
+<li><p><strong>Thermal Anomalies</strong>: Concrete and metal structures absorb/re-radiate heat differently than natural terrain, distorting temperature measurements. Particularly impactful for urban heat island research.</p></li>
+</ul>
+<p>Yet gaps remain. Most of these urban corrections don’t have out-of-the-box soluation as they are computationally intensive and require localised datasets (e.g., LiDAR), perhaps limiting real-time applications and scalability.</p>
 </section>
 <section id="reflection" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">3.3</span> Reflection</h2>
+<p>This week showed that image correction is a balance between precision and practicality. Methods like DOS or PIFs make corrections more accessible, but they also have limitations.</p>
+<p><em>relate to urban scenario too</em></p>
+<p>Pre-processed <strong>Analysis Ready Data (ARD)</strong></p>
+<p>—pre-corrected datasets that save time—but also made me question the assumptions behind vendor-applied corrections. What trade-offs are hidden in these standardised products? Can we always trust them without understanding their limitations? How does it affect comparison of products?</p>
+<p>blackbox concerns - <strong>Level 2 (ARD)</strong>&nbsp;is “plug-and-play”, but you’re trusting NASA’s blackbox algorithms</p>
+<p>working in urban research - researcher often use much more complicated solutions that are offered by products - integrating lidar, 3d models, combining different temporal sattellite images .</p>
+<p>integration of AI. . .</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-dare2005" class="csl-entry" role="listitem">
+Dare, Paul M. 2005. <span>“Shadow Analysis in High-Resolution Satellite Imagery of Urban Areas.”</span> <em>Photogrammetric Engineering &amp; Remote Sensing</em> 71 (2): 169–77. <a href="https://doi.org/10.14358/PERS.71.2.169">https://doi.org/10.14358/PERS.71.2.169</a>.
+</div>
+<div id="ref-earthsciencedatasystems2024" class="csl-entry" role="listitem">
+Earth Science Data Systems, NASA. 2024. <span>“Digital Elevation/Terrain Model (DEM) | NASA Earthdata.”</span> <a href="https://www.earthdata.nasa.gov/topics/land-surface/digital-elevation-terrain-model-dem">https://www.earthdata.nasa.gov/topics/land-surface/digital-elevation-terrain-model-dem</a>.
+</div>
+<div id="ref-haque2024" class="csl-entry" role="listitem">
+Haque, M. O., R. Rengarajan, M. Lubke, M. N. Hasan, A. Shrestha, J. L. Shaw, A. Denevan, et al. 2024. <span>“ECCOE Landsat Quarterly Calibration and Validation Report.”</span>
+</div>
+<div id="ref-huang2011" class="csl-entry" role="listitem">
+Huang, Xin, Liangpei Zhang, and Wei Gong. 2011. <span>“Information Fusion of Aerial Images and LIDAR Data in Urban Areas: Vector-Stacking, Re-Classification and Post-Processing Approaches.”</span> <em>International Journal of Remote Sensing</em> 32 (1): 69–84. <a href="https://doi.org/10.1080/01431160903439882">https://doi.org/10.1080/01431160903439882</a>.
+</div>
+<div id="ref-jensen2015" class="csl-entry" role="listitem">
+Jensen, John R. 2015. <em>Introductory Digital Image Processing</em>. 4th ed. A Remote Sensing Perspective. Pearson Higher Education US.
+</div>
+<div id="ref-landsat2021" class="csl-entry" role="listitem">
+Landsat. 2021. <span>“Landsat Collection 1 Vs Collection 2 Summary | U.S. Geological Survey.”</span> <a href="https://www.usgs.gov/media/files/landsat-collection-1-vs-collection-2-summary">https://www.usgs.gov/media/files/landsat-collection-1-vs-collection-2-summary</a>.
+</div>
+<div id="ref-landsat2017" class="csl-entry" role="listitem">
+<span>“Landsat Levels of Processing | U.S. Geological Survey.”</span> 2017. <a href="https://www.usgs.gov/landsat-missions/landsat-levels-processing">https://www.usgs.gov/landsat-missions/landsat-levels-processing</a>.
+</div>
+<div id="ref-le2020" class="csl-entry" role="listitem">
+Le, Hieu, and Dimitris Samaras. 2020. <span>“From Shadow Segmentation to Shadow Removal.”</span> In, edited by Andrea Vedaldi, Horst Bischof, Thomas Brox, and Jan-Michael Frahm, 264–81. Cham: Springer International Publishing. <a href="https://doi.org/10.1007/978-3-030-58621-8_16">https://doi.org/10.1007/978-3-030-58621-8_16</a>.
+</div>
+<div id="ref-miliaresis2007" class="csl-entry" role="listitem">
+Miliaresis, George, and Nikolaos Kokkas. 2007. <span>“Segmentation and Object-Based Classification for the Extraction of the Building Class from LIDAR DEMs.”</span> <em>Computers &amp; Geosciences</em> 33 (8): 1076–87. <a href="https://doi.org/10.1016/j.cageo.2006.11.012">https://doi.org/10.1016/j.cageo.2006.11.012</a>.
+</div>
+<div id="ref-pradhan2021" class="csl-entry" role="listitem">
+Pradhan, Biswajeet, Ahmed A. Ahmed, Subrata Chakraborty, Abdullah Alamri, and Chang-Wook Lee. 2021. <span>“Orthorectification of WorldView-3 Satellite Image Using Airborne Laser Scanning Data.”</span> <em>Journal of Sensors</em> 2021 (1): 5273549. <a href="https://doi.org/10.1155/2021/5273549">https://doi.org/10.1155/2021/5273549</a>.
+</div>
+<div id="ref-su2016" class="csl-entry" role="listitem">
+Su, Nan, Ye Zhang, Shu Tian, Yiming Yan, and Xinyuan Miao. 2016. <span>“Shadow Detection and Removal for Occluded Object Information Recovery in Urban High-Resolution Panchromatic Satellite Images.”</span> <em>IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing</em> 9 (6): 2568–82. <a href="https://doi.org/10.1109/JSTARS.2016.2570234">https://doi.org/10.1109/JSTARS.2016.2570234</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
