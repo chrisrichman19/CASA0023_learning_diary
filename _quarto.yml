@@ -11,7 +11,7 @@ book:
     - 01_intro.qmd
     - 02_portfolio.qmd
     - 03_corrections.qmd
-    - summary.qmd
+    - 04_policy.qmd
     - references.qmd
 
 bibliography: references.bib

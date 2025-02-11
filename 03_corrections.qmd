@@ -58,7 +58,7 @@ And with satellite imagery being increasingly used in urban settings for detecti
 
 Urban areas often exhibit high intra-class variability, which mean that similar materials appear spectrally different, due to shadows, reflective surfaces and high-rise buildings, making classification challenging [@huang2011].
 
-Some studies attempt to address this by fusing multi-angle satellite data (e.g., combining Landsat with Sentinel-2) or combining LiDAR data to create more accurate elevation models for cities. [@huang2011 ;@miliaresis2007].
+Some studies attempt to address this by fusing multi-angle satellite data (e.g., combining Landsat with Sentinel-2) or combining LiDAR data to create more accurate elevation models for cities. [@huang2011; @miliaresis2007].
 
 [@huang2011] found that the height features obatined from LiDAR data significantly improved urban land-cover classification.
 

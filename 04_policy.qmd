@@ -1,0 +1,29 @@
+# Policy
+
+## Summary
+
+The London Plan's Policy G5 focuses on urban greening as a fundamental element of site and building design for major developments. This policy encourages integrating high-quality landscaping, green roofs, green walls, and sustainable drainage solutions to enhance biodiversity and mitigate the urban heat island effect. Using an Urban Greening Factor (UGF), to set benchmarks for including features like green roofs, walls, trees, and rain gardens into building design, to attempt to ensure that new developments contribute meaningfully to London's environmental goal.
+
+[**Include UGF table**]{.underline}
+
+Urban greening presents significant benefits, including improved air quality, increased biodiversity, and better climate resilience. However, there also some key questions to consider:
+
+How effective is the UGF in practice? What barriers exist in its implementation? Can Earth Observation, enhance policy compliance and monitoring? How can meaningful ecological outcomes be prioritised over "checklist" compliance?
+
+problems with UGF - where will the greening happen ? will it affect the population or just for checklist? what about maintenance, will they be looked after , after planning application has been approved?
+
+## Application
+
+Remotely sensed data could directly support the goals of Policy G5 in assessing and monitoring urban greening efforts. Satellite imagery and LiDAR could be used to quantify vegetation cover and track changes over time. One example researchers could implement is Normalized Difference Vegetation Index (NDVI) analysis, a technique used to assess vegetation health by measuring the difference between near-infrared (which vegetation strongly reflects) and red light (which vegetation absorbs). This index could be used to identify plant cover in neighbourhoods, monitor changes over time, and assess how well urban-greening contribute to reducing the urban heat island effect.
+
+Could be used for more proactively, -\> Remote sensing could aid in identifying disparities in urban greening across different boroughs, which could support a more equitable implementation of the policy - , by prioritising interventions in neighbourhoods that lack greening. - \> or where there is poor air quality, urban heat island etc.,
+
+another approach could be priortising real-impact - heat radar sensor, air quality. some areas may need more greening than others - importance of local conditions - do developments in say, Richmond need the same greening requirements as the City?
+
+this approach can be used as a tool to get around the challenges of UGF - focus on the real-world heat-impacts over filling out a checklist. -\> provide tools after development application is approved - in maintaining greenery and new changes needed when circumstances change (e.,g global warming)
+
+## Reflection
+
+This exercise has highlighted the intersection between remote sensing and urban policy, emphasising how remote sensing data can enhance the effectiveness of greening initiatives. While satellite and aerial data offer powerful monitoring tools, challenges such as data resolution, cloud cover, and accessibility constraints may limit real-world application. Integrating EO into policy decisions requires collaboration between urban planners, environmental scientists, and data analysts. Personally, I found the application of NDVI particularly insightful, as it demonstrates a tangible way to assess vegetation health and policy compliance. Moving forward, understanding how to leverage EO data for urban resilience will be invaluable in both academic and professional contexts.
+
+This exercise highlighted the potential of remote sensing to bridge policy goals and on-ground implementation. While remote sensing offers a powerful solution for monitoring urban greening, practical barriers like data resolution, cost, and technical capacity could potentially limit its universal adoption, raising equity concerns, where cash-strapped councils could struggle to adopt remote sensing tools, risking uneven policy enforcement.
