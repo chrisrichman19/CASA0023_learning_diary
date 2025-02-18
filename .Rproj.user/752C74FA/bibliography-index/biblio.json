@@ -745,6 +745,18 @@
             "title": "Shadow detection and removal for occluded object information recovery in urban high-resolution panchromatic satellite images",
             "type": "article-journal",
             "volume": "9"
+        },
+        {
+            "URL": "https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-2",
+            "author": [
+                {
+                    "family": "ESA"
+                }
+            ],
+            "id": "esa",
+            "language": "en",
+            "title": "Sentinel-2",
+            "type": ""
         }
     ],
     "project_biblios": [

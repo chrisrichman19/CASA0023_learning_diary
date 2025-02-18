@@ -8,13 +8,21 @@ Remote sensing is the science of obtaining information about the Earth’s via s
 
 Sensors can be passive, relying on naturally reflected sunlight, or active, emitting their own energy (e.g., radar). This capability allows scientists to gather data on vegetation health, land use, and atmospheric conditions [@tempfli2009].
 
+Reflecting on this introductory week, the power of remote sensing is apparent. Its ability to provide a continuous view of the planet opens up possibilities for environmental monitoring, resource management, and disaster response.
+
 ## Application
 
-In the practical we looked at data from Landsat 8 and Sentinel-2; two of the most widely used Earth observation missions that provide freely available satellite data.
+In the practical we looked at data from Landsat 8 and Sentinel-2; two of the most widely used Earth observation missions that provide freely available satellite data. The ready availability of data from these missions has fundamentally changed the landscape of remote sensing research, leading to a huge increase in applications across different fields
 
-Landsat 8, launched in 2013, offers a spatial resolution of 30 meters and 16-day revisit intervals [@landsat]. It captures imagery across nine spectral bands using its sensor (Operational Land Imager). It differs from Sentinel-2 as it captures thermal data at a resolution of 100 meters, making Landsat 8 particularly useful for studying surface temperature related phenomena such as urban heat islands and mapping glacier melting [@kaplan2018; @fahnestock2016]
+Landsat 8, launched in 2013, offers a spatial resolution of 30 meters and 16-day revisit intervals [@landsat]. It captures imagery across nine spectral bands using its sensor (Operational Land Imager). It differs from Sentinel-2 as it captures thermal data at a resolution of 100 meters.
 
-Sentinel-2, launched in 2015 and 2017 as a dual-satellite mission, provides a more frequent revisit time of five days and captures data across 13 spectral bands at spatial resolutions ranging from 10 to 60 meters. Chaves et al., (2020) note how the red-edge bands are particularly good for assessing vegetation health. Sentinel-2 is excellent for detailed, real-time monitoring, making it a popular tool for researchers to assess natural disaster damage, and track seasonal changes in vegetation [@jelének2021; @chaves2020]
+Therefore, it has become a key data source for studies requiring long-term trend analysis and surface temperature information. For instance, [@kaplan2018] utilised Landsat's thermal bands to map urban heat islands in Skopje, tracking their expansion over multiple years. Another example is [@fahnestock2016], with their work on mapping glacier melting rates.
+
+Sentinel-2, launched in 2015 and 2024 as a dual-satellite mission, provides a more frequent revisit time of five days and captures data across 13 spectral bands at spatial resolutions ranging from 10 to 60 meters [@esa]. The relatively short revisit period makes it ideal for near real-time monitoring of dynamic events such as natural disasters.
+
+[@jelének2021], for example, showcased the effectiveness of Sentinel data in automatically detecting damage from earthquakes, providing crucial information for disaster response efforts. As well as the technical aspects of Sentinel data, they highlight its accessibility as a big asset for timely impact assessments [@jelének2021].
+
+Chaves et al., (2020) also notes how the red-edge bands are particularly good for assessing vegetation health, which enable researchers to detect subtle changes in plant conditions, making it useful for environmental research [@chaves2020].
 
 Both Landsat 8 and Sentinel-2 are great for monitoring Earth's surface, but as mentioned in the paragraphs above, their sensors capture data slightly differently [@mandanici2016]. This means you need to be careful when combining data from the two sensors, taking into consideration the differences in bands and resolution.
 
@@ -28,14 +36,12 @@ Whilst Landsat and Sentinel satellites dominant research due to their availabili
 
 ## Reflection
 
-reflection on lecture material - elcetromagnetic blah
-
-reflection on practical - whilst i see the place for SNAP - not a fan
+reflection on lecture material - elcetromagnetic blah blah
 
 reflection on remote sensing in general
 
-I am impressed by how much remote sensing data is freely available despite the million of pounds cost of launching satellites and all the research involved. They appear to have democratised remote sensing research, allowing for policy development and R&D in many domains including agriculture and urban planning.
+I am impressed by how much remote sensing data is freely available despite the million of pounds cost of launching satellites and all the research involved. They appear to have democratised remote sensing research, allowing for policy development and R&D in many domains including agriculture and urban planning. It lowers the barrier to entry for researchers globally, allowing for a wide range of institutions and individuals to contribute to the understanding of Earth.
 
-New satellites being launched all the time – From the European Space Agenecy - sentinel 1c launched in November last year with a spatial resolution of 5m and a 12 day revisit time.
+I also found a very helpful newsletter by TerraWatch Space called [Last Week in Observation](https://newsletter.terrawatchspace.com/) that releases weekly updates on the commercial and academic world in remote sensing, so I will keep an eye on that for any new research or innovations in the field.
 
-I also found a very helpful newsletter by TerraWatch Space called [Last Week in Observation](https://newsletter.terrawatchspace.com/) that releases weekly updates on the commercial and academic world in remote sensing, so I will keep an eye on that whilst I am doing this module. and maybe afterwards too . ...
+Looking ahead, the challenge lies in effectively translating remote sensing data into actionable policies. This week has sparked an interest in exploring how these tools and data can be applied to ongoing environmental issues. I expect these skills and this knowledge, or at least something similar, will be highly relevant and valuable in the future.

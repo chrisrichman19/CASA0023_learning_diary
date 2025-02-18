@@ -202,32 +202,28 @@ div.csl-indent {
 
 <section id="summary" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">3.1</span> Summary</h2>
-<p>This week, we explored the steps needed to turn raw satellite imagery into reliable, analysis-ready data. While remote sensing is powerful, I hadn’t fully appreciated just how technical image correction can be.</p>
+<p>This week, we explored the steps needed to turn raw satellite imagery into reliable, analysis-ready data.</p>
+<p>I learned that transforming raw remote sensing data into something usable for analysis is far from straightforward, with technical geometric, atmospheric, orthorectification, and radiometric corrections needed.</p>
 <p>Modern remote sensing products like Landsat’s Analysis Ready Data (ARD) come pre-corrected. But it important to know what corrections are applied to these products. For example, Landsat offers three processing levels: Level 0 (minor ancillary corrections), Level 1 (radiometrically and geometrically corrected) and Level 2 (atmospherically corrected and terrain-adjusted) <span class="citation" data-cites="haque2024">(<a href="references.html#ref-haque2024" role="doc-biblioref">Haque et al. 2024</a>)</span>.</p>
 <p>Depending on your needs</p>
 <ul>
-<li><p>level 1 for if you want control over atmospheric corrections</p></li>
-<li><p>level 2 - analysis ready - using ready made algorithms.</p></li>
+<li><p>level 0 and 1 for if you want control over atmospheric corrections</p></li>
+<li><p>level 2 - analysis ready - using NASA’s ready made algorithms.</p></li>
 </ul>
 <section id="corrections" class="level4" data-number="3.1.0.1">
 <h4 data-number="3.1.0.1" class="anchored" data-anchor-id="corrections"><span class="header-section-number">3.1.0.1</span> Corrections:</h4>
 <p><strong>Geometric correction</strong></p>
 <p>Since satellites capture images from shifting orbits and angles, distortions can occur. This is often corrected by using Ground Control Points (GCPs) <span class="citation" data-cites="jensen2015">(<a href="references.html#ref-jensen2015" role="doc-biblioref">Jensen 2015</a>)</span>. Ground control points are location on the Earth’s surface that can be accurately located and act as reference points <span class="citation" data-cites="jensen2015">(<a href="references.html#ref-jensen2015" role="doc-biblioref">Jensen 2015</a>)</span>. Algorithms match these GCPs in the captured image, which guide the transformations needed on the raw image to fix any distortions.</p>
 <p>Both Landsat level 1 and 2 products match pixels from raw images to Earth’s coordinates using ground control points<span class="citation" data-cites="landsat2021">(<a href="references.html#ref-landsat2021" role="doc-biblioref">Landsat 2021</a>)</span>.</p>
-<p>though they note that “Scenes containing snow, ice, and clouds can prevent accurate registration of GCPs within a scene.” <span class="citation" data-cites="landsat2017">(<a href="references.html#ref-landsat2017" role="doc-biblioref"><span>“Landsat Levels of Processing | U.S. Geological Survey”</span> 2017</a>)</span></p>
+<p>However, the accuracy of this correction is not absolute; cloud cover, snow, or ice can obscure GCP visibility, which can limit its effectiveness in certain environments <span class="citation" data-cites="landsat2017">(<a href="references.html#ref-landsat2017" role="doc-biblioref"><span>“Landsat Levels of Processing | U.S. Geological Survey”</span> 2017</a>)</span>.</p>
 <p><strong>Atmospheric correction:</strong></p>
-<p>Light interacts with the atmosphere before reaching a sensor. Particles like dust, water vapor, and pollutants scatter and absorb light, affecting the captured image quality.</p>
-<p><strong>Dark Object Subtraction (DOS)</strong> is a common fix, which assumes that the darkest pixel represents atmospheric noise so that value is subtracted from every pixel.</p>
-<p>Another method is using stable surfaces, like roads or rooftops, that maintain consistent reflectance over time. These are called <strong>Pseudo-invariant features (PIFs)</strong>. By assuming that these features do not change between images, researchers use them to adjust images.</p>
+<p>Light interacts with the atmosphere before reaching a sensor so particles like dust, water vapor, and pollutants scatter and absorb light, affecting the captured image quality.</p>
+<p><strong>Dark Object Subtraction (DOS)</strong> is a common fix, which assumes that the darkest pixel represents atmospheric noise so that value is subtracted from every pixel <span class="citation" data-cites="jensen2015">(<a href="references.html#ref-jensen2015" role="doc-biblioref">Jensen 2015</a>)</span>. Another method is using stable surfaces, like roads or rooftops, that maintain consistent reflectance over time. These are called <strong>Pseudo-invariant features (PIFs)</strong>. By assuming that these features do not change between images, researchers use them to adjust images <span class="citation" data-cites="jensen2015">(<a href="references.html#ref-jensen2015" role="doc-biblioref">Jensen 2015</a>)</span>.</p>
 <p>These methods are refered to as <em>relative atmospheric correction</em> and is often used as an estimate in the absence of synchronised surface-reflectance data<span class="citation" data-cites="jensen2015">(<a href="references.html#ref-jensen2015" role="doc-biblioref">Jensen 2015</a>)</span>.</p>
-<p>Landsat level 2 removes atmospheric haze by adjusting for aerosols/water vapor data from a sensor (MODIS) onboard another NASA satellite <span class="citation" data-cites="landsat2021">(<a href="references.html#ref-landsat2021" role="doc-biblioref">Landsat 2021</a>)</span>. This method is more advanced than PIFs or DOS corrections because it uses real atmospheric measurements instead of assumptions or reference surfaces.</p>
-<p>This is known as an <em>absolute atmospheric correction</em> method <span class="citation" data-cites="jensen2015">(<a href="references.html#ref-jensen2015" role="doc-biblioref">Jensen 2015</a>)</span>.</p>
+<p>In contrast, absolute atmospheric correction, exemplified by Landsat Level 2, uses external atmospheric data. Landsat uses aerosol and water vapor data from MODIS to adjust its image, rather than relying on assumptions used in relative methods <span class="citation" data-cites="landsat2021">(<a href="references.html#ref-landsat2021" role="doc-biblioref">Landsat 2021</a>)</span>.</p>
 <p><strong>Orthorectification correction</strong></p>
-<p>Elevation can distort imagery</p>
-<p>Digital Elevation Models (DEMs) adjust for terrain effects, ensuring images appear as if taken from directly above (nadir). Landsat 1 and 2 corrects terrain distortion using digital elevation models <span class="citation" data-cites="landsat2021">(<a href="references.html#ref-landsat2021" role="doc-biblioref">Landsat 2021</a>)</span>.</p>
+<p>Elevation distortions in imagery are corrected using Digital Elevation Models (DEMs) in a process called orthorectification, which ensures images appear as if viewed from directly above, removing terrain-induced geometric inaccuracies.</p>
 <p>However, tall buildings and bridges introduce their own artifacts, which are harder to correct as they are not included in standard DEMs <span class="citation" data-cites="earthsciencedatasystems2024">(<a href="references.html#ref-earthsciencedatasystems2024" role="doc-biblioref">Earth Science Data Systems 2024</a>)</span>.</p>
-<p><strong>Radiometric calibration</strong></p>
-<p>Converts raw sensor data to radiance values</p>
 </section>
 </section>
 <section id="application" class="level2" data-number="3.2">
@@ -235,26 +231,24 @@ div.csl-indent {
 <p><strong>Remote Sensing Challenges and Corrections in Urban Environments</strong></p>
 <p>I decided to focus on the distinct issues with remote sensing in urban areas, as I found that researchers often highlight challenges with collecting data in dense cities, so they often have to get creative with their solutions.</p>
 <p>And with satellite imagery being increasingly used in urban settings for detecting land use change, transport planning, environmental monitoring, it is important that these images accurately reflect the real environment <span class="citation" data-cites="pradhan2021">(<a href="references.html#ref-pradhan2021" role="doc-biblioref">Pradhan et al. 2021</a>)</span>.</p>
-<p>Urban areas often exhibit high intra-class variability, which mean that similar materials appear spectrally different, due to shadows, reflective surfaces and high-rise buildings, making classification challenging <span class="citation" data-cites="huang2011">(<a href="references.html#ref-huang2011" role="doc-biblioref">Huang, Zhang, and Gong 2011</a>)</span>.</p>
+<p>Urban areas often exhibit high intra-class variability, which means that similar materials appear spectrally different, due to shadows, reflective surfaces and high-rise buildings, making classification challenging <span class="citation" data-cites="huang2011">(<a href="references.html#ref-huang2011" role="doc-biblioref">Huang, Zhang, and Gong 2011</a>)</span>.</p>
 <p>Some studies attempt to address this by fusing multi-angle satellite data (e.g., combining Landsat with Sentinel-2) or combining LiDAR data to create more accurate elevation models for cities. <span class="citation" data-cites="huang2011 miliaresis2007">(<a href="references.html#ref-huang2011" role="doc-biblioref">Huang, Zhang, and Gong 2011</a>; <a href="references.html#ref-miliaresis2007" role="doc-biblioref">Miliaresis and Kokkas 2007</a>)</span>.</p>
-<p><span class="citation" data-cites="huang2011">(<a href="references.html#ref-huang2011" role="doc-biblioref">Huang, Zhang, and Gong 2011</a>)</span> found that the height features obatined from LiDAR data significantly improved urban land-cover classification.</p>
+<p><span class="citation" data-cites="huang2011">(<a href="references.html#ref-huang2011" role="doc-biblioref">Huang, Zhang, and Gong 2011</a>)</span> found that the height features obtained from LiDAR data significantly improved urban land-cover classification.</p>
 <p>Urban areas also introduce shadowing effects, where buildings cast shadows that obscure features on the ground, making it difficult to classify land cover accurately <span class="citation" data-cites="dare2005 le2020">(<a href="references.html#ref-dare2005" role="doc-biblioref">Dare 2005</a>; <a href="references.html#ref-le2020" role="doc-biblioref">Le and Samaras 2020</a>)</span>. Researchers have addressed this by applying shadow detection and removal algorithms that estimate surface reflectance in obscured areas <span class="citation" data-cites="su2016">(<a href="references.html#ref-su2016" role="doc-biblioref">Su et al. 2016</a>)</span>.</p>
-<p>Other</p>
+<p>Other challenges</p>
 <ul>
 <li><p><strong>Adjacency Effect</strong>: Reflective surfaces (e.g., glass facades) scatter light into neighbouring pixels, skewing surface reflectance values.</p></li>
 <li><p><strong>Thermal Anomalies</strong>: Concrete and metal structures absorb/re-radiate heat differently than natural terrain, distorting temperature measurements. Particularly impactful for urban heat island research.</p></li>
 </ul>
-<p>Yet gaps remain. Most of these urban corrections don’t have out-of-the-box soluation as they are computationally intensive and require localised datasets (e.g., LiDAR), perhaps limiting real-time applications and scalability.</p>
+<p>Yet gaps remain. Most of these urban corrections don’t have out-of-the-box solution as they are computationally intensive and require localised datasets (e.g., LiDAR), perhaps limiting their real-time applications and scalability.</p>
 </section>
 <section id="reflection" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">3.3</span> Reflection</h2>
-<p>This week showed that image correction is a balance between precision and practicality. Methods like DOS or PIFs make corrections more accessible, but they also have limitations.</p>
-<p><em>relate to urban scenario too</em></p>
-<p>Pre-processed <strong>Analysis Ready Data (ARD)</strong></p>
-<p>—pre-corrected datasets that save time—but also made me question the assumptions behind vendor-applied corrections. What trade-offs are hidden in these standardised products? Can we always trust them without understanding their limitations? How does it affect comparison of products?</p>
-<p>blackbox concerns - <strong>Level 2 (ARD)</strong>&nbsp;is “plug-and-play”, but you’re trusting NASA’s blackbox algorithms</p>
-<p>working in urban research - researcher often use much more complicated solutions that are offered by products - integrating lidar, 3d models, combining different temporal sattellite images .</p>
-<p>integration of AI. . .</p>
+<p>This week showed that image correction is a balance between precision and practicality. Methods like DOS or PIFs make corrections more accessible, but, because they rely on assumptions – like the idea that the darkest pixel is just atmospheric noise, or that some surfaces always reflect light the same way – they have limits.</p>
+<p>For exampe, in urban areas, where spectral variability is already high, these simplifications might not be suitable for detailed analysis</p>
+<p>The availability of ready-to-use data is great because it saves time and effort, but also made me question the assumptions behind vendor-applied corrections. What trade-offs are hidden in these standardised products? Can we always trust them without understanding their limitations? How does it affect comparison of products? Is there a risk that users might become detached from understanding the processing, which may not be generalisable to every scenario.</p>
+<p>Using LiDAR, 3D city models, and combining images from different times – as we talked about in the Applications section – shows that for cities, you often need more accuracy and context then out-of-the-box corrections.</p>
+<p>This week’s work has made it clear that while pre-processed data is convenient, really understanding image correction and its details, especially for cities, is still essential for doing good and useful remote sensing work</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">

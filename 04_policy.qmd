@@ -6,7 +6,7 @@ The London Plan's Policy G5 focuses on urban greening as a fundamental element o
 
 [**Include UGF table**]{.underline}
 
-Urban greening presents significant benefits, including improved air quality, increased biodiversity, and better climate resilience. However, there also some key questions to consider:
+Urban greening presents significant benefits, including improved air quality, increased biodiversity, and better climate resilience. However, there also some key questions to consider: - include reference / paper to support justification for this policy .
 
 How effective is the UGF in practice? What barriers exist in its implementation? Can Earth Observation, enhance policy compliance and monitoring? How can meaningful ecological outcomes be prioritised over "checklist" compliance?
 

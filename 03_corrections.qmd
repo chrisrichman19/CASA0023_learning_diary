@@ -2,15 +2,17 @@
 
 ## Summary
 
-This week, we explored the steps needed to turn raw satellite imagery into reliable, analysis-ready data. While remote sensing is powerful, I hadn’t fully appreciated just how technical image correction can be.
+This week, we explored the steps needed to turn raw satellite imagery into reliable, analysis-ready data.
+
+I learned that transforming raw remote sensing data into something usable for analysis is far from straightforward, with technical geometric, atmospheric, orthorectification, and radiometric corrections needed.
 
 Modern remote sensing products like Landsat’s Analysis Ready Data (ARD) come pre-corrected. But it important to know what corrections are applied to these products. For example, Landsat offers three processing levels: Level 0 (minor ancillary corrections), Level 1 (radiometrically and geometrically corrected) and Level 2 (atmospherically corrected and terrain-adjusted) [@haque2024].
 
 Depending on your needs
 
--   level 1 for if you want control over atmospheric corrections
+-   level 0 and 1 for if you want control over atmospheric corrections
 
--   level 2 - analysis ready - using ready made algorithms.
+-   level 2 - analysis ready - using NASA's ready made algorithms.
 
 #### Corrections:
 
@@ -20,33 +22,23 @@ Since satellites capture images from shifting orbits and angles, distortions can
 
 Both Landsat level 1 and 2 products match pixels from raw images to Earth’s coordinates using ground control points[@landsat2021].
 
-though they note that "Scenes containing snow, ice, and clouds can prevent accurate registration of GCPs within a scene." [@landsat2017]
+However, the accuracy of this correction is not absolute; cloud cover, snow, or ice can obscure GCP visibility, which can limit its effectiveness in certain environments [@landsat2017].
 
 **Atmospheric correction:**
 
-Light interacts with the atmosphere before reaching a sensor. Particles like dust, water vapor, and pollutants scatter and absorb light, affecting the captured image quality.
+Light interacts with the atmosphere before reaching a sensor so particles like dust, water vapor, and pollutants scatter and absorb light, affecting the captured image quality.
 
-**Dark Object Subtraction (DOS)** is a common fix, which assumes that the darkest pixel represents atmospheric noise so that value is subtracted from every pixel.
-
-Another method is using stable surfaces, like roads or rooftops, that maintain consistent reflectance over time. These are called **Pseudo-invariant features (PIFs)**. By assuming that these features do not change between images, researchers use them to adjust images.
+**Dark Object Subtraction (DOS)** is a common fix, which assumes that the darkest pixel represents atmospheric noise so that value is subtracted from every pixel [@jensen2015]. Another method is using stable surfaces, like roads or rooftops, that maintain consistent reflectance over time. These are called **Pseudo-invariant features (PIFs)**. By assuming that these features do not change between images, researchers use them to adjust images [@jensen2015].
 
 These methods are refered to as *relative atmospheric correction* and is often used as an estimate in the absence of synchronised surface-reflectance data[@jensen2015].
 
-Landsat level 2 removes atmospheric haze by adjusting for aerosols/water vapor data from a sensor (MODIS) onboard another NASA satellite [@landsat2021]. This method is more advanced than PIFs or DOS corrections because it uses real atmospheric measurements instead of assumptions or reference surfaces.
-
-This is known as an *absolute atmospheric correction* method [@jensen2015].
+In contrast, absolute atmospheric correction, exemplified by Landsat Level 2, uses external atmospheric data. Landsat uses aerosol and water vapor data from MODIS to adjust its image, rather than relying on assumptions used in relative methods [@landsat2021].
 
 **Orthorectification correction**
 
-Elevation can distort imagery
-
-Digital Elevation Models (DEMs) adjust for terrain effects, ensuring images appear as if taken from directly above (nadir). Landsat 1 and 2 corrects terrain distortion using digital elevation models [@landsat2021].
+Elevation distortions in imagery are corrected using Digital Elevation Models (DEMs) in a process called orthorectification, which ensures images appear as if viewed from directly above, removing terrain-induced geometric inaccuracies.
 
 However, tall buildings and bridges introduce their own artifacts, which are harder to correct as they are not included in standard DEMs [@earthsciencedatasystems2024].
-
-**Radiometric calibration**
-
-Converts raw sensor data to radiance values
 
 ## Application
 
@@ -56,34 +48,30 @@ I decided to focus on the distinct issues with remote sensing in urban areas, as
 
 And with satellite imagery being increasingly used in urban settings for detecting land use change, transport planning, environmental monitoring, it is important that these images accurately reflect the real environment [@pradhan2021].
 
-Urban areas often exhibit high intra-class variability, which mean that similar materials appear spectrally different, due to shadows, reflective surfaces and high-rise buildings, making classification challenging [@huang2011].
+Urban areas often exhibit high intra-class variability, which means that similar materials appear spectrally different, due to shadows, reflective surfaces and high-rise buildings, making classification challenging [@huang2011].
 
 Some studies attempt to address this by fusing multi-angle satellite data (e.g., combining Landsat with Sentinel-2) or combining LiDAR data to create more accurate elevation models for cities. [@huang2011; @miliaresis2007].
 
-[@huang2011] found that the height features obatined from LiDAR data significantly improved urban land-cover classification.
+[@huang2011] found that the height features obtained from LiDAR data significantly improved urban land-cover classification.
 
 Urban areas also introduce shadowing effects, where buildings cast shadows that obscure features on the ground, making it difficult to classify land cover accurately [@dare2005; @le2020]. Researchers have addressed this by applying shadow detection and removal algorithms that estimate surface reflectance in obscured areas [@su2016].
 
-Other
+Other challenges
 
 -   **Adjacency Effect**: Reflective surfaces (e.g., glass facades) scatter light into neighbouring pixels, skewing surface reflectance values.
 
 -   **Thermal Anomalies**: Concrete and metal structures absorb/re-radiate heat differently than natural terrain, distorting temperature measurements. Particularly impactful for urban heat island research.
 
-Yet gaps remain. Most of these urban corrections don't have out-of-the-box soluation as they are computationally intensive and require localised datasets (e.g., LiDAR), perhaps limiting real-time applications and scalability.
+Yet gaps remain. Most of these urban corrections don't have out-of-the-box solution as they are computationally intensive and require localised datasets (e.g., LiDAR), perhaps limiting their real-time applications and scalability.
 
 ## Reflection
 
-This week showed that image correction is a balance between precision and practicality. Methods like DOS or PIFs make corrections more accessible, but they also have limitations.
+This week showed that image correction is a balance between precision and practicality. Methods like DOS or PIFs make corrections more accessible, but, because they rely on assumptions – like the idea that the darkest pixel is just atmospheric noise, or that some surfaces always reflect light the same way – they have limits.
 
-*relate to urban scenario too*
+For exampe, in urban areas, where spectral variability is already high, these simplifications might not be suitable for detailed analysis
 
-Pre-processed **Analysis Ready Data (ARD)**
+The availability of ready-to-use data is great because it saves time and effort, but also made me question the assumptions behind vendor-applied corrections. What trade-offs are hidden in these standardised products? Can we always trust them without understanding their limitations? How does it affect comparison of products? Is there a risk that users might become detached from understanding the processing, which may not be generalisable to every scenario.
 
-—pre-corrected datasets that save time—but also made me question the assumptions behind vendor-applied corrections. What trade-offs are hidden in these standardised products? Can we always trust them without understanding their limitations? How does it affect comparison of products?
+Using LiDAR, 3D city models, and combining images from different times – as we talked about in the Applications section – shows that for cities, you often need more accuracy and context then out-of-the-box corrections.
 
-blackbox concerns - **Level 2 (ARD)** is “plug-and-play”, but you’re trusting NASA’s blackbox algorithms
-
-working in urban research - researcher often use much more complicated solutions that are offered by products - integrating lidar, 3d models, combining different temporal sattellite images .
-
-integration of AI. . .
+This week’s work has made it clear that while pre-processed data is convenient, really understanding image correction and its details, especially for cities, is still essential for doing good and useful remote sensing work
