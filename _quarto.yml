@@ -12,6 +12,8 @@ book:
     - 02_portfolio.qmd
     - 03_corrections.qmd
     - 04_policy.qmd
+    - 05_GEE.qmd
+    - 06_classification.qmd
     - references.qmd
 
 bibliography: references.bib

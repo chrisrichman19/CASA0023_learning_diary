@@ -1,3 +1,1 @@
 # **CASA0023:** Remotely Sensing Cities and Environments Learning Diary {.unnumbered}
-
-to-do - make application sections more like lit review

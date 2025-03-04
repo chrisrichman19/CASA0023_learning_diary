@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Chris Richman">
-<meta name="dcterms.date" content="2025-01-21">
 
-<title>Remotely Sensing Learning Diary</title>
+<title>5&nbsp; Policy – Remotely Sensing Learning Diary</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./01_intro.html" rel="next">
+<link href="./06_classification.html" rel="next">
+<link href="./04_policy.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -82,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><strong>CASA0023:</strong> Remotely Sensing Cities and Environments Learning Diary</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./05_GEE.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Policy</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -109,7 +108,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>CASA0023:</strong> Remotely Sensing Cities and Environments Learning Diary</span></a>
   </div>
 </li>
@@ -139,7 +138,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./05_GEE.html" class="sidebar-item-text sidebar-link">
+  <a href="./05_GEE.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Policy</span></span></a>
   </div>
 </li>
@@ -165,7 +164,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#casa0023-remotely-sensing-cities-and-environments-learning-diary" id="toc-casa0023-remotely-sensing-cities-and-environments-learning-diary" class="nav-link active" data-scroll-target="#casa0023-remotely-sensing-cities-and-environments-learning-diary"><strong>CASA0023:</strong> Remotely Sensing Cities and Environments Learning Diary</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">5.1</span> Summary</a></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="header-section-number">5.2</span> Application</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">5.3</span> Reflection</a></li>
   </ul>
 </nav>
     </div>
@@ -174,26 +175,14 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Remotely Sensing Learning Diary</h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Policy</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Chris Richman </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">January 21, 2025</p>
-    </div>
-  </div>
   
     
   </div>
@@ -203,8 +192,25 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="casa0023-remotely-sensing-cities-and-environments-learning-diary" class="level1 unnumbered">
-<h1 class="unnumbered"><strong>CASA0023:</strong> Remotely Sensing Cities and Environments Learning Diary</h1>
+<section id="summary" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">5.1</span> Summary</h2>
+<p>The London Plan’s Policy G5 focuses on urban greening as a fundamental element of site and building design for major developments. This policy encourages integrating high-quality landscaping, green roofs, green walls, and sustainable drainage solutions to enhance biodiversity and mitigate the urban heat island effect. Using an Urban Greening Factor (UGF), to set benchmarks for including features like green roofs, walls, trees, and rain gardens into building design, to attempt to ensure that new developments contribute meaningfully to London’s environmental goal.</p>
+<p><u><strong>Include UGF table</strong></u></p>
+<p>Urban greening presents significant benefits, including improved air quality, increased biodiversity, and better climate resilience. However, there also some key questions to consider: - include reference / paper to support justification for this policy .</p>
+<p>How effective is the UGF in practice? What barriers exist in its implementation? Can Earth Observation, enhance policy compliance and monitoring? How can meaningful ecological outcomes be prioritised over “checklist” compliance?</p>
+<p>problems with UGF - where will the greening happen ? will it affect the population or just for checklist? what about maintenance, will they be looked after , after planning application has been approved?</p>
+</section>
+<section id="application" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="application"><span class="header-section-number">5.2</span> Application</h2>
+<p>Remotely sensed data could directly support the goals of Policy G5 in assessing and monitoring urban greening efforts. Satellite imagery and LiDAR could be used to quantify vegetation cover and track changes over time. One example researchers could implement is Normalized Difference Vegetation Index (NDVI) analysis, a technique used to assess vegetation health by measuring the difference between near-infrared (which vegetation strongly reflects) and red light (which vegetation absorbs). This index could be used to identify plant cover in neighbourhoods, monitor changes over time, and assess how well urban-greening contribute to reducing the urban heat island effect.</p>
+<p>Could be used for more proactively, -&gt; Remote sensing could aid in identifying disparities in urban greening across different boroughs, which could support a more equitable implementation of the policy - , by prioritising interventions in neighbourhoods that lack greening. - &gt; or where there is poor air quality, urban heat island etc.,</p>
+<p>another approach could be priortising real-impact - heat radar sensor, air quality. some areas may need more greening than others - importance of local conditions - do developments in say, Richmond need the same greening requirements as the City?</p>
+<p>this approach can be used as a tool to get around the challenges of UGF - focus on the real-world heat-impacts over filling out a checklist. -&gt; provide tools after development application is approved - in maintaining greenery and new changes needed when circumstances change (e.,g global warming)</p>
+</section>
+<section id="reflection" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">5.3</span> Reflection</h2>
+<p>This exercise has highlighted the intersection between remote sensing and urban policy, emphasising how remote sensing data can enhance the effectiveness of greening initiatives. While satellite and aerial data offer powerful monitoring tools, challenges such as data resolution, cloud cover, and accessibility constraints may limit real-world application. Integrating EO into policy decisions requires collaboration between urban planners, environmental scientists, and data analysts. Personally, I found the application of NDVI particularly insightful, as it demonstrates a tangible way to assess vegetation health and policy compliance. Moving forward, understanding how to leverage EO data for urban resilience will be invaluable in both academic and professional contexts.</p>
+<p>This exercise highlighted the potential of remote sensing to bridge policy goals and on-ground implementation. While remote sensing offers a powerful solution for monitoring urban greening, practical barriers like data resolution, cost, and technical capacity could potentially limit its universal adoption, raising equity concerns, where cash-strapped councils could struggle to adopt remote sensing tools, risking uneven policy enforcement.</p>
 
 
 </section>
@@ -632,10 +638,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./04_policy.html" class="pagination-link" aria-label="Policy">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Policy</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./01_intro.html" class="pagination-link" aria-label="Introduction to Remote Sensing">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to Remote Sensing</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./06_classification.html" class="pagination-link" aria-label="Policy">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Policy</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
