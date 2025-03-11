@@ -757,6 +757,57 @@
             "language": "en",
             "title": "Sentinel-2",
             "type": ""
+        },
+        {
+            "author": [
+                {
+                    "family": "GLA"
+                }
+            ],
+            "id": "gla2021",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "language": "en",
+            "note": "OCLC: 1421001190",
+            "publisher": "Greater London Authority",
+            "publisher-place": "London",
+            "title": "The London plan: the spatial development strategy for Greater London, March 2021",
+            "title-short": "The London plan",
+            "type": "book"
+        },
+        {
+            "URL": "https://doi.org/10.5281/zenodo.14757583",
+            "author": [
+                {
+                    "family": "Roy",
+                    "given": "Samapriya"
+                },
+                {
+                    "family": "T.",
+                    "given": "Swetnam"
+                },
+                {
+                    "family": "A.",
+                    "given": "Saah"
+                }
+            ],
+            "id": "roy2025",
+            "issued": {
+                "date-parts": [
+                    [
+                        2025
+                    ]
+                ]
+            },
+            "language": "en",
+            "title": "samapriya/awesome-gee-community-datasets: Community Catalog (3.2.0)",
+            "title-short": "samapriya/awesome-gee-community-datasets",
+            "type": ""
         }
     ],
     "project_biblios": [

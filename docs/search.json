@@ -124,7 +124,7 @@
     "href": "04_policy.html",
     "title": "4  Policy",
     "section": "",
-    "text": "4.1 Summary\nThe London Plan’s Policy G5 focuses on urban greening as a fundamental element of site and building design for major developments. This policy encourages integrating high-quality landscaping, green roofs, green walls, and sustainable drainage solutions to enhance biodiversity and mitigate the urban heat island effect. Using an Urban Greening Factor (UGF), to set benchmarks for including features like green roofs, walls, trees, and rain gardens into building design, to attempt to ensure that new developments contribute meaningfully to London’s environmental goal.\nInclude UGF table\nUrban greening presents significant benefits, including improved air quality, increased biodiversity, and better climate resilience. However, there also some key questions to consider: - include reference / paper to support justification for this policy .\nHow effective is the UGF in practice? What barriers exist in its implementation? Can Earth Observation, enhance policy compliance and monitoring? How can meaningful ecological outcomes be prioritised over “checklist” compliance?\nproblems with UGF - where will the greening happen ? will it affect the population or just for checklist? what about maintenance, will they be looked after , after planning application has been approved?",
+    "text": "4.1 Summary\nThe London Plan’s Policy G5 focuses on urban greening as a fundamental element of site and building design for major developments (GLA 2021). This policy encourages integrating high-quality landscaping, green roofs, green walls, and sustainable drainage solutions to enhance biodiversity and mitigate the urban heat island effect. Using an Urban Greening Factor (UGF), to set benchmarks for including features like green roofs, walls, trees, and rain gardens into building design, to attempt to ensure that new developments contribute towards London’s environmental goals.\n“Scores range from 1 for semi natural vegetation through to 0 for impermeable sealed surfaces.” - direct quote from london plan\nFigure Source:The London Plan, 2021 (GLA 2021, 324)\nUrban greening presents significant benefits, including improved air quality, increased biodiversity, and better climate resilience. However, there also some key questions to consider: - include reference / paper to support justification for this policy .\nHow effective is the UGF in practice? What barriers exist in its implementation? Can Earth Observation, enhance policy compliance and monitoring? How can meaningful ecological outcomes be prioritised over “checklist” compliance?\nproblems with UGF - where will the greening happen ? will it affect the population or just for checklist? what about maintenance, will they be looked after , after planning application has been approved?",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Policy</span>"
     ]
@@ -144,7 +144,7 @@
     "href": "04_policy.html#reflection",
     "title": "4  Policy",
     "section": "4.3 Reflection",
-    "text": "4.3 Reflection\nThis exercise has highlighted the intersection between remote sensing and urban policy, emphasising how remote sensing data can enhance the effectiveness of greening initiatives. While satellite and aerial data offer powerful monitoring tools, challenges such as data resolution, cloud cover, and accessibility constraints may limit real-world application. Integrating EO into policy decisions requires collaboration between urban planners, environmental scientists, and data analysts. Personally, I found the application of NDVI particularly insightful, as it demonstrates a tangible way to assess vegetation health and policy compliance. Moving forward, understanding how to leverage EO data for urban resilience will be invaluable in both academic and professional contexts.\nThis exercise highlighted the potential of remote sensing to bridge policy goals and on-ground implementation. While remote sensing offers a powerful solution for monitoring urban greening, practical barriers like data resolution, cost, and technical capacity could potentially limit its universal adoption, raising equity concerns, where cash-strapped councils could struggle to adopt remote sensing tools, risking uneven policy enforcement.",
+    "text": "4.3 Reflection\nThis exercise has highlighted the intersection between remote sensing and urban policy, emphasising how remote sensing data can enhance the effectiveness of greening initiatives. While satellite and aerial data offer powerful monitoring tools, challenges such as data resolution, cloud cover, and accessibility constraints may limit real-world application. Integrating EO into policy decisions requires collaboration between urban planners, environmental scientists, and data analysts. Personally, I found the application of NDVI particularly insightful, as it demonstrates a tangible way to assess vegetation health and policy compliance.\nThis exercise highlighted the potential of remote sensing to bridge policy goals and on-ground implementation. While remote sensing offers a powerful solution for monitoring urban greening, practical barriers like data resolution, cost, and technical capacity could potentially limit its universal adoption, raising equity concerns, where cash-strapped councils could struggle to adopt remote sensing tools, risking uneven policy enforcement.\n\n\n\n\nGLA. 2021. The London Plan: The Spatial Development Strategy for Greater London, March 2021. London: Greater London Authority.",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Policy</span>"
     ]
@@ -152,9 +152,9 @@
   {
     "objectID": "06_classification.html",
     "href": "06_classification.html",
-    "title": "6  Policy",
+    "title": "6  Classification I",
     "section": "",
-    "text": "6.1 Summary\nThe London Plan’s Policy G5 focuses on urban greening as a fundamental element of site and building design for major developments. This policy encourages integrating high-quality landscaping, green roofs, green walls, and sustainable drainage solutions to enhance biodiversity and mitigate the urban heat island effect. Using an Urban Greening Factor (UGF), to set benchmarks for including features like green roofs, walls, trees, and rain gardens into building design, to attempt to ensure that new developments contribute meaningfully to London’s environmental goal.\nInclude UGF table\nUrban greening presents significant benefits, including improved air quality, increased biodiversity, and better climate resilience. However, there also some key questions to consider: - include reference / paper to support justification for this policy .\nHow effective is the UGF in practice? What barriers exist in its implementation? Can Earth Observation, enhance policy compliance and monitoring? How can meaningful ecological outcomes be prioritised over “checklist” compliance?\nproblems with UGF - where will the greening happen ? will it affect the population or just for checklist? what about maintenance, will they be looked after , after planning application has been approved?",
+    "text": "6.1 Summary\nthis week we learned about how combining remote sensing and machine learning to classify pixels. For example classifying land use.\nI’m taking data science module so I have learned this before - very interesting to see how it is applied in practically in real-world scenarios.\nMethods for image classification:\nClassification and regression trees / random forest\nSupport Vector Machine\nDBSCAN\nISODATA\nCluster Busting\nreducing overfitting\ntrain/test split\ntree pruning",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Classification I</span>"
     ]
@@ -162,9 +162,9 @@
   {
     "objectID": "06_classification.html#application",
     "href": "06_classification.html#application",
-    "title": "6  Policy",
+    "title": "6  Classification I",
     "section": "6.2 Application",
-    "text": "6.2 Application\nRemotely sensed data could directly support the goals of Policy G5 in assessing and monitoring urban greening efforts. Satellite imagery and LiDAR could be used to quantify vegetation cover and track changes over time. One example researchers could implement is Normalized Difference Vegetation Index (NDVI) analysis, a technique used to assess vegetation health by measuring the difference between near-infrared (which vegetation strongly reflects) and red light (which vegetation absorbs). This index could be used to identify plant cover in neighbourhoods, monitor changes over time, and assess how well urban-greening contribute to reducing the urban heat island effect.\nCould be used for more proactively, -&gt; Remote sensing could aid in identifying disparities in urban greening across different boroughs, which could support a more equitable implementation of the policy - , by prioritising interventions in neighbourhoods that lack greening. - &gt; or where there is poor air quality, urban heat island etc.,\nanother approach could be priortising real-impact - heat radar sensor, air quality. some areas may need more greening than others - importance of local conditions - do developments in say, Richmond need the same greening requirements as the City?\nthis approach can be used as a tool to get around the challenges of UGF - focus on the real-world heat-impacts over filling out a checklist. -&gt; provide tools after development application is approved - in maintaining greenery and new changes needed when circumstances change (e.,g global warming)",
+    "text": "6.2 Application\nSometimes referred to as GeoAI - professional buzzword\nintroduce briefly what machine learning has been used for in research -&gt; lead onto the limatations\nmore general article on how machine learning and satellite imagery could be used in future research -\nargues that the distinctive characteristics of satellite imagery set it apart from machine learning used for images, videos, text etc., - temporal and spatial characteristics, spectral channels (multi-channel) - author says popular libraries such as TorchVision do not support more than 3-channels\n“We outline critical discussion questions and actionable suggestions to transform SatML from merely an intriguing application area to a dedicated research discipline that helps move the needle on big challenges for machine learning and society.”\nThe author argues that current machine learning methods are not robust enough because they are tailored to other data modalities and don’t address the unique characteristics and challenges of satellite data. \ndifferences such as spatial and temporal scales, spectral channels, data volume, annotation sparsity, and deployment considerations.\n\nprovide example where multi-channel satellite data could be used in machine learning\n\nThe potential of satellite data\nhttps://arxiv.org/abs/2402.01444?ref=newsletter.terrawatchspace.com\nlead onto -&gt;\na new model for specifically detecting objects in satellite imagery.\n“Unlike traditional methods that rely on manual feature selection, modern deep learning-based models learn patterns directly from the data. The researchers improved previous YOLOX model by adding Efficient Channel Attention (ECA), which helps the model focus on important parts of an image while ignoring background noise. They also used Adaptively Spatial Feature Fusion (ASFF), which enhances the detection of small objects by combining information from different scales in an image. Additionally, they replaced the standard training loss function with Varifocal Loss (VFL) to better balance the learning of hard-to-detect objects.” - copied from Yohan Newsletter\n“Traditional detection algorithms are not effective in detecting objects in re‐mote sensing images. This is because traditional detection and the recognition of remote sensing image targets are mainly based on manually extracting features, and the rich,diverse, and detailed information in remote sensing images means that a single feature described manually is inadequate at fully expressing the target characteristics and relies more on expert experience” - page 2\n“In addition, machine learning based on probability and sta‐ tistics usually requires complex feature description, and the feature representation learned on the basis of its shallow network structure is obviously insufficient in terms of performance and generalization ability when dealing with complex target detection problems.” -page 2/3\nspecialised solution -&gt; outperforms traditional models. Improves overall accuracy although more computationally intensive.\nin future research -&gt;\nmonitoring urban expansion, identifying ships in coastal waters, or detecting vehicles in disaster zones.\nobject detection in satellite remote sensing images, which is valuable for resource exploration and natural disaster assessment\nhttps://arxiv.org/pdf/2502.02850",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Classification I</span>"
     ]
@@ -172,9 +172,9 @@
   {
     "objectID": "06_classification.html#reflection",
     "href": "06_classification.html#reflection",
-    "title": "6  Policy",
+    "title": "6  Classification I",
     "section": "6.3 Reflection",
-    "text": "6.3 Reflection\nThis exercise has highlighted the intersection between remote sensing and urban policy, emphasising how remote sensing data can enhance the effectiveness of greening initiatives. While satellite and aerial data offer powerful monitoring tools, challenges such as data resolution, cloud cover, and accessibility constraints may limit real-world application. Integrating EO into policy decisions requires collaboration between urban planners, environmental scientists, and data analysts. Personally, I found the application of NDVI particularly insightful, as it demonstrates a tangible way to assess vegetation health and policy compliance. Moving forward, understanding how to leverage EO data for urban resilience will be invaluable in both academic and professional contexts.\nThis exercise highlighted the potential of remote sensing to bridge policy goals and on-ground implementation. While remote sensing offers a powerful solution for monitoring urban greening, practical barriers like data resolution, cost, and technical capacity could potentially limit its universal adoption, raising equity concerns, where cash-strapped councils could struggle to adopt remote sensing tools, risking uneven policy enforcement.",
+    "text": "6.3 Reflection\ncool\nlooking into the future -&gt; this week out of all the others has shown how this field is rapidly adapting and changing.\nin general -&gt; must be specific to Remote sensing - generalised machine learning models meant for images are not powerful enough.\nWith AI and advanced Neural networks - alot of the nuance can be lost behind these black-box algorithms so there it explainability could be lost which is concerning.\nUnderstanding a model’s function and visualizing interpretations are critical in remote sensing applications to gain scientific insights and assess trustworthiness\nhttps://ieeexplore.ieee.org/abstract/document/10742949",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Classification I</span>"
     ]
@@ -182,31 +182,71 @@
   {
     "objectID": "05_GEE.html",
     "href": "05_GEE.html",
-    "title": "5  Policy",
+    "title": "5  Google Earth Engine",
     "section": "",
-    "text": "5.1 Summary\nThe London Plan’s Policy G5 focuses on urban greening as a fundamental element of site and building design for major developments. This policy encourages integrating high-quality landscaping, green roofs, green walls, and sustainable drainage solutions to enhance biodiversity and mitigate the urban heat island effect. Using an Urban Greening Factor (UGF), to set benchmarks for including features like green roofs, walls, trees, and rain gardens into building design, to attempt to ensure that new developments contribute meaningfully to London’s environmental goal.\nInclude UGF table\nUrban greening presents significant benefits, including improved air quality, increased biodiversity, and better climate resilience. However, there also some key questions to consider: - include reference / paper to support justification for this policy .\nHow effective is the UGF in practice? What barriers exist in its implementation? Can Earth Observation, enhance policy compliance and monitoring? How can meaningful ecological outcomes be prioritised over “checklist” compliance?\nproblems with UGF - where will the greening happen ? will it affect the population or just for checklist? what about maintenance, will they be looked after , after planning application has been approved?",
+    "text": "5.1 Summary\n- This week we were introduced to the wonders of Google Earth Engine.\n- geospatial data platform which aims to simplify the huge technical processes often involved with satellite data.\n- contains publicly available libraries of pre-written code for many of the preproccessing we talked about in week 3.\n- contains data catalog all in one place - for easy access to Landsat and sentinel data - as well as data on climate, land cover, buildings. - can be very general or incredibly specific.\nthis simplifies the coding process - and fortunately means that I do not have to learn a whole new language from scratch (javascript).\nThere is also a thriving open-source community in Google Earth Engine (Roy, T., and A. 2025)-\nhttps://gee-community-catalog.org/ (Roy, T., and A. 2025)\nhttps://github.com/gee-community\nif you have an issue, it is likely that someone else has had it before and solved it:\nanother benfeit is that the code is ran on Google’s servers so heavily computational processes can be completed much quicker then if you were to do it on your own computer.",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Policy</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Google Earth Engine</span>"
     ]
   },
   {
     "objectID": "05_GEE.html#application",
     "href": "05_GEE.html#application",
-    "title": "5  Policy",
+    "title": "5  Google Earth Engine",
     "section": "5.2 Application",
-    "text": "5.2 Application\nRemotely sensed data could directly support the goals of Policy G5 in assessing and monitoring urban greening efforts. Satellite imagery and LiDAR could be used to quantify vegetation cover and track changes over time. One example researchers could implement is Normalized Difference Vegetation Index (NDVI) analysis, a technique used to assess vegetation health by measuring the difference between near-infrared (which vegetation strongly reflects) and red light (which vegetation absorbs). This index could be used to identify plant cover in neighbourhoods, monitor changes over time, and assess how well urban-greening contribute to reducing the urban heat island effect.\nCould be used for more proactively, -&gt; Remote sensing could aid in identifying disparities in urban greening across different boroughs, which could support a more equitable implementation of the policy - , by prioritising interventions in neighbourhoods that lack greening. - &gt; or where there is poor air quality, urban heat island etc.,\nanother approach could be priortising real-impact - heat radar sensor, air quality. some areas may need more greening than others - importance of local conditions - do developments in say, Richmond need the same greening requirements as the City?\nthis approach can be used as a tool to get around the challenges of UGF - focus on the real-world heat-impacts over filling out a checklist. -&gt; provide tools after development application is approved - in maintaining greenery and new changes needed when circumstances change (e.,g global warming)",
+    "text": "5.2 Application\nwhat i did in the practical -&gt;\nContinuing on from last week, I wanted to use this week’s practical to see how remote sensing could be used to guide policy. So in google earth engine I wanted to the visualise NDVI for each borough as well calculate average value. Could this method guide where more urban greening needs to occur?\nhttps://code.earthengine.google.com/f5cb5c8ca991caa1223ae325a4c66763\n\n\nTop 3 green boroughs\n\n\nBorough\nmean NDVI\n\n\n\n\nBromley\n0.540\n\n\nCroydon\n0.510\n\n\nRichmond upon Thames\n0.504\n\n\n\n\nBottom 3 green boroughs\n\n\nBorough\nmean NDVI\n\n\n\n\nCity of London\n0.127\n\n\nTower Hamlets\n0.274\n\n\nWestminster\n0.302\n\n\n\nThe results make sense - inner boroughs are less green than outer boroughs - and provides clear evidence that geographically-aw. This could be further refined to a finer scale to identify particular neighbourhoods that require more urban greening\nbecause it contains multiple images over time - able to produce\n\nmedian image\nmosaic\n\nby finding code in google earth engines catalog\nand then calculated NDVI\n-&gt; onto real resaerch. a powerful tool so GEE Is popular in research -&gt;\nhttps://www.mdpi.com/2072-4292/13/18/3778 - read dis papr\nas well as a popular visualisation tool\nhttps://alexchunet.users.earthengine.app/view/forestchange2020 and corresponding paper : https://www.science.org/doi/10.1126/science.1244693\nglobal forest change\nadd novel thoughts / critiques",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Policy</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Google Earth Engine</span>"
     ]
   },
   {
     "objectID": "05_GEE.html#reflection",
     "href": "05_GEE.html#reflection",
-    "title": "5  Policy",
+    "title": "5  Google Earth Engine",
     "section": "5.3 Reflection",
-    "text": "5.3 Reflection\nThis exercise has highlighted the intersection between remote sensing and urban policy, emphasising how remote sensing data can enhance the effectiveness of greening initiatives. While satellite and aerial data offer powerful monitoring tools, challenges such as data resolution, cloud cover, and accessibility constraints may limit real-world application. Integrating EO into policy decisions requires collaboration between urban planners, environmental scientists, and data analysts. Personally, I found the application of NDVI particularly insightful, as it demonstrates a tangible way to assess vegetation health and policy compliance. Moving forward, understanding how to leverage EO data for urban resilience will be invaluable in both academic and professional contexts.\nThis exercise highlighted the potential of remote sensing to bridge policy goals and on-ground implementation. While remote sensing offers a powerful solution for monitoring urban greening, practical barriers like data resolution, cost, and technical capacity could potentially limit its universal adoption, raising equity concerns, where cash-strapped councils could struggle to adopt remote sensing tools, risking uneven policy enforcement.",
+    "text": "5.3 Reflection\nI think of all the remote sensing tools we have used so far, GEE finds the best balance between accessibility and powerful coding - provides a baseline with all the pre-written code that can be built on further to fit your needs.\ni enjoyed be able to apply the skills I’ve learnt to a real-world application I am interested in, and so close to home. - helpful to see how remote sensing and google earth engine can be used in a policy setting.\n\n\n\n\nRoy, Samapriya, Swetnam T., and Saah A. 2025. “Samapriya/Awesome-Gee-Community-Datasets: Community Catalog (3.2.0).” https://doi.org/10.5281/zenodo.14757583.",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Policy</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Google Earth Engine</span>"
+    ]
+  },
+  {
+    "objectID": "06_classification.html#summary",
+    "href": "06_classification.html#summary",
+    "title": "6  Classification I",
+    "section": "",
+    "text": "Supervised\n\nPattern recognition or machine learning\nClassified learns patterns in the data\nUses that to place labels onto new data\n\n\n\n\nUnsupervised\n\n\n\nIdentify land cover classes that aren’t known before\nTells computer to cluster based on info it has\nThen labels the clusters",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Classification I</span>"
+    ]
+  },
+  {
+    "objectID": "07_classification-ii.html",
+    "href": "07_classification-ii.html",
+    "title": "7  Classification II",
+    "section": "",
+    "text": "7.1 Summary",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Classification II</span>"
+    ]
+  },
+  {
+    "objectID": "07_classification-ii.html#application",
+    "href": "07_classification-ii.html#application",
+    "title": "7  Classification II",
+    "section": "7.2 Application",
+    "text": "7.2 Application",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Classification II</span>"
+    ]
+  },
+  {
+    "objectID": "07_classification-ii.html#reflection",
+    "href": "07_classification-ii.html#reflection",
+    "title": "7  Classification II",
+    "section": "7.3 Reflection",
+    "text": "7.3 Reflection",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Classification II</span>"
     ]
   }
 ]

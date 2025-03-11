@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -30,7 +50,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./references.html" rel="next">
+<link href="./05_GEE.html" rel="next">
 <link href="./03_corrections.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -138,8 +158,26 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./05_GEE.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Google Earth Engine</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_classification.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification I</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07_classification-ii.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">References</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">References</span></span></a>
   </div>
 </li>
     </ul>
@@ -182,8 +220,10 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="summary" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">4.1</span> Summary</h2>
-<p>The London Plan’s Policy G5 focuses on urban greening as a fundamental element of site and building design for major developments. This policy encourages integrating high-quality landscaping, green roofs, green walls, and sustainable drainage solutions to enhance biodiversity and mitigate the urban heat island effect. Using an Urban Greening Factor (UGF), to set benchmarks for including features like green roofs, walls, trees, and rain gardens into building design, to attempt to ensure that new developments contribute meaningfully to London’s environmental goal.</p>
-<p><u><strong>Include UGF table</strong></u></p>
+<p>The London Plan’s Policy G5 focuses on urban greening as a fundamental element of site and building design for major developments <span class="citation" data-cites="gla2021">(<a href="references.html#ref-gla2021" role="doc-biblioref">GLA 2021</a>)</span>. This policy encourages integrating high-quality landscaping, green roofs, green walls, and sustainable drainage solutions to enhance biodiversity and mitigate the urban heat island effect. Using an Urban Greening Factor (UGF), to set benchmarks for including features like green roofs, walls, trees, and rain gardens into building design, to attempt to ensure that new developments contribute towards London’s environmental goals.</p>
+<p>“Scores range from 1 for semi natural vegetation through to 0 for impermeable sealed surfaces.” - direct quote from london plan</p>
+<p><img src="images/clipboard-1974949891.png" class="img-fluid"></p>
+<p><u><em>Figure Source:The London Plan, 2021 <span class="citation" data-cites="gla2021">(<a href="references.html#ref-gla2021" role="doc-biblioref">GLA 2021, 324</a>)</span></em></u></p>
 <p>Urban greening presents significant benefits, including improved air quality, increased biodiversity, and better climate resilience. However, there also some key questions to consider: - include reference / paper to support justification for this policy .</p>
 <p>How effective is the UGF in practice? What barriers exist in its implementation? Can Earth Observation, enhance policy compliance and monitoring? How can meaningful ecological outcomes be prioritised over “checklist” compliance?</p>
 <p>problems with UGF - where will the greening happen ? will it affect the population or just for checklist? what about maintenance, will they be looked after , after planning application has been approved?</p>
@@ -197,10 +237,15 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="reflection" class="level2" data-number="4.3">
 <h2 data-number="4.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">4.3</span> Reflection</h2>
-<p>This exercise has highlighted the intersection between remote sensing and urban policy, emphasising how remote sensing data can enhance the effectiveness of greening initiatives. While satellite and aerial data offer powerful monitoring tools, challenges such as data resolution, cloud cover, and accessibility constraints may limit real-world application. Integrating EO into policy decisions requires collaboration between urban planners, environmental scientists, and data analysts. Personally, I found the application of NDVI particularly insightful, as it demonstrates a tangible way to assess vegetation health and policy compliance. Moving forward, understanding how to leverage EO data for urban resilience will be invaluable in both academic and professional contexts.</p>
+<p>This exercise has highlighted the intersection between remote sensing and urban policy, emphasising how remote sensing data can enhance the effectiveness of greening initiatives. While satellite and aerial data offer powerful monitoring tools, challenges such as data resolution, cloud cover, and accessibility constraints may limit real-world application. Integrating EO into policy decisions requires collaboration between urban planners, environmental scientists, and data analysts. Personally, I found the application of NDVI particularly insightful, as it demonstrates a tangible way to assess vegetation health and policy compliance.</p>
 <p>This exercise highlighted the potential of remote sensing to bridge policy goals and on-ground implementation. While remote sensing offers a powerful solution for monitoring urban greening, practical barriers like data resolution, cost, and technical capacity could potentially limit its universal adoption, raising equity concerns, where cash-strapped councils could struggle to adopt remote sensing tools, risking uneven policy enforcement.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-gla2021" class="csl-entry" role="listitem">
+GLA. 2021. <em>The London Plan: The Spatial Development Strategy for Greater London, March 2021</em>. London: Greater London Authority.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -631,8 +676,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link" aria-label="References">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">References</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./05_GEE.html" class="pagination-link" aria-label="Google Earth Engine">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Google Earth Engine</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

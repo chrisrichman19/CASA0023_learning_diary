@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>6&nbsp; Classification I – Remotely Sensing Learning Diary</title>
+<title>7&nbsp; Classification II – Remotely Sensing Learning Diary</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./07_classification-ii.html" rel="next">
-<link href="./05_GEE.html" rel="prev">
+<link href="./references.html" rel="next">
+<link href="./06_classification.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./06_classification.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification I</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./07_classification-ii.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -144,13 +144,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./06_classification.html" class="sidebar-item-text sidebar-link active">
+  <a href="./06_classification.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification I</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./07_classification-ii.html" class="sidebar-item-text sidebar-link">
+  <a href="./07_classification-ii.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II</span></span></a>
   </div>
 </li>
@@ -170,9 +170,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">6.1</span> Summary</a></li>
-  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="header-section-number">6.2</span> Application</a></li>
-  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">6.3</span> Reflection</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">7.1</span> Summary</a></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="header-section-number">7.2</span> Application</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">7.3</span> Reflection</a></li>
   </ul>
 </nav>
     </div>
@@ -181,7 +181,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification I</span></h1>
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II</span></h1>
 </div>
 
 
@@ -198,71 +198,14 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="summary" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">6.1</span> Summary</h2>
-<p>this week we learned about how combining remote sensing and machine learning to classify pixels. For example classifying land use.</p>
-<p>I’m taking data science module so I have learned this before - very interesting to see how it is applied in practically in real-world scenarios.</p>
-<p>Methods for image classification:<br>
-</p>
-<p>Classification and regression trees / random forest</p>
-<ul>
-<li><p>Supervised</p>
-<ul>
-<li><p>Pattern recognition or machine learning</p></li>
-<li><p>Classified learns patterns in the data</p></li>
-<li><p>Uses that to place labels onto new data</p></li>
-</ul></li>
-</ul>
-<p>Support Vector Machine</p>
-<ul>
-<li>Unsupervised</li>
-</ul>
-<!-- -->
-<ul>
-<li><p>Identify land cover classes that aren’t known before</p></li>
-<li><p>Tells computer to cluster based on info it has</p></li>
-<li><p>Then labels the clusters</p></li>
-</ul>
-<p>DBSCAN</p>
-<p>ISODATA</p>
-<p>Cluster Busting</p>
-<p>reducing overfitting</p>
-<p>train/test split</p>
-<p>tree pruning</p>
+<section id="summary" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">7.1</span> Summary</h2>
 </section>
-<section id="application" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="application"><span class="header-section-number">6.2</span> Application</h2>
-<p>Sometimes referred to as GeoAI - professional buzzword</p>
-<p>introduce briefly what machine learning has been used for in research -&gt; lead onto the limatations</p>
-<p>more general article on how machine learning and satellite imagery could be used in future research -</p>
-<p>argues that the distinctive characteristics of satellite imagery set it apart from machine learning used for images, videos, text etc., - temporal and spatial characteristics, spectral channels (multi-channel) - author says popular libraries such as TorchVision do not support more than 3-channels</p>
-<p>“We outline critical discussion questions and actionable suggestions to transform SatML from merely an intriguing application area to a dedicated research discipline that helps move the needle on big challenges for machine learning and society.”</p>
-<p>The author argues that current machine learning methods are not robust enough because they are tailored to other data modalities and don’t address the unique characteristics and challenges of satellite data.&nbsp;</p>
-<p><strong>differences such as spatial and temporal scales, spectral channels, data volume, annotation sparsity, and deployment considerations.</strong></p>
-<ul>
-<li>provide example where multi-channel satellite data could be used in machine learning</li>
-</ul>
-<p>The potential of satellite data</p>
-<p><a href="https://arxiv.org/abs/2402.01444?ref=newsletter.terrawatchspace.com" class="uri">https://arxiv.org/abs/2402.01444?ref=newsletter.terrawatchspace.com</a></p>
-<p>lead onto -&gt;</p>
-<p>a new model for specifically detecting objects in satellite imagery.</p>
-<p>“Unlike traditional methods that rely on manual feature selection, modern deep learning-based models learn patterns directly from the data. The researchers improved previous YOLOX model by adding Efficient Channel Attention (ECA), which helps the model focus on important parts of an image while ignoring background noise. They also used Adaptively Spatial Feature Fusion (ASFF), which enhances the detection of small objects by combining information from different scales in an image. Additionally, they replaced the standard training loss function with Varifocal Loss (VFL) to better balance the learning of hard-to-detect objects.” - copied from Yohan Newsletter</p>
-<p>“Traditional detection algorithms are not effective in detecting objects in re‐mote sensing images. This is because traditional detection and the recognition of remote sensing image targets are mainly based on manually extracting features, and the rich,diverse, and detailed information in remote sensing images means that a single feature described manually is inadequate at fully expressing the target characteristics and relies more on expert experience” - page 2</p>
-<p>“In addition, machine learning based on probability and sta‐ tistics usually requires complex feature description, and the feature representation learned on the basis of its shallow network structure is obviously insufficient in terms of performance and generalization ability when dealing with complex target detection problems.” -page 2/3</p>
-<p>specialised solution -&gt; outperforms traditional models. Improves overall accuracy although more computationally intensive.</p>
-<p>in future research -&gt;</p>
-<p>monitoring urban expansion, identifying ships in coastal waters, or detecting vehicles in disaster zones.</p>
-<p>object detection in satellite remote sensing images, which is valuable for <strong>resource exploration</strong> and <strong>natural disaster assessment</strong></p>
-<p><a href="https://arxiv.org/pdf/2502.02850" class="uri">https://arxiv.org/pdf/2502.02850</a></p>
+<section id="application" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="application"><span class="header-section-number">7.2</span> Application</h2>
 </section>
-<section id="reflection" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">6.3</span> Reflection</h2>
-<p>cool</p>
-<p>looking into the future -&gt; this week out of all the others has shown how this field is rapidly adapting and changing.</p>
-<p>in general -&gt; must be specific to Remote sensing - generalised machine learning models meant for images are not powerful enough.</p>
-<p>With AI and advanced Neural networks - alot of the nuance can be lost behind these black-box algorithms so there it explainability could be lost which is concerning.</p>
-<p>Understanding a model’s function and visualizing interpretations are critical in remote sensing applications to gain scientific insights and assess trustworthiness</p>
-<p><a href="https://ieeexplore.ieee.org/abstract/document/10742949" class="uri">https://ieeexplore.ieee.org/abstract/document/10742949</a></p>
+<section id="reflection" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">7.3</span> Reflection</h2>
 
 
 </section>
@@ -690,13 +633,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./05_GEE.html" class="pagination-link" aria-label="Google Earth Engine">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Google Earth Engine</span></span>
+      <a href="./06_classification.html" class="pagination-link" aria-label="Classification I">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification I</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./07_classification-ii.html" class="pagination-link" aria-label="Classification II">
-        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link" aria-label="References">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">References</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

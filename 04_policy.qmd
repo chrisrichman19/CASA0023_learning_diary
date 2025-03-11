@@ -2,9 +2,13 @@
 
 ## Summary
 
-The London Plan's Policy G5 focuses on urban greening as a fundamental element of site and building design for major developments. This policy encourages integrating high-quality landscaping, green roofs, green walls, and sustainable drainage solutions to enhance biodiversity and mitigate the urban heat island effect. Using an Urban Greening Factor (UGF), to set benchmarks for including features like green roofs, walls, trees, and rain gardens into building design, to attempt to ensure that new developments contribute meaningfully to London's environmental goal.
+The London Plan's Policy G5 focuses on urban greening as a fundamental element of site and building design for major developments [@gla2021]. This policy encourages integrating high-quality landscaping, green roofs, green walls, and sustainable drainage solutions to enhance biodiversity and mitigate the urban heat island effect. Using an Urban Greening Factor (UGF), to set benchmarks for including features like green roofs, walls, trees, and rain gardens into building design, to attempt to ensure that new developments contribute towards London's environmental goals.
 
-[**Include UGF table**]{.underline}
+"Scores range from 1 for semi natural vegetation through to 0 for impermeable sealed surfaces." - direct quote from london plan
+
+![](images/clipboard-1974949891.png)
+
+[*Figure Source:The London Plan, 2021 [@gla2021, p. 324]*]{.underline}
 
 Urban greening presents significant benefits, including improved air quality, increased biodiversity, and better climate resilience. However, there also some key questions to consider: - include reference / paper to support justification for this policy .
 
@@ -24,6 +28,6 @@ this approach can be used as a tool to get around the challenges of UGF - focus 
 
 ## Reflection
 
-This exercise has highlighted the intersection between remote sensing and urban policy, emphasising how remote sensing data can enhance the effectiveness of greening initiatives. While satellite and aerial data offer powerful monitoring tools, challenges such as data resolution, cloud cover, and accessibility constraints may limit real-world application. Integrating EO into policy decisions requires collaboration between urban planners, environmental scientists, and data analysts. Personally, I found the application of NDVI particularly insightful, as it demonstrates a tangible way to assess vegetation health and policy compliance. Moving forward, understanding how to leverage EO data for urban resilience will be invaluable in both academic and professional contexts.
+This exercise has highlighted the intersection between remote sensing and urban policy, emphasising how remote sensing data can enhance the effectiveness of greening initiatives. While satellite and aerial data offer powerful monitoring tools, challenges such as data resolution, cloud cover, and accessibility constraints may limit real-world application. Integrating EO into policy decisions requires collaboration between urban planners, environmental scientists, and data analysts. Personally, I found the application of NDVI particularly insightful, as it demonstrates a tangible way to assess vegetation health and policy compliance.
 
 This exercise highlighted the potential of remote sensing to bridge policy goals and on-ground implementation. While remote sensing offers a powerful solution for monitoring urban greening, practical barriers like data resolution, cost, and technical capacity could potentially limit its universal adoption, raising equity concerns, where cash-strapped councils could struggle to adopt remote sensing tools, risking uneven policy enforcement.

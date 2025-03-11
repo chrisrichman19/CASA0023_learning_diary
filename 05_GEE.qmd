@@ -2,6 +2,78 @@
 
 ## Summary
 
+\- This week we were introduced to the wonders of Google Earth Engine.
+
+\- geospatial data platform which aims to simplify the huge technical processes often involved with satellite data.
+
+\- contains publicly available libraries of pre-written code for many of the preproccessing we talked about in week 3.
+
+\- contains data catalog all in one place - for easy access to Landsat and sentinel data - as well as data on climate, land cover, buildings. - can be very general or incredibly specific.
+
+this simplifies the coding process - and fortunately means that I do not have to learn a whole new language from scratch (javascript).
+
+There is also a thriving open-source community in Google Earth Engine [@roy2025]-
+
+<https://gee-community-catalog.org/> [@roy2025]
+
+<https://github.com/gee-community>
+
+if you have an issue, it is likely that someone else has had it before and solved it:
+
+another benfeit is that the code is ran on Google's servers so heavily computational processes can be completed much quicker then if you were to do it on your own computer.
+
 ## Application
 
+what i did in the practical -\>
+
+Continuing on from last week, I wanted to use this week's practical to see how remote sensing could be used to guide policy. So in google earth engine I wanted to the visualise NDVI for each borough as well calculate average value. Could this method guide where more urban greening needs to occur?
+
+<https://code.earthengine.google.com/f5cb5c8ca991caa1223ae325a4c66763>
+
+![](images/clipboard-1888529418.png)
+
+| Borough              | mean NDVI |
+|----------------------|-----------|
+| Bromley              | 0.540     |
+| Croydon              | 0.510     |
+| Richmond upon Thames | 0.504     |
+
+: Top 3 green boroughs
+
+| Borough        | mean NDVI |
+|----------------|-----------|
+| City of London | 0.127     |
+| Tower Hamlets  | 0.274     |
+| Westminster    | 0.302     |
+
+: Bottom 3 green boroughs
+
+The results make sense - inner boroughs are less green than outer boroughs - and provides clear evidence that geographically-aw. This could be further refined to a finer scale to identify particular neighbourhoods that require more urban greening
+
+because it contains multiple images over time - able to produce
+
+-   median image
+
+-   mosaic
+
+by finding code in google earth engines catalog
+
+and then calculated NDVI
+
+-\> onto real resaerch. a powerful tool so GEE Is popular in research -\>
+
+<https://www.mdpi.com/2072-4292/13/18/3778> - read dis papr
+
+as well as a popular visualisation tool
+
+<https://alexchunet.users.earthengine.app/view/forestchange2020> and corresponding paper : <https://www.science.org/doi/10.1126/science.1244693>
+
+global forest change
+
+add novel thoughts / critiques
+
 ## Reflection
+
+I think of all the remote sensing tools we have used so far, GEE finds the best balance between accessibility and powerful coding - provides a baseline with all the pre-written code that can be built on further to fit your needs.
+
+i enjoyed be able to apply the skills I've learnt to a real-world application I am interested in, and so close to home. - helpful to see how remote sensing and google earth engine can be used in a policy setting.

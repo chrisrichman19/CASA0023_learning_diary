@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>5&nbsp; Policy – Remotely Sensing Learning Diary</title>
+<title>5&nbsp; Google Earth Engine – Remotely Sensing Learning Diary</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -81,7 +101,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./05_GEE.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Policy</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./05_GEE.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Google Earth Engine</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -139,19 +159,25 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./05_GEE.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Policy</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Google Earth Engine</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./06_classification.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Policy</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification I</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07_classification-ii.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">References</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">References</span></span></a>
   </div>
 </li>
     </ul>
@@ -175,7 +201,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Policy</span></h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Google Earth Engine</span></h1>
 </div>
 
 
@@ -194,25 +220,95 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="summary" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">5.1</span> Summary</h2>
-<p>The London Plan’s Policy G5 focuses on urban greening as a fundamental element of site and building design for major developments. This policy encourages integrating high-quality landscaping, green roofs, green walls, and sustainable drainage solutions to enhance biodiversity and mitigate the urban heat island effect. Using an Urban Greening Factor (UGF), to set benchmarks for including features like green roofs, walls, trees, and rain gardens into building design, to attempt to ensure that new developments contribute meaningfully to London’s environmental goal.</p>
-<p><u><strong>Include UGF table</strong></u></p>
-<p>Urban greening presents significant benefits, including improved air quality, increased biodiversity, and better climate resilience. However, there also some key questions to consider: - include reference / paper to support justification for this policy .</p>
-<p>How effective is the UGF in practice? What barriers exist in its implementation? Can Earth Observation, enhance policy compliance and monitoring? How can meaningful ecological outcomes be prioritised over “checklist” compliance?</p>
-<p>problems with UGF - where will the greening happen ? will it affect the population or just for checklist? what about maintenance, will they be looked after , after planning application has been approved?</p>
+<p>- This week we were introduced to the wonders of Google Earth Engine.</p>
+<p>- geospatial data platform which aims to simplify the huge technical processes often involved with satellite data.</p>
+<p>- contains publicly available libraries of pre-written code for many of the preproccessing we talked about in week 3.</p>
+<p>- contains data catalog all in one place - for easy access to Landsat and sentinel data - as well as data on climate, land cover, buildings. - can be very general or incredibly specific.</p>
+<p>this simplifies the coding process - and fortunately means that I do not have to learn a whole new language from scratch (javascript).</p>
+<p>There is also a thriving open-source community in Google Earth Engine <span class="citation" data-cites="roy2025">(<a href="references.html#ref-roy2025" role="doc-biblioref">Roy, T., and A. 2025</a>)</span>-</p>
+<p><a href="https://gee-community-catalog.org/" class="uri">https://gee-community-catalog.org/</a> <span class="citation" data-cites="roy2025">(<a href="references.html#ref-roy2025" role="doc-biblioref">Roy, T., and A. 2025</a>)</span></p>
+<p><a href="https://github.com/gee-community" class="uri">https://github.com/gee-community</a></p>
+<p>if you have an issue, it is likely that someone else has had it before and solved it:</p>
+<p>another benfeit is that the code is ran on Google’s servers so heavily computational processes can be completed much quicker then if you were to do it on your own computer.</p>
 </section>
 <section id="application" class="level2" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="application"><span class="header-section-number">5.2</span> Application</h2>
-<p>Remotely sensed data could directly support the goals of Policy G5 in assessing and monitoring urban greening efforts. Satellite imagery and LiDAR could be used to quantify vegetation cover and track changes over time. One example researchers could implement is Normalized Difference Vegetation Index (NDVI) analysis, a technique used to assess vegetation health by measuring the difference between near-infrared (which vegetation strongly reflects) and red light (which vegetation absorbs). This index could be used to identify plant cover in neighbourhoods, monitor changes over time, and assess how well urban-greening contribute to reducing the urban heat island effect.</p>
-<p>Could be used for more proactively, -&gt; Remote sensing could aid in identifying disparities in urban greening across different boroughs, which could support a more equitable implementation of the policy - , by prioritising interventions in neighbourhoods that lack greening. - &gt; or where there is poor air quality, urban heat island etc.,</p>
-<p>another approach could be priortising real-impact - heat radar sensor, air quality. some areas may need more greening than others - importance of local conditions - do developments in say, Richmond need the same greening requirements as the City?</p>
-<p>this approach can be used as a tool to get around the challenges of UGF - focus on the real-world heat-impacts over filling out a checklist. -&gt; provide tools after development application is approved - in maintaining greenery and new changes needed when circumstances change (e.,g global warming)</p>
+<p>what i did in the practical -&gt;</p>
+<p>Continuing on from last week, I wanted to use this week’s practical to see how remote sensing could be used to guide policy. So in google earth engine I wanted to the visualise NDVI for each borough as well calculate average value. Could this method guide where more urban greening needs to occur?</p>
+<p><a href="https://code.earthengine.google.com/f5cb5c8ca991caa1223ae325a4c66763" class="uri">https://code.earthengine.google.com/f5cb5c8ca991caa1223ae325a4c66763</a></p>
+<p><img src="images/clipboard-1888529418.png" class="img-fluid"></p>
+<table class="caption-top table">
+<caption>Top 3 green boroughs</caption>
+<thead>
+<tr class="header">
+<th>Borough</th>
+<th>mean NDVI</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Bromley</td>
+<td>0.540</td>
+</tr>
+<tr class="even">
+<td>Croydon</td>
+<td>0.510</td>
+</tr>
+<tr class="odd">
+<td>Richmond upon Thames</td>
+<td>0.504</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<caption>Bottom 3 green boroughs</caption>
+<thead>
+<tr class="header">
+<th>Borough</th>
+<th>mean NDVI</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>City of London</td>
+<td>0.127</td>
+</tr>
+<tr class="even">
+<td>Tower Hamlets</td>
+<td>0.274</td>
+</tr>
+<tr class="odd">
+<td>Westminster</td>
+<td>0.302</td>
+</tr>
+</tbody>
+</table>
+<p>The results make sense - inner boroughs are less green than outer boroughs - and provides clear evidence that geographically-aw. This could be further refined to a finer scale to identify particular neighbourhoods that require more urban greening</p>
+<p>because it contains multiple images over time - able to produce</p>
+<ul>
+<li><p>median image</p></li>
+<li><p>mosaic</p></li>
+</ul>
+<p>by finding code in google earth engines catalog</p>
+<p>and then calculated NDVI</p>
+<p>-&gt; onto real resaerch. a powerful tool so GEE Is popular in research -&gt;</p>
+<p><a href="https://www.mdpi.com/2072-4292/13/18/3778" class="uri">https://www.mdpi.com/2072-4292/13/18/3778</a> - read dis papr</p>
+<p>as well as a popular visualisation tool</p>
+<p><a href="https://alexchunet.users.earthengine.app/view/forestchange2020" class="uri">https://alexchunet.users.earthengine.app/view/forestchange2020</a> and corresponding paper : <a href="https://www.science.org/doi/10.1126/science.1244693" class="uri">https://www.science.org/doi/10.1126/science.1244693</a></p>
+<p>global forest change</p>
+<p>add novel thoughts / critiques</p>
 </section>
 <section id="reflection" class="level2" data-number="5.3">
 <h2 data-number="5.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">5.3</span> Reflection</h2>
-<p>This exercise has highlighted the intersection between remote sensing and urban policy, emphasising how remote sensing data can enhance the effectiveness of greening initiatives. While satellite and aerial data offer powerful monitoring tools, challenges such as data resolution, cloud cover, and accessibility constraints may limit real-world application. Integrating EO into policy decisions requires collaboration between urban planners, environmental scientists, and data analysts. Personally, I found the application of NDVI particularly insightful, as it demonstrates a tangible way to assess vegetation health and policy compliance. Moving forward, understanding how to leverage EO data for urban resilience will be invaluable in both academic and professional contexts.</p>
-<p>This exercise highlighted the potential of remote sensing to bridge policy goals and on-ground implementation. While remote sensing offers a powerful solution for monitoring urban greening, practical barriers like data resolution, cost, and technical capacity could potentially limit its universal adoption, raising equity concerns, where cash-strapped councils could struggle to adopt remote sensing tools, risking uneven policy enforcement.</p>
+<p>I think of all the remote sensing tools we have used so far, GEE finds the best balance between accessibility and powerful coding - provides a baseline with all the pre-written code that can be built on further to fit your needs.</p>
+<p>i enjoyed be able to apply the skills I’ve learnt to a real-world application I am interested in, and so close to home. - helpful to see how remote sensing and google earth engine can be used in a policy setting.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-roy2025" class="csl-entry" role="listitem">
+Roy, Samapriya, Swetnam T., and Saah A. 2025. <span>“Samapriya/Awesome-Gee-Community-Datasets: Community Catalog (3.2.0).”</span> <a href="https://doi.org/10.5281/zenodo.14757583">https://doi.org/10.5281/zenodo.14757583</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -643,8 +739,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./06_classification.html" class="pagination-link" aria-label="Policy">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Policy</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./06_classification.html" class="pagination-link" aria-label="Classification I">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification I</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
