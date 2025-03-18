@@ -15,6 +15,7 @@ book:
     - 05_GEE.qmd
     - 06_classification.qmd
     - 07_classification-ii.qmd
+    - 08_SAR_in_GEE.qmd
     - references.qmd
 
 bibliography: references.bib

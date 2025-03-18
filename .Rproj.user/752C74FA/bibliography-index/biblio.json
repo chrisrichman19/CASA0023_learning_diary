@@ -1207,6 +1207,167 @@
             "title-short": "Detecting trends in forest disturbance and recovery using yearly landsat time series",
             "type": "article-journal",
             "volume": "114"
+        },
+        {
+            "DOI": "10.1080/01431161.2018.1433343",
+            "URL": "https://doi.org/10.1080/01431161.2018.1433343",
+            "author": [
+                {
+                    "family": "Maxwell",
+                    "given": "Aaron E."
+                },
+                {
+                    "given": "Warner ",
+                    "suffix": "Timothy A."
+                },
+                {
+                    "dropping-particle": "and",
+                    "family": "Fang",
+                    "given": "Fang"
+                }
+            ],
+            "container-title": "International Journal of Remote Sensing",
+            "id": "maxwell2018",
+            "issue": "9",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018,
+                        5,
+                        3
+                    ]
+                ]
+            },
+            "note": "Publisher: Taylor & Francis _eprint: https://doi.org/10.1080/01431161.2018.1433343",
+            "page": "2784-2817",
+            "title": "Implementation of machine-learning classification in remote sensing: An applied review",
+            "title-short": "Implementation of machine-learning classification in remote sensing",
+            "type": "article-journal",
+            "volume": "39"
+        },
+        {
+            "DOI": "10.1109/MGRS.2016.2641240",
+            "URL": "https://ieeexplore.ieee.org/document/7882747/?arnumber=7882747&tag=1",
+            "author": [
+                {
+                    "family": "Maulik",
+                    "given": "Ujjwal"
+                },
+                {
+                    "family": "Chakraborty",
+                    "given": "Debasis"
+                }
+            ],
+            "container-title": "IEEE Geoscience and Remote Sensing Magazine",
+            "id": "maulik2017",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017,
+                        3
+                    ]
+                ]
+            },
+            "note": "Conference Name: IEEE Geoscience and Remote Sensing Magazine",
+            "page": "33-52",
+            "title": "Remote sensing image classification: A survey of support-vector-machine-based advanced techniques",
+            "title-short": "Remote sensing image classification",
+            "type": "article-journal",
+            "volume": "5"
+        },
+        {
+            "DOI": "10.26833/ijeg.987605",
+            "URL": "https://dergipark.org.tr/en/pub/ijeg/issue/69401/987605",
+            "author": [
+                {
+                    "family": "Avcı",
+                    "given": "Cengiz"
+                },
+                {
+                    "family": "Budak",
+                    "given": "Muhammed"
+                },
+                {
+                    "family": "Yağmur",
+                    "given": "Nur"
+                },
+                {
+                    "family": "Balçık",
+                    "given": "Filiz"
+                }
+            ],
+            "container-title": "International Journal of Engineering and Geosciences",
+            "id": "avci2023",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2023,
+                        2,
+                        15
+                    ]
+                ]
+            },
+            "language": "en",
+            "note": "Number: 1 Publisher: Murat YAKAR",
+            "page": "1-10",
+            "title": "Comparison between random forest and support vector machine algorithms for LULC classification",
+            "type": "article-journal",
+            "volume": "8"
+        },
+        {
+            "DOI": "10.1016/j.isprsjprs.2018.07.017",
+            "URL": "https://www.sciencedirect.com/science/article/pii/S0924271618302090",
+            "author": [
+                {
+                    "family": "Teluguntla",
+                    "given": "Pardhasaradhi"
+                },
+                {
+                    "family": "Thenkabail",
+                    "given": "Prasad S"
+                },
+                {
+                    "family": "Oliphant",
+                    "given": "Adam"
+                },
+                {
+                    "family": "Xiong",
+                    "given": "Jun"
+                },
+                {
+                    "family": "Gumma",
+                    "given": "Murali Krishna"
+                },
+                {
+                    "family": "Congalton",
+                    "given": "Russell G."
+                },
+                {
+                    "family": "Yadav",
+                    "given": "Kamini"
+                },
+                {
+                    "family": "Huete",
+                    "given": "Alfredo"
+                }
+            ],
+            "container-title": "ISPRS Journal of Photogrammetry and Remote Sensing",
+            "id": "teluguntla2018",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018,
+                        10,
+                        1
+                    ]
+                ]
+            },
+            "page": "325-340",
+            "title": "A 30-m landsat-derived cropland extent product of australia and china using random forest machine learning algorithm on google earth engine cloud computing platform",
+            "type": "article-journal",
+            "volume": "144"
         }
     ],
     "project_biblios": [

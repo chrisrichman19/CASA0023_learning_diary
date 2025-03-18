@@ -176,8 +176,14 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./08_SAR_in_GEE.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">SAR in GEE</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">References</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">References</span></span></a>
   </div>
 </li>
     </ul>
@@ -223,27 +229,32 @@ div.csl-indent {
 <p>This week we learned about image classification, a process that uses machine learning algorithms to categorises pixels, and explored how that can be used in remote sensing, such as for land-use mapping. I’m taking the data science module, so it was interesting to see familiar methods, including classification and regression trees, applied to challenges in remote-sensing. We looked at both supervised and unsupervised methods; supervised learning involves training a model on pre-labeled data to recognise patterns, while unsupervised methods identify clusters within the data, which are then labeled.</p>
 <section id="supervised-machine-learning" class="level4" data-number="6.1.0.1">
 <h4 data-number="6.1.0.1" class="anchored" data-anchor-id="supervised-machine-learning"><span class="header-section-number">6.1.0.1</span> Supervised Machine Learning</h4>
-<p>We explored Classification and Regression Trees (CART) and Random Forests. CART creates a decision tree by recursively partitioning the data based on feature values, aiming to create homogeneous groups within each partition. Random Forests enhance this by building multiple decision trees on random subsets of the data and averaging their predictions, reducing overfitting and improving accuracy. Both methods excel at capturing complex, non-linear relationships between spectral data and land cover classes.</p>
-<p>Another supervised method we examined was Support Vector Machines (SVMs). SVMs operate by finding the optimal hyperplane that separates different classes in the data. They aim to maximize the margin between the hyperplane and the closest data points (support vectors). This method is particularly useful when dealing with complex spectral data, as SVMs can effectively handle the high-dimensional datasets common in satellite imagery. All of these supervised methods require labeled training data, where pixels are already associated with known land cover types, to learn the patterns and build the classification model.</p>
+<p>We explored Classification and Regression Trees (CART) and Random Forests. CART creates a decision tree by iteratively partitioning the data based on feature values, aiming to create homogeneous groups within each partition. Random Forests builds on this by using multiple decision trees on random subsets of the data and averaging their predictions. Both methods are good at capturing complex, non-linear relationships between the spectral data and land cover classes.</p>
+<p>Another supervised method we looked at was Support Vector Machines (SVMs). SVMs work by finding the optimal hyperplane that separates different classes in the data. They aim to maximize the margin between the hyperplane and the closest data points (support vectors). This method is particularly useful when dealing with complex spectral data, as SVMs can effectively handle the high-dimensional datasets common in satellite imagery <span class="citation" data-cites="maulik2017">(<a href="references.html#ref-maulik2017" role="doc-biblioref">Maulik and Chakraborty 2017</a>)</span>. All of these supervised methods require labeled training data, where pixels are already associated with known land cover types, to learn the patterns and build the classification model.</p>
 <p><strong>Unsupervised Machine Learning</strong></p>
 <p>Unsupervised classification is employed when we lack prior knowledge about the specific land cover classes present in an image. Essentially, the algorithm is tasked with finding patterns within the data itself. It operates by grouping pixels based on their spectral similarities, without relying on any pre-labeled training data.</p>
-<p>ISODATA, which iteratively refines clusters based on spectral distance, and DBSCAN, which identifies clusters based on pixel density, and effectively handles irregular shapes and noise.</p>
-<p>I found myself wondering about the trade-offs between these approaches. Supervised learning seems powerful when you have good training data, but what about areas where ground truth is sparse or difficult to obtain? Unsupervised methods offer flexibility, but how do you ensure the resulting clusters meaningfully represent real-world land cover types? We also touched on techniques like train/test splits and tree pruning to combat overfitting, highlighting the importance of robust model evaluation. The real-world applications, from urban planning to environmental monitoring, are clear, but I’m curious how well these classifications hold up over time, and what the impact of data quality and resolution is on the final accuracy.</p>
+<p>We looked at two different unsupervised methods; ISODATA, which iteratively refines clusters based on spectral distance, and DBSCAN, which identifies clusters based on pixel density, and effectively handles irregular shapes and noise.</p>
+<p><strong>So which method to choose?</strong></p>
+<p>There is no perfect algorithm that is best for every scenario. The best algorithm is case-specfic and depends on the quality and quantity of training data as well as the desired balance between model complexity and interpretability. It may also be useful to experiment with multiple classifiers to assess what fits your data the best in practice. We will look more into this next week when we learn about accuracy measures.<br>
+</p>
 </section>
 </section>
 <section id="application" class="level2" data-number="6.2">
 <h2 data-number="6.2" class="anchored" data-anchor-id="application"><span class="header-section-number">6.2</span> Application</h2>
-<p>introduce briefly what machine learning has been used for in research -&gt; lead onto</p>
-<p>lead onto -&gt; <span class="citation" data-cites="yang">(<a href="references.html#ref-yang" role="doc-biblioref">Yang et al., n.d.</a>)</span></p>
-<p>a brand new model for specifically detecting objects in satellite imagery.</p>
+<p>introduce what machine learning has been used for in research -&gt; lead onto</p>
+<p>A popular phenomena in remote sensing research is land cover classification , which involves categorising each pixel into classes based on its spectral characteristics <span class="citation" data-cites="maulik2017">(<a href="references.html#ref-maulik2017" role="doc-biblioref">Maulik and Chakraborty 2017</a>)</span>.</p>
+<p>a more complicated classifcation case in remote sensing: Object detection - &gt; involves identifying the locations and types of specific targets within an image and labeling them with bounding boxes.</p>
+<p>more complicated problems need more specialised techniques:</p>
+<p>moving beyond basic machine learning techniques, there has been developments in deep learning methods. ANNs and CNNs -&gt; <span class="citation" data-cites="yang">(<a href="references.html#ref-yang" role="doc-biblioref">Yang et al., n.d.</a>)</span></p>
+<p><strong>Artificial Neural Networks (ANNs)</strong>: use many hidden layers to model multiple levels of abstraction, have shown great promise in remote sensing, often outperforming methods like SVM for tasks like hyperspectral image classification<strong>. Convolutional Neural Networks (CNNs)</strong>, a type of deep learning model, are particularly good at exploiting semantic features of imagery data by directly extracting features from massive amounts of imagery. <span class="citation" data-cites="maxwell2018">(<a href="references.html#ref-maxwell2018" role="doc-biblioref">Maxwell, and Fang 2018</a>)</span>. reword</p>
+<p>a brand new model for specifically detecting objects in satellite imagery. <span class="citation" data-cites="yang">(<a href="references.html#ref-yang" role="doc-biblioref">Yang et al., n.d.</a>)</span> RS-YOLOX CNN</p>
 <p>“Unlike traditional methods that rely on manual feature selection, modern deep learning-based models learn patterns directly from the data. The researchers improved previous YOLOX model by adding Efficient Channel Attention (ECA), which helps the model focus on important parts of an image while ignoring background noise. They also used Adaptively Spatial Feature Fusion (ASFF), which enhances the detection of small objects by combining information from different scales in an image. Additionally, they replaced the standard training loss function with Varifocal Loss (VFL) to better balance the learning of hard-to-detect objects.” - copied from Yohan Newsletter</p>
 <p>“Traditional detection algorithms are not effective in detecting objects in re‐mote sensing images. This is because traditional detection and the recognition of remote sensing image targets are mainly based on manually extracting features, and the rich,diverse, and detailed information in remote sensing images means that a single feature described manually is inadequate at fully expressing the target characteristics and relies more on expert experience” - page 2 <span class="citation" data-cites="yang">(<a href="references.html#ref-yang" role="doc-biblioref">Yang et al., n.d.</a>)</span></p>
 <p>“In addition, machine learning based on probability and statistics usually requires complex feature description, and the feature representation learned on the basis of its shallow network structure is obviously insufficient in terms of performance and generalization ability when dealing with complex target detection problems.” -page 2/3</p>
 <p>specialised solution -&gt; outperforms traditional models. Improves overall accuracy although more computationally intensive.</p>
-<p>in future research -&gt;</p>
-<p>monitoring urban expansion, identifying ships in coastal waters, or detecting vehicles in disaster zones.</p>
 <p>object detection in satellite remote sensing images, which is valuable for <strong>resource exploration</strong> and <strong>natural disaster assessment</strong></p>
 <p><span class="citation" data-cites="yang">(<a href="references.html#ref-yang" role="doc-biblioref">Yang et al., n.d.</a>)</span></p>
+<p>What factors influence the selection of machine learning classifiers -&gt; why pick one model over the other?</p>
 <p><a href="https://arxiv.org/pdf/2502.02850" class="uri">https://arxiv.org/pdf/2502.02850</a></p>
 </section>
 <section id="reflection" class="level2" data-number="6.3">
@@ -260,12 +271,22 @@ div.csl-indent {
 </ul>
 <p>The potential of satellite data</p>
 <p><a href="https://arxiv.org/abs/2402.01444?ref=newsletter.terrawatchspace.com" class="uri">https://arxiv.org/abs/2402.01444</a></p>
-<p>With AI and advanced Neural networks - alot of the nuance can be lost behind these black-box algorithms so there it explainability could be lost which is concerning.</p>
+<p>With AI and advanced Neural networks - alot of the nuance can be lost behind these black-box algorithms explainability could be lost which is concerning.</p>
 <p>Understanding a model’s function and visualizing interpretations are critical in remote sensing applications to gain scientific insights and assess trustworthiness</p>
 <p><a href="https://ieeexplore.ieee.org/abstract/document/10742949" class="uri">https://ieeexplore.ieee.org/abstract/document/10742949</a></p>
+<p>other Challenges for models</p>
+<p><strong>Potential for overfitting</strong>: Especially with powerful classifiers, there’s a risk of the model learning the training data too precisely, hindering its ability to generalize to new data.</p>
+<p><strong>Training data requirements</strong>: The quantity and quality of training data significantly impact classifier performance</p>
+<p><strong>Feature space impacts and reduction</strong>: The choice and processing of features from the remote sensing data can greatly influence classification accuracy</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-maulik2017" class="csl-entry" role="listitem">
+Maulik, Ujjwal, and Debasis Chakraborty. 2017. <span>“Remote Sensing Image Classification: A Survey of Support-Vector-Machine-Based Advanced Techniques.”</span> <em>IEEE Geoscience and Remote Sensing Magazine</em> 5 (1): 33–52. <a href="https://doi.org/10.1109/MGRS.2016.2641240">https://doi.org/10.1109/MGRS.2016.2641240</a>.
+</div>
+<div id="ref-maxwell2018" class="csl-entry" role="listitem">
+Maxwell, Aaron E., Warner ,Timothy A., and Fang and Fang. 2018. <span>“Implementation of Machine-Learning Classification in Remote Sensing: An Applied Review.”</span> <em>International Journal of Remote Sensing</em> 39 (9): 2784–2817. <a href="https://doi.org/10.1080/01431161.2018.1433343">https://doi.org/10.1080/01431161.2018.1433343</a>.
+</div>
 <div id="ref-rolf" class="csl-entry" role="listitem">
 Rolf, Esther, Konstantin Klemmer, Caleb Robinson, and Hannah Kerner. n.d. <span>“Mission Critical – Satellite Data Is a Distinct Modality in Machine Learning.”</span> <a href="https://doi.org/10.48550/arXiv.2402.01444">https://doi.org/10.48550/arXiv.2402.01444</a>.
 </div>

@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./references.html" rel="next">
+<link href="./08_SAR_in_GEE.html" rel="next">
 <link href="./06_classification.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -156,8 +156,14 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./08_SAR_in_GEE.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">SAR in GEE</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">References</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">References</span></span></a>
   </div>
 </li>
     </ul>
@@ -200,12 +206,50 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="summary" class="level2" data-number="7.1">
 <h2 data-number="7.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">7.1</span> Summary</h2>
+<p>accuracy measures</p>
+<p><strong>Accuracy Assessment</strong></p>
+<p>After producing an output we need oto know how accurate it is</p>
+<ul>
+<li><p>Producer accuracy</p>
+<ul>
+<li>True positive rate or sensitivity</li>
+</ul></li>
+<li><p>User accuracy</p>
+<ul>
+<li>Positive prediction value - horizontal pixels are incorrectly classified as a known class when they shouldve been classified as something else</li>
+</ul></li>
+<li><p>Overall accuracy</p></li>
+</ul>
+<p>Producers accuracy can also be called errors of omission</p>
+<p>User’s accuracy can be called errors of commission</p>
+<p>Kappa is designed to express the accuracy of an image compared to the results done by chance. Ranges from 0 to 1. calls to abandon it as it may not be that useful</p>
+<p>F1 score</p>
+<p>Receiver operating characteristic curve (ROC curve)</p>
+<p>Cross validation when there is spatial dependence</p>
+<p>“How can we deal with taking a sample of training data for testing when they are possibly from the same polygon of training data…”</p>
+<ul>
+<li>Consider spatial autocorrelation accuracy can be deceivingly high</li>
+</ul>
+<p>Spatial cross validation</p>
+<ul>
+<li><p>Spatially partition the folded data, folds are from cross validation</p></li>
+<li><p>Disjoint (no common boundary) using k- means clustering (number of points and a distance)</p></li>
+<li><p>Same as cross validation but with clustering to the folds</p></li>
+<li><p>Stops our training data being near each other</p></li>
+</ul>
+<p><br>
+&nbsp;</p>
 </section>
 <section id="application" class="level2" data-number="7.2">
 <h2 data-number="7.2" class="anchored" data-anchor-id="application"><span class="header-section-number">7.2</span> Application</h2>
+<p>In the practical this week I focused on my undergraduate city of Bristol.</p>
+<p>comparing accuracy measures for different machine learning algorithms in practical - what does the values each mean ?</p>
+<p>Random Forest Classifier:</p>
+<p><img src="images/clipboard-4120096112.png" class="img-fluid"></p>
 </section>
 <section id="reflection" class="level2" data-number="7.3">
 <h2 data-number="7.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">7.3</span> Reflection</h2>
+<p>Critique cross-validation with no spatial-autocorrelation in&nbsp; diary.</p>
 
 
 </section>
@@ -638,8 +682,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link" aria-label="References">
-        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">References</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./08_SAR_in_GEE.html" class="pagination-link" aria-label="SAR in GEE">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">SAR in GEE</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
