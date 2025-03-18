@@ -2,17 +2,21 @@
 
 ## Summary
 
-The London Plan's Policy G5 focuses on urban greening as a fundamental element of site and building design for major developments [@gla2021]. This policy encourages integrating high-quality landscaping, green roofs, green walls, and sustainable drainage solutions to enhance biodiversity and mitigate the urban heat island effect. Using an Urban Greening Factor (UGF), to set benchmarks for including features like green roofs, walls, trees, and rain gardens into building design, to attempt to ensure that new developments contribute towards London's environmental goals.
-
-"Scores range from 1 for semi natural vegetation through to 0 for impermeable sealed surfaces." - direct quote from london plan
+The London Plan's Policy G5 focuses on urban greening as a fundamental element of site and building design for major developments [@gla2021]. This policy encourages integrating high-quality landscaping, green roofs, green walls, and sustainable drainage solutions to enhance biodiversity and mitigate the urban heat island effect. The UGF assigns scores from 0 (impermeable surfaces) to 1 (semi-natural vegetation) to quantify greening efforts [@gla2021]. This index attempts to ensure that new developments contribute towards London's environmental goals.
 
 ![](images/clipboard-1974949891.png)
 
 [*Figure Source:The London Plan, 2021 [@gla2021, p. 324]*]{.underline}
 
-Urban greening presents significant benefits, including improved air quality, increased biodiversity, and better climate resilience. However, there also some key questions to consider: - include reference / paper to support justification for this policy .
+The practical benefits underpinning this Urban greening policy is clear as there is significant evidence that greening improves air quality, increases biodiversity, and improves climate resilience [@semeraro2021; @quaranta2021]. However, there are questions to consider regarding the practical effectiveness and implementation of UGF.
 
-How effective is the UGF in practice? What barriers exist in its implementation? Can Earth Observation, enhance policy compliance and monitoring? How can meaningful ecological outcomes be prioritised over "checklist" compliance?
+How will meaningful ecological outcomes be prioritised to avoid checklist-compliance ?
+
+Is a one-size fits all solution best ? How can spatial disparities be addressed ? local needs?
+
+What barriers exist in its implementation? what about maintenance, will they be looked after , after planning application has been approved?
+
+these are all important questions that the solution towards healthier urban spaces need to address
 
 problems with UGF - where will the greening happen ? will it affect the population or just for checklist? what about maintenance, will they be looked after , after planning application has been approved?
 
@@ -20,11 +24,9 @@ problems with UGF - where will the greening happen ? will it affect the populati
 
 Remotely sensed data could directly support the goals of Policy G5 in assessing and monitoring urban greening efforts. Satellite imagery and LiDAR could be used to quantify vegetation cover and track changes over time. One example researchers could implement is Normalized Difference Vegetation Index (NDVI) analysis, a technique used to assess vegetation health by measuring the difference between near-infrared (which vegetation strongly reflects) and red light (which vegetation absorbs). This index could be used to identify plant cover in neighbourhoods, monitor changes over time, and assess how well urban-greening contribute to reducing the urban heat island effect.
 
-Could be used for more proactively, -\> Remote sensing could aid in identifying disparities in urban greening across different boroughs, which could support a more equitable implementation of the policy - , by prioritising interventions in neighbourhoods that lack greening. - \> or where there is poor air quality, urban heat island etc.,
+Remote sensing data could aid a more proactive approach, by identifying disparities in urban greening across different boroughs, and supporting a more equitable implementation of the policy. This approach allows for the prioritisation of interventions in neighbourhoods lacking greening or experiencing issues such as poor air quality or urban heat island impacts. By recognising the importance of local conditions, remote sensing tools can be used to help tailor greening requirements to meet specific areas needs, acknowledging that developments in areas like Richmond may have different needs compared to those in the City.
 
-another approach could be priortising real-impact - heat radar sensor, air quality. some areas may need more greening than others - importance of local conditions - do developments in say, Richmond need the same greening requirements as the City?
-
-this approach can be used as a tool to get around the challenges of UGF - focus on the real-world heat-impacts over filling out a checklist. -\> provide tools after development application is approved - in maintaining greenery and new changes needed when circumstances change (e.,g global warming)
+Remote sensing would offer a practical solution to go beyond checklist compliance and instead focus in on the real-world environmental outcomes of urban greening. Additionally it provides ongoing monitoring and support the maintenance of greenery post-development approval, as well as inform necessary adaptations in response to changing circumstances, such as those driven by global warming in the future.
 
 ## Reflection
 

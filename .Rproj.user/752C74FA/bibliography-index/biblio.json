@@ -808,6 +808,405 @@
             "title": "samapriya/awesome-gee-community-datasets: Community Catalog (3.2.0)",
             "title-short": "samapriya/awesome-gee-community-datasets",
             "type": ""
+        },
+        {
+            "DOI": "10.48550/arXiv.2402.01444",
+            "author": [
+                {
+                    "family": "Rolf",
+                    "given": "Esther"
+                },
+                {
+                    "family": "Klemmer",
+                    "given": "Konstantin"
+                },
+                {
+                    "family": "Robinson",
+                    "given": "Caleb"
+                },
+                {
+                    "family": "Kerner",
+                    "given": "Hannah"
+                }
+            ],
+            "id": "rolf",
+            "title": "Mission critical – satellite data is a distinct modality in machine learning",
+            "type": "article-journal"
+        },
+        {
+            "DOI": "10.3390/app12178707",
+            "author": [
+                {
+                    "family": "Yang",
+                    "given": "Lei"
+                },
+                {
+                    "family": "Yuan",
+                    "given": "Guowu"
+                },
+                {
+                    "family": "Zhou",
+                    "given": "Hao"
+                },
+                {
+                    "family": "Liu",
+                    "given": "Hongyu"
+                },
+                {
+                    "family": "Chen",
+                    "given": "Jian"
+                },
+                {
+                    "family": "Wu",
+                    "given": "Hao"
+                }
+            ],
+            "id": "yang",
+            "title": "RS-YOLOX: A high precision detector for object detection in satellite remote sensing images",
+            "title-short": "RS-YOLOX",
+            "type": "article-journal"
+        },
+        {
+            "DOI": "10.3390/land10020105",
+            "URL": "https://www.mdpi.com/2073-445X/10/2/105",
+            "author": [
+                {
+                    "family": "Semeraro",
+                    "given": "Teodoro"
+                },
+                {
+                    "family": "Scarano",
+                    "given": "Aurelia"
+                },
+                {
+                    "family": "Buccolieri",
+                    "given": "Riccardo"
+                },
+                {
+                    "family": "Santino",
+                    "given": "Angelo"
+                },
+                {
+                    "family": "Aarrevaara",
+                    "given": "Eeva"
+                }
+            ],
+            "container-title": "Land",
+            "id": "semeraro2021",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021,
+                        2
+                    ]
+                ]
+            },
+            "language": "en",
+            "note": "Number: 2 Publisher: Multidisciplinary Digital Publishing Institute",
+            "page": "105",
+            "title": "Planning of Urban Green Spaces: An Ecological Perspective on Human Benefits",
+            "title-short": "Planning of Urban Green Spaces",
+            "type": "article-journal",
+            "volume": "10"
+        },
+        {
+            "DOI": "10.1038/s41598-021-88141-7",
+            "URL": "https://www.nature.com/articles/s41598-021-88141-7",
+            "author": [
+                {
+                    "family": "Quaranta",
+                    "given": "Emanuele"
+                },
+                {
+                    "family": "Dorati",
+                    "given": "Chiara"
+                },
+                {
+                    "family": "Pistocchi",
+                    "given": "Alberto"
+                }
+            ],
+            "container-title": "Scientific Reports",
+            "id": "quaranta2021",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021,
+                        6,
+                        9
+                    ]
+                ]
+            },
+            "language": "en",
+            "note": "Publisher: Nature Publishing Group",
+            "page": "12163",
+            "title": "Water, energy and climate benefits of urban greening throughout Europe under different climatic scenarios",
+            "type": "article-journal",
+            "volume": "11"
+        },
+        {
+            "DOI": "10.3390/rs13183778",
+            "URL": "https://www.mdpi.com/2072-4292/13/18/3778",
+            "author": [
+                {
+                    "family": "Zhao",
+                    "given": "Qiang"
+                },
+                {
+                    "family": "Yu",
+                    "given": "Le"
+                },
+                {
+                    "family": "Li",
+                    "given": "Xuecao"
+                },
+                {
+                    "family": "Peng",
+                    "given": "Dailiang"
+                },
+                {
+                    "family": "Zhang",
+                    "given": "Yongguang"
+                },
+                {
+                    "family": "Gong",
+                    "given": "Peng"
+                }
+            ],
+            "container-title": "Remote Sensing",
+            "id": "zhao2021",
+            "issue": "18",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021,
+                        1
+                    ]
+                ]
+            },
+            "language": "en",
+            "note": "Number: 18 Publisher: Multidisciplinary Digital Publishing Institute",
+            "page": "3778",
+            "title": "Progress and Trends in the Application of Google Earth and Google Earth Engine",
+            "type": "article-journal",
+            "volume": "13"
+        },
+        {
+            "DOI": "10.1126/science.1244693",
+            "URL": "https://www.science.org/doi/10.1126/science.1244693",
+            "author": [
+                {
+                    "family": "Hansen",
+                    "given": "M. C."
+                },
+                {
+                    "family": "Potapov",
+                    "given": "P. V."
+                },
+                {
+                    "family": "Moore",
+                    "given": "R."
+                },
+                {
+                    "family": "Hancher",
+                    "given": "M."
+                },
+                {
+                    "family": "Turubanova",
+                    "given": "S. A."
+                },
+                {
+                    "family": "Tyukavina",
+                    "given": "A."
+                },
+                {
+                    "family": "Thau",
+                    "given": "D."
+                },
+                {
+                    "family": "Stehman",
+                    "given": "S. V."
+                },
+                {
+                    "family": "Goetz",
+                    "given": "S. J."
+                },
+                {
+                    "family": "Loveland",
+                    "given": "T. R."
+                },
+                {
+                    "family": "Kommareddy",
+                    "given": "A."
+                },
+                {
+                    "family": "Egorov",
+                    "given": "A."
+                },
+                {
+                    "family": "Chini",
+                    "given": "L."
+                },
+                {
+                    "family": "Justice",
+                    "given": "C. O."
+                },
+                {
+                    "family": "Townshend",
+                    "given": "J. R. G."
+                }
+            ],
+            "container-title": "Science",
+            "id": "hansen2013",
+            "issue": "6160",
+            "issued": {
+                "date-parts": [
+                    [
+                        2013,
+                        11,
+                        15
+                    ]
+                ]
+            },
+            "note": "Publisher: American Association for the Advancement of Science",
+            "page": "850-853",
+            "title": "High-resolution global maps of 21st-century forest cover change",
+            "type": "article-journal",
+            "volume": "342"
+        },
+        {
+            "DOI": "10.1016/j.isprsjprs.2020.04.001",
+            "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0924271620300927",
+            "author": [
+                {
+                    "family": "Tamiminia",
+                    "given": "Haifa"
+                },
+                {
+                    "family": "Salehi",
+                    "given": "Bahram"
+                },
+                {
+                    "family": "Mahdianpari",
+                    "given": "Masoud"
+                },
+                {
+                    "family": "Quackenbush",
+                    "given": "Lindi"
+                },
+                {
+                    "family": "Adeli",
+                    "given": "Sarina"
+                },
+                {
+                    "family": "Brisco",
+                    "given": "Brian"
+                }
+            ],
+            "container-title": "ISPRS Journal of Photogrammetry and Remote Sensing",
+            "id": "tamiminia2020",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020,
+                        6
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "152-170",
+            "title": "Google Earth Engine for geo-big data applications: A meta-analysis and systematic review",
+            "title-short": "Google Earth Engine for geo-big data applications",
+            "type": "article-journal",
+            "volume": "164"
+        },
+        {
+            "DOI": "10.3390/rs10050691",
+            "URL": "https://www.mdpi.com/2072-4292/10/5/691",
+            "author": [
+                {
+                    "family": "Kennedy",
+                    "given": "Robert E."
+                },
+                {
+                    "family": "Yang",
+                    "given": "Zhiqiang"
+                },
+                {
+                    "family": "Gorelick",
+                    "given": "Noel"
+                },
+                {
+                    "family": "Braaten",
+                    "given": "Justin"
+                },
+                {
+                    "family": "Cavalcante",
+                    "given": "Lucas"
+                },
+                {
+                    "family": "Cohen",
+                    "given": "Warren B."
+                },
+                {
+                    "family": "Healey",
+                    "given": "Sean"
+                }
+            ],
+            "container-title": "Remote Sensing",
+            "id": "kennedy2018",
+            "issue": "5",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018,
+                        5
+                    ]
+                ]
+            },
+            "language": "en",
+            "note": "Number: 5 Publisher: Multidisciplinary Digital Publishing Institute",
+            "page": "691",
+            "title": "Implementation of the LandTrendr Algorithm on Google Earth Engine",
+            "type": "article-journal",
+            "volume": "10"
+        },
+        {
+            "DOI": "10.1016/j.rse.2010.07.008",
+            "URL": "https://www.sciencedirect.com/science/article/pii/S0034425710002245",
+            "author": [
+                {
+                    "family": "Kennedy",
+                    "given": "Robert E."
+                },
+                {
+                    "family": "Yang",
+                    "given": "Zhiqiang"
+                },
+                {
+                    "family": "Cohen",
+                    "given": "Warren B."
+                }
+            ],
+            "container-title": "Remote Sensing of Environment",
+            "id": "kennedy2010",
+            "issue": "12",
+            "issued": {
+                "date-parts": [
+                    [
+                        2010,
+                        12,
+                        15
+                    ]
+                ]
+            },
+            "page": "2897-2910",
+            "title": "Detecting trends in forest disturbance and recovery using yearly landsat time series: 1. LandTrendr  temporal segmentation algorithms",
+            "title-short": "Detecting trends in forest disturbance and recovery using yearly landsat time series",
+            "type": "article-journal",
+            "volume": "114"
         }
     ],
     "project_biblios": [

@@ -2,55 +2,57 @@
 
 ## Summary
 
-this week we learned about how combining remote sensing and machine learning to classify pixels. For example classifying land use.
+This week we learned about image classification, a process that uses machine learning algorithms to categorises pixels, and explored how that can be used in remote sensing, such as for land-use mapping. I'm taking the data science module, so it was interesting to see familiar methods, including classification and regression trees, applied to challenges in remote-sensing. We looked at both supervised and unsupervised methods; supervised learning involves training a model on pre-labeled data to recognise patterns, while unsupervised methods identify clusters within the data, which are then labeled.
 
-I'm taking data science module so I have learned this before - very interesting to see how it is applied in practically in real-world scenarios.
+#### Supervised Machine Learning
 
-Methods for image classification:\
+We explored Classification and Regression Trees (CART) and Random Forests. CART creates a decision tree by recursively partitioning the data based on feature values, aiming to create homogeneous groups within each partition. Random Forests enhance this by building multiple decision trees on random subsets of the data and averaging their predictions, reducing overfitting and improving accuracy. Both methods excel at capturing complex, non-linear relationships between spectral data and land cover classes.
 
-Classification and regression trees / random forest
+Another supervised method we examined was Support Vector Machines (SVMs). SVMs operate by finding the optimal hyperplane that separates different classes in the data. They aim to maximize the margin between the hyperplane and the closest data points (support vectors). This method is particularly useful when dealing with complex spectral data, as SVMs can effectively handle the high-dimensional datasets common in satellite imagery. All of these supervised methods require labeled training data, where pixels are already associated with known land cover types, to learn the patterns and build the classification model.
 
--   Supervised
+**Unsupervised Machine Learning**
 
-    -   Pattern recognition or machine learning
+Unsupervised classification is employed when we lack prior knowledge about the specific land cover classes present in an image. Essentially, the algorithm is tasked with finding patterns within the data itself. It operates by grouping pixels based on their spectral similarities, without relying on any pre-labeled training data.
 
-    -   Classified learns patterns in the data
+ISODATA, which iteratively refines clusters based on spectral distance, and DBSCAN, which identifies clusters based on pixel density, and effectively handles irregular shapes and noise.
 
-    -   Uses that to place labels onto new data
-
-Support Vector Machine
-
--   Unsupervised
-
-<!-- -->
-
--   Identify land cover classes that aren't known before
-
--   Tells computer to cluster based on info it has
-
--   Then labels the clusters
-
-DBSCAN
-
-ISODATA
-
-Cluster Busting
-
-reducing overfitting
-
-train/test split
-
-tree pruning
+I found myself wondering about the trade-offs between these approaches. Supervised learning seems powerful when you have good training data, but what about areas where ground truth is sparse or difficult to obtain? Unsupervised methods offer flexibility, but how do you ensure the resulting clusters meaningfully represent real-world land cover types? We also touched on techniques like train/test splits and tree pruning to combat overfitting, highlighting the importance of robust model evaluation. The real-world applications, from urban planning to environmental monitoring, are clear, but I’m curious how well these classifications hold up over time, and what the impact of data quality and resolution is on the final accuracy.
 
 ## Application
 
-Sometimes referred to as GeoAI - professional buzzword
+introduce briefly what machine learning has been used for in research -\> lead onto
 
-introduce briefly what machine learning has been used for in research -\> lead onto the limatations
+lead onto -\> [@yang]
 
-more general article on how machine learning and satellite imagery could be used in future research -
+a brand new model for specifically detecting objects in satellite imagery.
 
-argues that the distinctive characteristics of satellite imagery set it apart from machine learning used for images, videos, text etc., - temporal and spatial characteristics, spectral channels (multi-channel) - author says popular libraries such as TorchVision do not support more than 3-channels
+"Unlike traditional methods that rely on manual feature selection, modern deep learning-based models learn patterns directly from the data. The researchers improved previous YOLOX model by adding Efficient Channel Attention (ECA), which helps the model focus on important parts of an image while ignoring background noise. They also used Adaptively Spatial Feature Fusion (ASFF), which enhances the detection of small objects by combining information from different scales in an image. Additionally, they replaced the standard training loss function with Varifocal Loss (VFL) to better balance the learning of hard-to-detect objects." - copied from Yohan Newsletter
+
+"Traditional detection algorithms are not effective in detecting objects in re‐mote sensing images. This is because traditional detection and the recognition of remote sensing image targets are mainly based on manually extracting features, and the rich,diverse, and detailed information in remote sensing images means that a single feature described manually is inadequate at fully expressing the target characteristics and relies more on expert experience" - page 2 [@yang]
+
+"In addition, machine learning based on probability and statistics usually requires complex feature description, and the feature representation learned on the basis of its shallow network structure is obviously insufficient in terms of performance and generalization ability when dealing with complex target detection problems." -page 2/3
+
+specialised solution -\> outperforms traditional models. Improves overall accuracy although more computationally intensive.
+
+in future research -\>
+
+monitoring urban expansion, identifying ships in coastal waters, or detecting vehicles in disaster zones.
+
+object detection in satellite remote sensing images, which is valuable for **resource exploration** and **natural disaster assessment**
+
+[@yang]
+
+<https://arxiv.org/pdf/2502.02850>
+
+## Reflection
+
+cool
+
+looking into the future -\> this week out of all the others has shown how this field is rapidly adapting and changing.
+
+in general -\> must be specific to Remote sensing - generalised machine learning models meant for images are not powerful enough.
+
+[@rolf] paper argues that the distinctive characteristics of satellite imagery set it apart from machine learning used for images, videos, text etc., - temporal and spatial characteristics, spectral channels (multi-channel) - author says popular libraries such as TorchVision do not support more than 3-channels
 
 "We outline critical discussion questions and actionable suggestions to transform SatML from merely an intriguing application area to a dedicated research discipline that helps move the needle on big challenges for machine learning and society."
 
@@ -62,35 +64,7 @@ The author argues that current machine learning methods are not robust enough be
 
 The potential of satellite data
 
-<https://arxiv.org/abs/2402.01444?ref=newsletter.terrawatchspace.com>
-
-lead onto -\>
-
-a new model for specifically detecting objects in satellite imagery.
-
-"Unlike traditional methods that rely on manual feature selection, modern deep learning-based models learn patterns directly from the data. The researchers improved previous YOLOX model by adding Efficient Channel Attention (ECA), which helps the model focus on important parts of an image while ignoring background noise. They also used Adaptively Spatial Feature Fusion (ASFF), which enhances the detection of small objects by combining information from different scales in an image. Additionally, they replaced the standard training loss function with Varifocal Loss (VFL) to better balance the learning of hard-to-detect objects." - copied from Yohan Newsletter
-
-"Traditional detection algorithms are not effective in detecting objects in re‐mote sensing images. This is because traditional detection and the recognition of remote sensing image targets are mainly based on manually extracting features, and the rich,diverse, and detailed information in remote sensing images means that a single feature described manually is inadequate at fully expressing the target characteristics and relies more on expert experience" - page 2
-
-"In addition, machine learning based on probability and sta‐ tistics usually requires complex feature description, and the feature representation learned on the basis of its shallow network structure is obviously insufficient in terms of performance and generalization ability when dealing with complex target detection problems." -page 2/3
-
-specialised solution -\> outperforms traditional models. Improves overall accuracy although more computationally intensive.
-
-in future research -\>
-
-monitoring urban expansion, identifying ships in coastal waters, or detecting vehicles in disaster zones.
-
-object detection in satellite remote sensing images, which is valuable for **resource exploration** and **natural disaster assessment**
-
-<https://arxiv.org/pdf/2502.02850>
-
-## Reflection
-
-cool
-
-looking into the future -\> this week out of all the others has shown how this field is rapidly adapting and changing.
-
-in general -\> must be specific to Remote sensing - generalised machine learning models meant for images are not powerful enough.
+[https://arxiv.org/abs/2402.01444](https://arxiv.org/abs/2402.01444?ref=newsletter.terrawatchspace.com){.uri}
 
 With AI and advanced Neural networks - alot of the nuance can be lost behind these black-box algorithms so there it explainability could be lost which is concerning.
 

@@ -220,25 +220,16 @@ div.csl-indent {
 
 <section id="summary" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">5.1</span> Summary</h2>
-<p>- This week we were introduced to the wonders of Google Earth Engine.</p>
-<p>- geospatial data platform which aims to simplify the huge technical processes often involved with satellite data.</p>
-<p>- contains publicly available libraries of pre-written code for many of the preproccessing we talked about in week 3.</p>
-<p>- contains data catalog all in one place - for easy access to Landsat and sentinel data - as well as data on climate, land cover, buildings. - can be very general or incredibly specific.</p>
-<p>this simplifies the coding process - and fortunately means that I do not have to learn a whole new language from scratch (javascript).</p>
-<p>There is also a thriving open-source community in Google Earth Engine <span class="citation" data-cites="roy2025">(<a href="references.html#ref-roy2025" role="doc-biblioref">Roy, T., and A. 2025</a>)</span>-</p>
+<p>This week’s session introduced Google Earth Engine (GEE), a cloud-based geospatial data platform that aims to simplify the huge technical processes often involved with satellite data.</p>
+<p>A key feature of GEE is its pre-built code libraries for common preprocessing tasks, such as those covered in week three, and a comprehensive data catalog providing direct access to datasets like Landsat and Sentinel, as well as climate, land cover, and building data. This simplifies the coding process and technical aspects, fortunately meaning that I did not have to learn a whole new language from scratch (JavaScript). Another significant advantage of Google Earth Engine is its cloud-based processing environment, which enables computationally intensive tasks to be performed more efficiently than on your own machine. There is also a thriving open-source community in Google Earth Engine so if you have an issue, it is likely that someone else has had it before and solved it:</p>
 <p><a href="https://gee-community-catalog.org/" class="uri">https://gee-community-catalog.org/</a> <span class="citation" data-cites="roy2025">(<a href="references.html#ref-roy2025" role="doc-biblioref">Roy, T., and A. 2025</a>)</span></p>
 <p><a href="https://github.com/gee-community" class="uri">https://github.com/gee-community</a></p>
-<p>if you have an issue, it is likely that someone else has had it before and solved it:</p>
-<p>another benfeit is that the code is ran on Google’s servers so heavily computational processes can be completed much quicker then if you were to do it on your own computer.</p>
-</section>
-<section id="application" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="application"><span class="header-section-number">5.2</span> Application</h2>
-<p>what i did in the practical -&gt;</p>
-<p>Continuing on from last week, I wanted to use this week’s practical to see how remote sensing could be used to guide policy. So in google earth engine I wanted to the visualise NDVI for each borough as well calculate average value. Could this method guide where more urban greening needs to occur?</p>
+<p>Continuing on from last week, I wanted to use this week’s practical to see how remote sensing could be used to guide policy. So in google earth engine I calculated and visualised NDVI for each borough. Could Google earth engine be used to guide where more urban greening needs to occur? I have included the code and a flowchart below:</p>
+<pre><code>[Load Borough Boundaries] --&gt; [Load Sentinel-2 Data] --&gt; [Filter Data by Date &amp; Bounds] --&gt; [Calculate Mean Image] --&gt; [Calculate NDVI] --&gt; [Visualise NDVI] --&gt; [Print Mean NDVI for Borough] </code></pre>
 <p><a href="https://code.earthengine.google.com/f5cb5c8ca991caa1223ae325a4c66763" class="uri">https://code.earthengine.google.com/f5cb5c8ca991caa1223ae325a4c66763</a></p>
 <p><img src="images/clipboard-1888529418.png" class="img-fluid"></p>
 <table class="caption-top table">
-<caption>Top 3 green boroughs</caption>
+<caption>Most green boroughs by mean NDVI</caption>
 <thead>
 <tr class="header">
 <th>Borough</th>
@@ -261,7 +252,7 @@ div.csl-indent {
 </tbody>
 </table>
 <table class="caption-top table">
-<caption>Bottom 3 green boroughs</caption>
+<caption>Least green boroughs by mean NDVI</caption>
 <thead>
 <tr class="header">
 <th>Borough</th>
@@ -283,30 +274,43 @@ div.csl-indent {
 </tr>
 </tbody>
 </table>
-<p>The results make sense - inner boroughs are less green than outer boroughs - and provides clear evidence that geographically-aw. This could be further refined to a finer scale to identify particular neighbourhoods that require more urban greening</p>
-<p>because it contains multiple images over time - able to produce</p>
-<ul>
-<li><p>median image</p></li>
-<li><p>mosaic</p></li>
-</ul>
-<p>by finding code in google earth engines catalog</p>
-<p>and then calculated NDVI</p>
-<p>-&gt; onto real resaerch. a powerful tool so GEE Is popular in research -&gt;</p>
-<p><a href="https://www.mdpi.com/2072-4292/13/18/3778" class="uri">https://www.mdpi.com/2072-4292/13/18/3778</a> - read dis papr</p>
-<p>as well as a popular visualisation tool</p>
-<p><a href="https://alexchunet.users.earthengine.app/view/forestchange2020" class="uri">https://alexchunet.users.earthengine.app/view/forestchange2020</a> and corresponding paper : <a href="https://www.science.org/doi/10.1126/science.1244693" class="uri">https://www.science.org/doi/10.1126/science.1244693</a></p>
-<p>global forest change</p>
-<p>add novel thoughts / critiques</p>
+<p>This quick analysis provides a possible use case for monitoring urban greening as well as a justification for geographically aware policy. This could clearly be further refined, for example, to a finer scale to identify particular neighbourhoods that require more urban greening, but it demonstrates how GEE can be an effective platform for communicating results and reproducible research.</p>
+</section>
+<section id="application" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="application"><span class="header-section-number">5.2</span> Application</h2>
+<p>In a paper discussing the trajectory of GEE in research, Zhao et al., (2021) notes how since 2015, applications of GEE expanded, covering fields such as climate studies, agriculture, water resource management, land cover analysis, disaster response, and urban development <span class="citation" data-cites="zhao2021 tamiminia2020">(<a href="references.html#ref-zhao2021" role="doc-biblioref">Zhao et al. 2021</a>; <a href="references.html#ref-tamiminia2020" role="doc-biblioref">Tamiminia et al. 2020</a>)</span>. And in 2020, almost 300 research papers utilised GEE, demonstrating its growing influence.</p>
+<p>A key strength of GEE lies in its contributions to visualisation and reproducibility. The platform enables researchers to create apps to present datasets interactively, improving researchers ability to communicate their results and make them more accessible to both expert and non-expert audiences. Hansen’s (2013) research paper on global forest change, was accompanied with an interactive GEE visualtion allowing users to explore deforestation patterns themselves <span class="citation" data-cites="hansen2013">(<a href="references.html#ref-hansen2013" role="doc-biblioref">Hansen et al. 2013</a>)</span>.</p>
+<p><img src="images/clipboard-2935809600.png" class="img-fluid"></p>
+<p><a href="https://alexchunet.users.earthengine.app/view/forestchange2020" class="uri">https://alexchunet.users.earthengine.app/view/forestchange2020</a></p>
+<p>Another example is LandTrendr; a Landsat-based detection algorithm for trends in disturbance and recovery, widely used for the analysis of change in Landsat spectral time series data [<span class="citation" data-cites="kennedy2018">Kennedy et al. (<a href="references.html#ref-kennedy2018" role="doc-biblioref">2018</a>)</span>].</p>
+<p>It was initially implemented in a proprietary programming language (IDL) with high computational demands however it was transitioned to GEE removing accessibility barriers.</p>
+<p>It has been used extensively in research, with the original paper “Detecting trends in forest disturbance and recovery using yearly Landsat time series” being cited 1887 times, perfectly demonstrating how GEE can allow advanced algorithms to become more accessible <span class="citation" data-cites="kennedy2010">(<a href="references.html#ref-kennedy2010" role="doc-biblioref">Kennedy, Yang, and Cohen 2010</a>)</span>. The free availability of LandTrendr enables researchers to apply it to study areas without needing extensive the computational infrastructure.</p>
 </section>
 <section id="reflection" class="level2" data-number="5.3">
 <h2 data-number="5.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">5.3</span> Reflection</h2>
-<p>I think of all the remote sensing tools we have used so far, GEE finds the best balance between accessibility and powerful coding - provides a baseline with all the pre-written code that can be built on further to fit your needs.</p>
-<p>i enjoyed be able to apply the skills I’ve learnt to a real-world application I am interested in, and so close to home. - helpful to see how remote sensing and google earth engine can be used in a policy setting.</p>
+<p>Of all the remote sensing tools I have used so far, I think Google Earth Engine finds the best balance between accessibility and powerful coding. The pre-written code that can be adapted to fit specific needs, making it an ideal tool for both beginners and experienced users.</p>
+<p>The mini-project I completed on urban greening in London demonstrated just how efficient GEE can be. By adapting existing code from the practicals and utilising its built-in libraries, I was able to complete this analysis in a relatively short amount of time. This is reflected in GEE’s recent explosion in research applications.</p>
+<p>I also found it rewarding to apply these skills to a real-world topic that is both relevant and local to me. Seeing how remote sensing and GEE can be used in a policy setting reinforced its practical applications beyond just academic exercises. While there are limitations, such as data availability and the learning curve for more advanced scripting, the accessibility of GEE makes it a highly attractive tool for integrating Earth Observation data into policy and decision-making. Even if GEE itself does not become a long-term tool for me, the concepts and skills I have gained from using it will undoubtedly be valuable in future research and professional contexts.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-hansen2013" class="csl-entry" role="listitem">
+Hansen, M. C., P. V. Potapov, R. Moore, M. Hancher, S. A. Turubanova, A. Tyukavina, D. Thau, et al. 2013. <span>“High-Resolution Global Maps of 21st-Century Forest Cover Change.”</span> <em>Science</em> 342 (6160): 850–53. <a href="https://doi.org/10.1126/science.1244693">https://doi.org/10.1126/science.1244693</a>.
+</div>
+<div id="ref-kennedy2010" class="csl-entry" role="listitem">
+Kennedy, Robert E., Zhiqiang Yang, and Warren B. Cohen. 2010. <span>“Detecting Trends in Forest Disturbance and Recovery Using Yearly Landsat Time Series: 1. LandTrendr <span></span> Temporal Segmentation Algorithms.”</span> <em>Remote Sensing of Environment</em> 114 (12): 2897–2910. <a href="https://doi.org/10.1016/j.rse.2010.07.008">https://doi.org/10.1016/j.rse.2010.07.008</a>.
+</div>
+<div id="ref-kennedy2018" class="csl-entry" role="listitem">
+Kennedy, Robert E., Zhiqiang Yang, Noel Gorelick, Justin Braaten, Lucas Cavalcante, Warren B. Cohen, and Sean Healey. 2018. <span>“Implementation of the LandTrendr Algorithm on Google Earth Engine.”</span> <em>Remote Sensing</em> 10 (5): 691. <a href="https://doi.org/10.3390/rs10050691">https://doi.org/10.3390/rs10050691</a>.
+</div>
 <div id="ref-roy2025" class="csl-entry" role="listitem">
 Roy, Samapriya, Swetnam T., and Saah A. 2025. <span>“Samapriya/Awesome-Gee-Community-Datasets: Community Catalog (3.2.0).”</span> <a href="https://doi.org/10.5281/zenodo.14757583">https://doi.org/10.5281/zenodo.14757583</a>.
+</div>
+<div id="ref-tamiminia2020" class="csl-entry" role="listitem">
+Tamiminia, Haifa, Bahram Salehi, Masoud Mahdianpari, Lindi Quackenbush, Sarina Adeli, and Brian Brisco. 2020. <span>“Google Earth Engine for Geo-Big Data Applications: A Meta-Analysis and Systematic Review.”</span> <em>ISPRS Journal of Photogrammetry and Remote Sensing</em> 164 (June): 152–70. <a href="https://doi.org/10.1016/j.isprsjprs.2020.04.001">https://doi.org/10.1016/j.isprsjprs.2020.04.001</a>.
+</div>
+<div id="ref-zhao2021" class="csl-entry" role="listitem">
+Zhao, Qiang, Le Yu, Xuecao Li, Dailiang Peng, Yongguang Zhang, and Peng Gong. 2021. <span>“Progress and Trends in the Application of Google Earth and Google Earth Engine.”</span> <em>Remote Sensing</em> 13 (18): 3778. <a href="https://doi.org/10.3390/rs13183778">https://doi.org/10.3390/rs13183778</a>.
 </div>
 </div>
 </section>
