@@ -2,29 +2,83 @@
 
 ## Summary
 
-accuracy measures
+This week we looked at accuracy measures for classification - going to use practical SVM and random forest model to explain different accuracy measures.
+
+In the practical last week I focused on my undergraduate city of Bristol. A simple random forest model with limited training data (3-5 polygons for each land type) - polygon data for land use types , forest, low urban, high urban, water, bare earth.
+
+Train/test split -\> why we do it
+
+I then found code on google earth engine for SVM and adapted for my code.
+
+comparing accuracy measures for different machine learning algorithms in practical - what does the values each mean ?
+
+Random Forest Classifier:
+
+![](images/clipboard-4120096112.png){width="481"}
+
+Support Vector Machine (SVM):
+
+![](images/clipboard-4234707019.png){width="475"}
+
+Light pink: Low urban\
+Blue: Water\
+Dark pink: High urban\
+Beige: Grass\
+Grey: Bare earth\
+Green: Forest\
+\
+
+visually, SVM predicts that there is a lot more forest in what the RF predicts as low urban. But how can we interpret these results? There are various measures each with their own advantages and disadvantages.
 
 **Accuracy Assessment**
 
-After producing an output we need oto know how accurate it is
+Each predicted value is placed into this Confusion Matrix, which acts as the foundation for the upcoming measures.
 
--   Producer accuracy
+![](images/clipboard-3707637320.png)
 
-    -   True positive rate or sensitivity
+**Overall accuracy** measures the total correct prediction in proportion to all prediction
 
--   User accuracy
+(TP+TN) / (TP + FP + FN + TN)
 
-    -   Positive prediction value - horizontal pixels are incorrectly classified as a known class when they shouldve been classified as something else
+RF model: 0.981
 
--   Overall accuracy
+SVM model: 0.879
 
-Producers accuracy can also be called errors of omission
+what this means in practice -\>
 
-User's accuracy can be called errors of commission
+**Producer accuracy** measures the true positive rate in a class or the proportion of correctly identified positives relative to actual positives.
 
-Kappa is designed to express the accuracy of an image compared to the results done by chance. Ranges from 0 to 1. calls to abandon it as it may not be that useful
+TP / (TP + FN)
 
-F1 score
+looking at low urban class - so the number of pixels correctly identified pixels as low urban divided by the total pixels in the low urban class.
+
+RF model: 0.943
+
+SVM model: 0.478
+
+**User accuracy** measures the proportion of correctly predicted positives relative to all predicted positives.
+
+TP / (TP + FP)
+
+again, using the low urban class - the number of pixels correctly identified as low urban divided by the total number of pixels that are claimed to be low urban.
+
+RF model: 0.955
+
+SVM model: 0.962
+
+SVM model performs better here!
+
+what these mean in practise for the classifiying for urban low class -\> SVM low producer accuracy means that a lot of the urban low pixels are misclassified as a different class - however the high user accuracy means that of the pixels that are predicted urban low are very likely to be urban low.
+
+accuracy depends on the needs - producer or user ..
+
+**Kappa** **coefficient** is designed to express the accuracy of an image compared to the results done by chance. Ranges from 0 to 1. calls to abandon it as it may not be that useful
+
+RF: 0.977\
+
+SVM: 0.855
+
+there is also the **F1 score** which is the harmonic mean of precision (UA) and recall (PA). Useful for balancing UA and PA, especially in imbalanced datasets like our own.
 
 Receiver operating characteristic curve (ROC curve)
 
@@ -49,16 +103,32 @@ Spatial cross validation
 
 ## Application
 
-In the practical this week I focused on my undergraduate city of Bristol.
+Contiuining on from last week -\> here are also more complicated classification use case in remote sensing: Object detection - \> involves identifying the locations and types of specific targets within an image and labeling them with bounding boxes. e.g., Disaster detection (landslides, ship monitoring, resource exploration)
 
-comparing accuracy measures for different machine learning algorithms in practical - what does the values each mean ?
+more complicated problems need more specialised techniques:
 
-Random Forest Classifier:
+moving beyond basic machine learning techniques, there has been developments in deep learning methods. ANNs and CNNs -\> [@yang]
 
-![](images/clipboard-4120096112.png)
+**Artificial Neural Networks (ANNs)**: use many hidden layers to model multiple levels of abstraction, have shown great promise in remote sensing, often outperforming methods like SVM for tasks like hyperspectral image classification**. Convolutional Neural Networks (CNNs)**, a type of deep learning model, are particularly good at exploiting semantic features of imagery data by directly extracting features from massive amounts of imagery. [@maxwell2018]. reword
 
-**label what the colours are**
+[Landslide detection. Ship detection.]{.underline}
+
+a brand new model for specifically detecting objects in satellite imagery. [@yang] RS-YOLOX CNN
+
+"Unlike traditional methods that rely on manual feature selection, modern deep learning-based models learn patterns directly from the data. The researchers improved previous YOLOX model by adding Efficient Channel Attention (ECA), which helps the model focus on important parts of an image while ignoring background noise. They also used Adaptively Spatial Feature Fusion (ASFF), which enhances the detection of small objects by combining information from different scales in an image. Additionally, they replaced the standard training loss function with Varifocal Loss (VFL) to better balance the learning of hard-to-detect objects." - copied from Yohan Newsletter
+
+"Traditional detection algorithms are not effective in detecting objects in re‐mote sensing images. This is because traditional detection and the recognition of remote sensing image targets are mainly based on manually extracting features, and the rich,diverse, and detailed information in remote sensing images means that a single feature described manually is inadequate at fully expressing the target characteristics and relies more on expert experience" - page 2 [@yang]
+
+"In addition, machine learning based on probability and statistics usually requires complex feature description, and the feature representation learned on the basis of its shallow network structure is obviously insufficient in terms of performance and generalization ability when dealing with complex target detection problems." -page 2/3
+
+specialised solution -\> outperforms traditional models. Improves overall accuracy although more computationally intensive.
+
+object detection in satellite remote sensing images, which is valuable for **resource exploration** and **natural disaster assessment**
+
+[@yang]
 
 ## Reflection
 
 Critique cross-validation with no spatial-autocorrelation in  diary.
+
+Accuracy measures rely heavily on the quality of the labeled data - \> ground truth - \> validating data can be expensive , requiring alot of manual field work.

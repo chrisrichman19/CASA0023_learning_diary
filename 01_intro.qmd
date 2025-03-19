@@ -36,10 +36,6 @@ Whilst Landsat and Sentinel satellites dominant research due to their availabili
 
 ## Reflection
 
-reflection on lecture material - elcetromagnetic blah blah
-
-reflection on remote sensing in general
-
 I am impressed by how much remote sensing data is freely available despite the million of pounds cost of launching satellites and all the research involved. They appear to have democratised remote sensing research, allowing for policy development and R&D in many domains including agriculture and urban planning. It lowers the barrier to entry for researchers globally, allowing for a wide range of institutions and individuals to contribute to the understanding of Earth.
 
 I also found a very helpful newsletter by TerraWatch Space called [Last Week in Observation](https://newsletter.terrawatchspace.com/) that releases weekly updates on the commercial and academic world in remote sensing, so I will keep an eye on that for any new research or innovations in the field.

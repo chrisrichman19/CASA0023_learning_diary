@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>4&nbsp; Policy – Remotely Sensing Learning Diary</title>
+<title>8&nbsp; SAR in GEE – Remotely Sensing Learning Diary</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +20,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -50,8 +30,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./05_GEE.html" rel="next">
-<link href="./03_corrections.html" rel="prev">
+<link href="./references.html" rel="next">
+<link href="./07_classification-ii.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -101,7 +81,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./04_policy.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Policy</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./08_SAR_in_GEE.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">SAR in GEE</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -152,7 +132,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./04_policy.html" class="sidebar-item-text sidebar-link active">
+  <a href="./04_policy.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Policy</span></span></a>
   </div>
 </li>
@@ -176,7 +156,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./08_SAR_in_GEE.html" class="sidebar-item-text sidebar-link">
+  <a href="./08_SAR_in_GEE.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">SAR in GEE</span></span></a>
   </div>
 </li>
@@ -196,9 +176,9 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">4.1</span> Summary</a></li>
-  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="header-section-number">4.2</span> Application</a></li>
-  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">4.3</span> Reflection</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">8.1</span> Summary</a></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="header-section-number">8.2</span> Application</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">8.3</span> Reflection</a></li>
   </ul>
 </nav>
     </div>
@@ -207,7 +187,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Policy</span></h1>
+<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">SAR in GEE</span></h1>
 </div>
 
 
@@ -224,40 +204,16 @@ div.csl-indent {
 </header>
 
 
-<section id="summary" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">4.1</span> Summary</h2>
-<p>The London Plan’s Policy G5 focuses on urban greening as a fundamental element of site and building design for major developments <span class="citation" data-cites="gla2021">(<a href="references.html#ref-gla2021" role="doc-biblioref">GLA 2021</a>)</span>. This policy encourages integrating high-quality landscaping, green roofs, green walls, and sustainable drainage solutions to enhance biodiversity and mitigate the urban heat island effect. The UGF assigns scores from 0 (impermeable surfaces) to 1 (semi-natural vegetation) to quantify greening efforts <span class="citation" data-cites="gla2021">(<a href="references.html#ref-gla2021" role="doc-biblioref">GLA 2021</a>)</span>. This index attempts to ensure that new developments contribute towards London’s environmental goals.</p>
-<p><img src="images/clipboard-1974949891.png" class="img-fluid"></p>
-<p><u><em>Figure Source:The London Plan, 2021 <span class="citation" data-cites="gla2021">(<a href="references.html#ref-gla2021" role="doc-biblioref">GLA 2021, 324</a>)</span></em></u></p>
-<p>The practical benefits underpinning this Urban greening policy is clear as there is significant evidence that greening improves air quality, increases biodiversity, and improves climate resilience <span class="citation" data-cites="semeraro2021 quaranta2021">(<a href="references.html#ref-semeraro2021" role="doc-biblioref">Semeraro et al. 2021</a>; <a href="references.html#ref-quaranta2021" role="doc-biblioref">Quaranta, Dorati, and Pistocchi 2021</a>)</span>. However, there are questions to consider regarding the practical effectiveness and implementation of UGF.</p>
-<p>How will meaningful ecological outcomes in the real-world be prioritised over checklist-compliance ?</p>
-<p>How can spatial disparities and local needs be addressed ?</p>
-<p>What barriers exist in its implementation? And how will greening maintenance be assessed after the planning application has been approved?</p>
-<p>These are all important questions that a holistic solution for a healthier urban spaces need to address.</p>
+<section id="summary" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">8.1</span> Summary</h2>
 </section>
-<section id="application" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="application"><span class="header-section-number">4.2</span> Application</h2>
-<p>Remotely sensed data could directly support the goals of Policy G5 in assessing and monitoring urban greening efforts. Satellite imagery and LiDAR could be used to quantify vegetation cover and track changes over time. One example researchers could implement is Normalized Difference Vegetation Index (NDVI) analysis, a technique used to assess vegetation health by measuring the difference between near-infrared (which vegetation strongly reflects) and red light (which vegetation absorbs). This index could be used to identify plant cover in neighbourhoods, monitor changes over time, and assess how well urban-greening contribute to reducing the urban heat island effect.</p>
-<p>Remote sensing data could aid a more proactive approach, by identifying disparities in urban greening across different boroughs, and supporting a more equitable implementation of the policy. This approach allows for the prioritisation of interventions in neighbourhoods lacking greening or experiencing issues such as poor air quality or urban heat island impacts. By recognising the importance of local conditions, remote sensing tools can be used to help tailor greening requirements to meet specific areas needs, acknowledging that developments in areas like Richmond may have different needs compared to those in the City.</p>
-<p>Remote sensing would offer a practical solution to go beyond checklist compliance and instead focus in on the real-world environmental outcomes of urban greening. Additionally it provides ongoing monitoring and support the maintenance of greenery post-development approval, as well as inform necessary adaptations in response to changing circumstances, such as those driven by global warming in the future.</p>
+<section id="application" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="application"><span class="header-section-number">8.2</span> Application</h2>
 </section>
-<section id="reflection" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">4.3</span> Reflection</h2>
-<p>This exercise has highlighted the intersection between remote sensing and urban policy, emphasising how remote sensing data can enhance the effectiveness of greening initiatives. While satellite and aerial data offer powerful monitoring tools, challenges such as data resolution, cloud cover, and accessibility constraints may limit real-world application. Integrating EO into policy decisions requires collaboration between urban planners, environmental scientists, and data analysts. Personally, I found the application of NDVI particularly insightful, as it demonstrates a tangible way to assess vegetation health and policy compliance.</p>
-<p>This exercise highlighted the potential of remote sensing to bridge policy goals and on-ground implementation. While remote sensing offers a powerful solution for monitoring urban greening, practical barriers like data resolution, cost, and technical capacity could potentially limit its universal adoption, raising equity concerns, where cash-strapped councils could struggle to adopt remote sensing tools, risking uneven policy enforcement.</p>
+<section id="reflection" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">8.3</span> Reflection</h2>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
-<div id="ref-gla2021" class="csl-entry" role="listitem">
-GLA. 2021. <em>The London Plan: The Spatial Development Strategy for Greater London, March 2021</em>. London: Greater London Authority.
-</div>
-<div id="ref-quaranta2021" class="csl-entry" role="listitem">
-Quaranta, Emanuele, Chiara Dorati, and Alberto Pistocchi. 2021. <span>“Water, Energy and Climate Benefits of Urban Greening Throughout Europe Under Different Climatic Scenarios.”</span> <em>Scientific Reports</em> 11 (1): 12163. <a href="https://doi.org/10.1038/s41598-021-88141-7">https://doi.org/10.1038/s41598-021-88141-7</a>.
-</div>
-<div id="ref-semeraro2021" class="csl-entry" role="listitem">
-Semeraro, Teodoro, Aurelia Scarano, Riccardo Buccolieri, Angelo Santino, and Eeva Aarrevaara. 2021. <span>“Planning of Urban Green Spaces: An Ecological Perspective on Human Benefits.”</span> <em>Land</em> 10 (2): 105. <a href="https://doi.org/10.3390/land10020105">https://doi.org/10.3390/land10020105</a>.
-</div>
-</div>
 </section>
 
 </main> <!-- /main -->
@@ -683,13 +639,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./03_corrections.html" class="pagination-link" aria-label="Corrections and Enhancements">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Corrections and Enhancements</span></span>
+      <a href="./07_classification-ii.html" class="pagination-link" aria-label="Classification II">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./05_GEE.html" class="pagination-link" aria-label="Google Earth Engine">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Google Earth Engine</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link" aria-label="References">
+        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">References</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

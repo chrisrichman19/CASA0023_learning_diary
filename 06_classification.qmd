@@ -40,28 +40,6 @@ To note - The authors referenced similar research that used SVM methods but they
 
 [@teluguntla2018; p. 338]
 
-a more complicated classifcation case in remote sensing: Object detection - \> involves identifying the locations and types of specific targets within an image and labeling them with bounding boxes.
-
-more complicated problems need more specialised techniques:
-
-moving beyond basic machine learning techniques, there has been developments in deep learning methods. ANNs and CNNs -\> [@yang]
-
-**Artificial Neural Networks (ANNs)**: use many hidden layers to model multiple levels of abstraction, have shown great promise in remote sensing, often outperforming methods like SVM for tasks like hyperspectral image classification**. Convolutional Neural Networks (CNNs)**, a type of deep learning model, are particularly good at exploiting semantic features of imagery data by directly extracting features from massive amounts of imagery. [@maxwell2018]. reword
-
-a brand new model for specifically detecting objects in satellite imagery. [@yang] RS-YOLOX CNN
-
-"Unlike traditional methods that rely on manual feature selection, modern deep learning-based models learn patterns directly from the data. The researchers improved previous YOLOX model by adding Efficient Channel Attention (ECA), which helps the model focus on important parts of an image while ignoring background noise. They also used Adaptively Spatial Feature Fusion (ASFF), which enhances the detection of small objects by combining information from different scales in an image. Additionally, they replaced the standard training loss function with Varifocal Loss (VFL) to better balance the learning of hard-to-detect objects." - copied from Yohan Newsletter
-
-"Traditional detection algorithms are not effective in detecting objects in re‐mote sensing images. This is because traditional detection and the recognition of remote sensing image targets are mainly based on manually extracting features, and the rich,diverse, and detailed information in remote sensing images means that a single feature described manually is inadequate at fully expressing the target characteristics and relies more on expert experience" - page 2 [@yang]
-
-"In addition, machine learning based on probability and statistics usually requires complex feature description, and the feature representation learned on the basis of its shallow network structure is obviously insufficient in terms of performance and generalization ability when dealing with complex target detection problems." -page 2/3
-
-specialised solution -\> outperforms traditional models. Improves overall accuracy although more computationally intensive.
-
-object detection in satellite remote sensing images, which is valuable for **resource exploration** and **natural disaster assessment**
-
-[@yang]
-
 What factors influence the selection of machine learning classifiers -\> why pick one model over the other?
 
 <https://arxiv.org/pdf/2502.02850>

@@ -1,7 +1,5 @@
 # Portfolio and Xaringan Presentation
 
-This week we were tasked to get to grips with Xaringan and Quarto ...
-
 ## Sentinel-1c
 
 ```{=html}
@@ -10,8 +8,6 @@ This week we were tasked to get to grips with Xaringan and Quarto ...
 
 ## Reflection
 
-comparing to powerpoint does seem alot more complicated - especially when resizing images and restyling text etc.,
+Xaringan presentations at first appear a lot more complex than comparable programs like PowerPoint and Slides, particularly when it comes to tasks like resizing images and restyling text. I think that it will take a while to master all the syntax before it becomes intuitive.
 
-I think it will take a while to get used to all the syntax before it becomes second nature .. . .
-
-i looked into the benefits of why xaringan is considered more powerful by its user (over powerpoint, google slides etc.,) :
+I looked into the benefits of Xaringan, which its users claim make it more powerful than traditional presentation software like PowerPoint or Google Slides. For example, the ability to directly include R code and its output into slides is a big professed advantage for its user. However, at this stage, I am not yet convinced and remain unconverted.
