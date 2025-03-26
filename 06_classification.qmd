@@ -26,58 +26,22 @@ A popular phenomena in remote sensing research is land use and land cover mappin
 
 Teluguntla et al., (2018) used a random forest to precisely classify cropland in Australia and China [@teluguntla2018].
 
-existing global and regional cropland products were derived from medium to coarse resolution (250-m to 1-km) remote sensing data. They needed highly accurate 30-m cropland data as precise cropland maps are crucial for understanding and managing resources related to food and water.
+Existing global and regional cropland products were derived from medium to coarse resolution (250-m to 1-km) remote sensing data. They needed highly accurate 30-m cropland data as precise cropland maps are crucial for understanding and managing resources related to food and water.
 
-the random forest (RF) model was trained using a **comprehensive and iterative approach** involving a large collection of reference data and careful consideration of various factors. To label their data - Ground data was collected in field visits. Over 628 samples were collected in Australia [@teluguntla2018].
-
-additionally **Sub-meter to 5-m Very High Resolution Imagery (VHRI)**, available for the entire study region, was used to generate cropland versus non-cropland interpretations by multiple analysts across China and Australia, resulting in approximately 1490 data samples.
-
-The authors selected a random forest model as they can handle high-dimensionality, and are suitable for large datasets.
-
-To note - The authors referenced similar research that used SVM methods but they chose not too as an RF is easier to be implement.
+The random forest (RF) model was trained using an iterative approach involving a large collection of reference data. To label their data - Ground data was collected in field visits. Over 628 samples were collected in Australia [@teluguntla2018]. Additionally Sub-meter to 5-m Very High Resolution Imagery (VHRI), available for the entire study region, was used to generate cropland versus non-cropland interpretations by multiple analysts across China and Australia, resulting in approximately 1490 data samples. This demonstrates how the process of 'supervising' / labeling data for machine learning can be as intense as the analysis itself.
 
 ![](images/clipboard-1512575338.png)
 
 [@teluguntla2018; p. 338]
 
-What factors influence the selection of machine learning classifiers -\> why pick one model over the other?
+This intensive supervised learning approach is not uncommon, as existing pre-labelled data is sparse especially in remote sensing [@xu2023].
 
-<https://arxiv.org/pdf/2502.02850>
+The quantity and quality of training data significantly impact classifier performance so extensive field work may be required to correctly label data.
 
 ## Reflection
 
-cool
+This week highlighted remote sensing's rapid development and its technical challenges. Tools like deep learning offer transformative capabilities, but, their integration into policy faces hurdles, particularly regarding data quality, computational costs, and model transparency. For instance, extensive fieldwork for training data labelling is resource-intensive, which could complicate policy applications.
 
-looking into the future -\> this week out of all the others has shown how this field is rapidly adapting and changing.
+In a similar vain, in the literature, I found a debate between the need for domain-specific models and utilising repurposed computer vision libraries given computational resources required for training [@rolf; @lahrichi]. [@rolf] suggests that satellite data’s temporal, spatial, and spectral complexity, require tailored solutions rather than repurposed computer vision libraries. However, [@lahrichi] argues that the costs may outweigh the benefits. This debate emphasises balancing innovation with practicality and shows that this field is still in its infancy.
 
-in general -\> must be specific to Remote sensing - generalised machine learning models meant for images are not powerful enough.
-
-[@rolf] paper argues that the distinctive characteristics of satellite imagery set it apart from machine learning used for images, videos, text etc., - temporal and spatial characteristics, spectral channels (multi-channel) - author says popular libraries such as TorchVision do not support more than 3-channels.
-
-"We outline critical discussion questions and actionable suggestions to transform SatML from merely an intriguing application area to a dedicated research discipline that helps move the needle on big challenges for machine learning and society."
-
-The author argues that current machine learning methods are not robust enough because they are tailored to other data modalities and don't address the unique characteristics and challenges of satellite data.  exemplified by custom models -\> e.g., the YOLO model adapted to detect landslides, the various technical additions to this new RS-YOLOx,
-
-models must be trained on all the extensive and unique data availibe to satellite data -\> computer intensive to train.
-
-**differences such as spatial and temporal scales, spectral channels, data volume, annotation sparsity, and deployment considerations.**
-
-relate this to google earth engine - a domain specific software with built in algos
-
-The potential of satellite data
-
-[https://arxiv.org/abs/2402.01444](https://arxiv.org/abs/2402.01444?ref=newsletter.terrawatchspace.com){.uri}
-
-With AI and advanced Neural networks - alot of the nuance can be lost behind these black-box algorithms explainability could be lost which is concerning.
-
-Understanding a model's function and visualizing interpretations are critical in remote sensing applications to gain scientific insights and assess trustworthiness
-
-<https://ieeexplore.ieee.org/abstract/document/10742949>
-
-other Challenges for models
-
-**Potential for overfitting**: Especially with powerful classifiers, there's a risk of the model learning the training data too precisely, hindering its ability to generalize to new data.
-
-**Training data requirements**: The quantity and quality of training data significantly impact classifier performance. extensive field work may be required to correctly label data!
-
-**Feature space impacts and reduction**: The choice and processing of features from the remote sensing data can greatly influence classification accuracy
+Another concern is “black-box” algorithms risk eroding trust in critical applications like disaster monitoring. Explainability must remain at the forefront of remote sensing, ensuring stakeholders understand critical model decisions.

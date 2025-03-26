@@ -48,7 +48,7 @@ A key strength of GEE lies in its contributions to visualisation and reproducibi
 
 <https://alexchunet.users.earthengine.app/view/forestchange2020>
 
-Another example is LandTrendr; a Landsat-based detection algorithm for trends in disturbance and recovery, widely used for the analysis of change in Landsat spectral time series data \[@kennedy2018\].
+Another example is LandTrendr; a Landsat-based detection algorithm for trends in disturbance and recovery, widely used for the analysis of change in Landsat spectral time series data [@kennedy2018].
 
 It was initially implemented in a proprietary programming language (IDL) with high computational demands however it was transitioned to GEE removing accessibility barriers.
 

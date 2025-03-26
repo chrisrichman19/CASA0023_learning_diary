@@ -243,41 +243,26 @@ div.csl-indent {
 <h2 data-number="6.2" class="anchored" data-anchor-id="application"><span class="header-section-number">6.2</span> Application</h2>
 <p>A popular phenomena in remote sensing research is land use and land cover mapping <span class="citation" data-cites="avci2023">(<a href="references.html#ref-avci2023" role="doc-biblioref">Avcı et al. 2023</a>)</span>. Classification methods involves categorising each pixel into classes based on its spectral characteristics <span class="citation" data-cites="maulik2017">(<a href="references.html#ref-maulik2017" role="doc-biblioref">Maulik and Chakraborty 2017</a>)</span>.</p>
 <p>Teluguntla et al., (2018) used a random forest to precisely classify cropland in Australia and China <span class="citation" data-cites="teluguntla2018">(<a href="references.html#ref-teluguntla2018" role="doc-biblioref">Teluguntla et al. 2018</a>)</span>.</p>
-<p>existing global and regional cropland products were derived from medium to coarse resolution (250-m to 1-km) remote sensing data. They needed highly accurate 30-m cropland data as precise cropland maps are crucial for understanding and managing resources related to food and water.</p>
-<p>the random forest (RF) model was trained using a <strong>comprehensive and iterative approach</strong> involving a large collection of reference data and careful consideration of various factors. To label their data - Ground data was collected in field visits. Over 628 samples were collected in Australia <span class="citation" data-cites="teluguntla2018">(<a href="references.html#ref-teluguntla2018" role="doc-biblioref">Teluguntla et al. 2018</a>)</span>.</p>
-<p>additionally <strong>Sub-meter to 5-m Very High Resolution Imagery (VHRI)</strong>, available for the entire study region, was used to generate cropland versus non-cropland interpretations by multiple analysts across China and Australia, resulting in approximately 1490 data samples.</p>
-<p>The authors selected a random forest model as they can handle high-dimensionality, and are suitable for large datasets.</p>
-<p>To note - The authors referenced similar research that used SVM methods but they chose not too as an RF is easier to be implement.</p>
+<p>Existing global and regional cropland products were derived from medium to coarse resolution (250-m to 1-km) remote sensing data. They needed highly accurate 30-m cropland data as precise cropland maps are crucial for understanding and managing resources related to food and water.</p>
+<p>The random forest (RF) model was trained using an iterative approach involving a large collection of reference data. To label their data - Ground data was collected in field visits. Over 628 samples were collected in Australia <span class="citation" data-cites="teluguntla2018">(<a href="references.html#ref-teluguntla2018" role="doc-biblioref">Teluguntla et al. 2018</a>)</span>. Additionally Sub-meter to 5-m Very High Resolution Imagery (VHRI), available for the entire study region, was used to generate cropland versus non-cropland interpretations by multiple analysts across China and Australia, resulting in approximately 1490 data samples. This demonstrates how the process of ‘supervising’ / labeling data for machine learning can be as intense as the analysis itself.</p>
 <p><img src="images/clipboard-1512575338.png" class="img-fluid"></p>
 <p>[<span class="citation" data-cites="teluguntla2018">Teluguntla et al. (<a href="references.html#ref-teluguntla2018" role="doc-biblioref">2018</a>)</span>; p.&nbsp;338]</p>
-<p>What factors influence the selection of machine learning classifiers -&gt; why pick one model over the other?</p>
-<p><a href="https://arxiv.org/pdf/2502.02850" class="uri">https://arxiv.org/pdf/2502.02850</a></p>
+<p>This intensive supervised learning approach is not uncommon, as existing pre-labelled data is sparse especially in remote sensing <span class="citation" data-cites="xu2023">(<a href="references.html#ref-xu2023" role="doc-biblioref">Xu, Zhao, and Wu 2023</a>)</span>.</p>
+<p>The quantity and quality of training data significantly impact classifier performance so extensive field work may be required to correctly label data.</p>
 </section>
 <section id="reflection" class="level2" data-number="6.3">
 <h2 data-number="6.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">6.3</span> Reflection</h2>
-<p>cool</p>
-<p>looking into the future -&gt; this week out of all the others has shown how this field is rapidly adapting and changing.</p>
-<p>in general -&gt; must be specific to Remote sensing - generalised machine learning models meant for images are not powerful enough.</p>
-<p><span class="citation" data-cites="rolf">(<a href="references.html#ref-rolf" role="doc-biblioref">Rolf et al., n.d.</a>)</span> paper argues that the distinctive characteristics of satellite imagery set it apart from machine learning used for images, videos, text etc., - temporal and spatial characteristics, spectral channels (multi-channel) - author says popular libraries such as TorchVision do not support more than 3-channels.</p>
-<p>“We outline critical discussion questions and actionable suggestions to transform SatML from merely an intriguing application area to a dedicated research discipline that helps move the needle on big challenges for machine learning and society.”</p>
-<p>The author argues that current machine learning methods are not robust enough because they are tailored to other data modalities and don’t address the unique characteristics and challenges of satellite data.&nbsp; exemplified by custom models -&gt; e.g., the YOLO model adapted to detect landslides, the various technical additions to this new RS-YOLOx,</p>
-<p>models must be trained on all the extensive and unique data availibe to satellite data -&gt; computer intensive to train.</p>
-<p><strong>differences such as spatial and temporal scales, spectral channels, data volume, annotation sparsity, and deployment considerations.</strong></p>
-<p>relate this to google earth engine - a domain specific software with built in algos</p>
-<p>The potential of satellite data</p>
-<p><a href="https://arxiv.org/abs/2402.01444?ref=newsletter.terrawatchspace.com" class="uri">https://arxiv.org/abs/2402.01444</a></p>
-<p>With AI and advanced Neural networks - alot of the nuance can be lost behind these black-box algorithms explainability could be lost which is concerning.</p>
-<p>Understanding a model’s function and visualizing interpretations are critical in remote sensing applications to gain scientific insights and assess trustworthiness</p>
-<p><a href="https://ieeexplore.ieee.org/abstract/document/10742949" class="uri">https://ieeexplore.ieee.org/abstract/document/10742949</a></p>
-<p>other Challenges for models</p>
-<p><strong>Potential for overfitting</strong>: Especially with powerful classifiers, there’s a risk of the model learning the training data too precisely, hindering its ability to generalize to new data.</p>
-<p><strong>Training data requirements</strong>: The quantity and quality of training data significantly impact classifier performance. extensive field work may be required to correctly label data!</p>
-<p><strong>Feature space impacts and reduction</strong>: The choice and processing of features from the remote sensing data can greatly influence classification accuracy</p>
+<p>This week highlighted remote sensing’s rapid development and its technical challenges. Tools like deep learning offer transformative capabilities, but, their integration into policy faces hurdles, particularly regarding data quality, computational costs, and model transparency. For instance, extensive fieldwork for training data labelling is resource-intensive, which could complicate policy applications.</p>
+<p>In a similar vain, in the literature, I found a debate between the need for domain-specific models and utilising repurposed computer vision libraries given computational resources required for training <span class="citation" data-cites="rolf lahrichi">(<a href="references.html#ref-rolf" role="doc-biblioref">Rolf et al., n.d.</a>; <a href="references.html#ref-lahrichi" role="doc-biblioref">Lahrichi et al., n.d.</a>)</span>. <span class="citation" data-cites="rolf">(<a href="references.html#ref-rolf" role="doc-biblioref">Rolf et al., n.d.</a>)</span> suggests that satellite data’s temporal, spatial, and spectral complexity, require tailored solutions rather than repurposed computer vision libraries. However, <span class="citation" data-cites="lahrichi">(<a href="references.html#ref-lahrichi" role="doc-biblioref">Lahrichi et al., n.d.</a>)</span> argues that the costs may outweigh the benefits. This debate emphasises balancing innovation with practicality and shows that this field is still in its infancy.</p>
+<p>Another concern is “black-box” algorithms risk eroding trust in critical applications like disaster monitoring. Explainability must remain at the forefront of remote sensing, ensuring stakeholders understand critical model decisions.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
 <div id="ref-avci2023" class="csl-entry" role="listitem">
 Avcı, Cengiz, Muhammed Budak, Nur Yağmur, and Filiz Balçık. 2023. <span>“Comparison Between Random Forest and Support Vector Machine Algorithms for LULC Classification.”</span> <em>International Journal of Engineering and Geosciences</em> 8 (1): 1–10. <a href="https://doi.org/10.26833/ijeg.987605">https://doi.org/10.26833/ijeg.987605</a>.
+</div>
+<div id="ref-lahrichi" class="csl-entry" role="listitem">
+Lahrichi, Saad, Zion Sheng, Shufan Xia, Kyle Bradbury, and Jordan Malof. n.d. <span>“Is Self-Supervised Pre-Training on Satellite Imagery Better Than ImageNet? A Systematic Study with Sentinel-2.”</span> <a href="https://doi.org/10.48550/arXiv.2502.10669">https://doi.org/10.48550/arXiv.2502.10669</a>.
 </div>
 <div id="ref-maulik2017" class="csl-entry" role="listitem">
 Maulik, Ujjwal, and Debasis Chakraborty. 2017. <span>“Remote Sensing Image Classification: A Survey of Support-Vector-Machine-Based Advanced Techniques.”</span> <em>IEEE Geoscience and Remote Sensing Magazine</em> 5 (1): 33–52. <a href="https://doi.org/10.1109/MGRS.2016.2641240">https://doi.org/10.1109/MGRS.2016.2641240</a>.
@@ -287,6 +272,9 @@ Rolf, Esther, Konstantin Klemmer, Caleb Robinson, and Hannah Kerner. n.d. <span>
 </div>
 <div id="ref-teluguntla2018" class="csl-entry" role="listitem">
 Teluguntla, Pardhasaradhi, Prasad S Thenkabail, Adam Oliphant, Jun Xiong, Murali Krishna Gumma, Russell G. Congalton, Kamini Yadav, and Alfredo Huete. 2018. <span>“A 30-m Landsat-Derived Cropland Extent Product of Australia and China Using Random Forest Machine Learning Algorithm on Google Earth Engine Cloud Computing Platform.”</span> <em>ISPRS Journal of Photogrammetry and Remote Sensing</em> 144 (October): 325–40. <a href="https://doi.org/10.1016/j.isprsjprs.2018.07.017">https://doi.org/10.1016/j.isprsjprs.2018.07.017</a>.
+</div>
+<div id="ref-xu2023" class="csl-entry" role="listitem">
+Xu, Tao, Zhicheng Zhao, and Jun Wu. 2023. <span>“Breaking the ImageNet Pretraining Paradigm: A General Framework for Training Using Only Remote Sensing Scene Images.”</span> <em>Applied Sciences</em> 13 (20): 11374. <a href="https://doi.org/10.3390/app132011374">https://doi.org/10.3390/app132011374</a>.
 </div>
 </div>
 </section>

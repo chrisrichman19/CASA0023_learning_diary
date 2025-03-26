@@ -2,6 +2,20 @@
 
 ## Summary
 
+This week we learned about SAR sensors and imagery which I had looked at before as in week 2, for my presentation, I researched the Sentinel-1 mission which uses this technology.
+
+Synthetic Aperture Radar (SAR) is an active remote sensing technology that emits its own energy to image the Earth's surface, unlike passive sensors that rely on sunlight. This allows SAR to operate in day-and-night and through cloud cover, a significant advantage over optical sensors.
+
+SAR imaging involves synthesising a large antenna from the sensor's motion, capturing both amplitude and phase data. Amplitude reflects the strength of the reflected signal, while phase provides timing information.
+
+Different polarisations of SAR signals help identify various surface characteristics, and data can be analysed using power, amplitude, or decibel scales. However, SAR images are often affected by speckle noise, which can be reduced by averaging multiple images.
+
+Interferometric techniques like InSAR and DInSAR use phase differences to map topography and detect ground movement. Change detection in SAR data requires specialised methods like ratio imaging and statistical analysis due to the data's statistical nature.
+
+Combining SAR with optical data through image fusion can enhance classification and change detection by leveraging the strengths of both data types.
+
+SAR finds applications in flood monitoring, urban mapping, and tracking landscape changes.
+
 ## Application
 
 ## Reflection

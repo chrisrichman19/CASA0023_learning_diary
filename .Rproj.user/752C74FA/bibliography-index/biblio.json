@@ -1368,6 +1368,70 @@
             "title": "A 30-m landsat-derived cropland extent product of australia and china using random forest machine learning algorithm on google earth engine cloud computing platform",
             "type": "article-journal",
             "volume": "144"
+        },
+        {
+            "DOI": "10.3390/app132011374",
+            "URL": "https://www.mdpi.com/2076-3417/13/20/11374",
+            "author": [
+                {
+                    "family": "Xu",
+                    "given": "Tao"
+                },
+                {
+                    "family": "Zhao",
+                    "given": "Zhicheng"
+                },
+                {
+                    "family": "Wu",
+                    "given": "Jun"
+                }
+            ],
+            "container-title": "Applied Sciences",
+            "id": "xu2023",
+            "issue": "20",
+            "issued": {
+                "date-parts": [
+                    [
+                        2023,
+                        1
+                    ]
+                ]
+            },
+            "language": "en",
+            "note": "Number: 20 Publisher: Multidisciplinary Digital Publishing Institute",
+            "page": "11374",
+            "title": "Breaking the ImageNet Pretraining Paradigm: A General Framework for Training Using Only Remote Sensing Scene Images",
+            "title-short": "Breaking the ImageNet Pretraining Paradigm",
+            "type": "article-journal",
+            "volume": "13"
+        },
+        {
+            "DOI": "10.48550/arXiv.2502.10669",
+            "author": [
+                {
+                    "family": "Lahrichi",
+                    "given": "Saad"
+                },
+                {
+                    "family": "Sheng",
+                    "given": "Zion"
+                },
+                {
+                    "family": "Xia",
+                    "given": "Shufan"
+                },
+                {
+                    "family": "Bradbury",
+                    "given": "Kyle"
+                },
+                {
+                    "family": "Malof",
+                    "given": "Jordan"
+                }
+            ],
+            "id": "lahrichi",
+            "title": "Is self-supervised pre-training on satellite imagery better than ImageNet? A systematic study with sentinel-2",
+            "type": "article-journal"
         }
     ],
     "project_biblios": [
