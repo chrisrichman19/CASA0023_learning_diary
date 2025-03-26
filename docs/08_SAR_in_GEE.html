@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -208,19 +228,28 @@ ul.task-list li input[type="checkbox"] {
 <h2 data-number="8.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">8.1</span> Summary</h2>
 <p>This week we learned about SAR sensors and imagery which I had looked at before as in week 2, for my presentation, I researched the Sentinel-1 mission which uses this technology.</p>
 <p>Synthetic Aperture Radar (SAR) is an active remote sensing technology that emits its own energy to image the Earth’s surface, unlike passive sensors that rely on sunlight. This allows SAR to operate in day-and-night and through cloud cover, a significant advantage over optical sensors.</p>
-<p>SAR imaging involves synthesising a large antenna from the sensor’s motion, capturing both amplitude and phase data. Amplitude reflects the strength of the reflected signal, while phase provides timing information.</p>
-<p>Different polarisations of SAR signals help identify various surface characteristics, and data can be analysed using power, amplitude, or decibel scales. However, SAR images are often affected by speckle noise, which can be reduced by averaging multiple images.</p>
-<p>Interferometric techniques like InSAR and DInSAR use phase differences to map topography and detect ground movement. Change detection in SAR data requires specialised methods like ratio imaging and statistical analysis due to the data’s statistical nature.</p>
+<p>SAR imaging involves synthesising a large antenna from the sensor’s motion, capturing both amplitude and phase data. Amplitude reflects the strength of the reflected signal, while the phase provides timing information.</p>
+<p>Different polarisations of SAR signals help identify various surface characteristics, and data can be analysed using power, amplitude, or decibel scales. However, SAR images are often affected by speckle noise, which can be reduced by averaging multiple images together.</p>
+<p>Interferometric techniques like InSAR and DInSAR use phase differences to map topography and detect ground movement. Change detection in SAR data requires specialised methods like ratio imaging and statistical analysis.</p>
 <p>Combining SAR with optical data through image fusion can enhance classification and change detection by leveraging the strengths of both data types.</p>
-<p>SAR finds applications in flood monitoring, urban mapping, and tracking landscape changes.</p>
 </section>
 <section id="application" class="level2" data-number="8.2">
 <h2 data-number="8.2" class="anchored" data-anchor-id="application"><span class="header-section-number">8.2</span> Application</h2>
+<p>SAR are particulary useful for identifying change as InSAR can detect millimeter-scale changes in elevation by comparing the phase difference between two or more radar images taken at different times. This makes it ideal for monitoring subsidence, landslides, earthquakes, and infrastructure stability.</p>
+<p>For example, this paper uses InSAR data, collected between 2015 and 2023, to provide detailed local estimates of verticle land motion (VLM) in California, a significant indicator for sea-level rise <span class="citation" data-cites="govorcin2025">(<a href="references.html#ref-govorcin2025" role="doc-biblioref">Govorcin et al. 2025</a>)</span>.</p>
+<p>Current ways of predicting sea level rise often underestimate how much the land is moving because they rely on limited regional data, such as from spatially sparse tide gauges. The Authors found that InSar’s high spatial resolution and coverage was more effective in identifying of local VLM along the coastline compared to traditional methods.</p>
+<p><img src="images/clipboard-2294381570.png" class="img-fluid"></p>
+<p>Source: <a href="https://www.jpl.nasa.gov/news/nasa-led-study-pinpoints-areas-sinking-rising-along-california-coast/?ref=newsletter.terrawatchspace.com">NASA</a></p>
 </section>
 <section id="reflection" class="level2" data-number="8.3">
 <h2 data-number="8.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">8.3</span> Reflection</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-govorcin2025" class="csl-entry" role="listitem">
+Govorcin, Marin, David P. S. Bekaert, Benjamin D. Hamlington, Simran S. Sangha, and William Sweet. 2025. <span>“Variable Vertical Land Motion and Its Impacts on Sea Level Rise Projections.”</span> <em>Science Advances</em> 11 (5): eads8163. <a href="https://doi.org/10.1126/sciadv.ads8163">https://doi.org/10.1126/sciadv.ads8163</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

@@ -1432,6 +1432,49 @@
             "id": "lahrichi",
             "title": "Is self-supervised pre-training on satellite imagery better than ImageNet? A systematic study with sentinel-2",
             "type": "article-journal"
+        },
+        {
+            "DOI": "10.1126/sciadv.ads8163",
+            "URL": "https://www.science.org/doi/10.1126/sciadv.ads8163",
+            "author": [
+                {
+                    "family": "Govorcin",
+                    "given": "Marin"
+                },
+                {
+                    "family": "Bekaert",
+                    "given": "David P. S."
+                },
+                {
+                    "family": "Hamlington",
+                    "given": "Benjamin D."
+                },
+                {
+                    "family": "Sangha",
+                    "given": "Simran S."
+                },
+                {
+                    "family": "Sweet",
+                    "given": "William"
+                }
+            ],
+            "container-title": "Science Advances",
+            "id": "govorcin2025",
+            "issue": "5",
+            "issued": {
+                "date-parts": [
+                    [
+                        2025,
+                        1,
+                        29
+                    ]
+                ]
+            },
+            "note": "Publisher: American Association for the Advancement of Science",
+            "page": "eads8163",
+            "title": "Variable vertical land motion and its impacts on sea level rise projections",
+            "type": "article-journal",
+            "volume": "11"
         }
     ],
     "project_biblios": [

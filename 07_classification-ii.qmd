@@ -135,7 +135,3 @@ Spatial cross validation
 -   Same as cross validation but with clustering to the folds
 
 -   Stops our training data being near each other
-
-\
-
-Accuracy measures rely heavily on the quality of the labeled data - \> ground truth - \> validating data can be expensive , requiring alot of manual field work.
