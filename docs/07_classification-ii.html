@@ -89,6 +89,35 @@ div.csl-indent {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -243,48 +272,48 @@ Grey: Bare earth<br>
 Green: Forest<br>
 <br>
 </p>
-<p>visually, SVM predicts that there is a lot more forest in what the RF predicts as low urban. But how can we interpret these results? There are various measures each with their own advantages and disadvantages.</p>
+<p>Visually, SVM predicts that there is a lot more forest in what the RF predicts as low urban. But how can we interpret these results? There are various measures each with their own advantages and disadvantages.</p>
 <p><strong>Accuracy Assessment</strong></p>
 <p>Each predicted value is placed into this Confusion Matrix, which acts as the foundation for the upcoming measures.</p>
 <p><img src="images/clipboard-3707637320.png" class="img-fluid"></p>
 <p><strong>Overall accuracy</strong> measures the total correct prediction in proportion to all prediction</p>
-<p>(TP+TN) / (TP + FP + FN + TN)</p>
-<p>RF model: 0.981</p>
-<p>SVM model: 0.879</p>
-<p>what this means in practice -&gt;</p>
-<p><strong>Producer accuracy</strong> measures the true positive rate in a class or the proportion of correctly identified positives relative to actual positives.</p>
-<p>TP / (TP + FN)</p>
-<p>looking at low urban class - so the number of pixels correctly identified pixels as low urban divided by the total pixels in the low urban class.</p>
-<p>RF model: 0.943</p>
-<p>SVM model: 0.478</p>
+<p><span class="math display">\[
+  \frac{\text{Number of Correct Predictions}}{\text{Total Predictions}} = \frac{TP + TN}{TP + FP + FN + TN}
+  \]</span></p>
+<ul>
+<li><strong>RF</strong>: 0.981 | <strong>SVM</strong>: 0.879</li>
+</ul>
+<p>RF’s high overall accuracy suggests strong general performance across all classes. SVM’s lower score may stem from misclassifications, especially in overlapping classes</p>
+<section id="class-specific-metrics-low-urban-class" class="level4" data-number="7.1.0.1">
+<h4 data-number="7.1.0.1" class="anchored" data-anchor-id="class-specific-metrics-low-urban-class"><span class="header-section-number">7.1.0.1</span> <strong>Class-Specific Metrics (Low Urban Class)</strong></h4>
+<p><strong>Producer accuracy</strong> measures the true positive rate in a class or the proportion of correctly identified positives relative to actual positives. I will just look at low urban class, so the number of pixels correctly identified pixels as low urban divided by the total pixels in the low urban class.</p>
+<p><span class="math display">\[
+  \text{Producer Accuracy} = \frac{TP}{TP + FN}
+  \]</span> <strong>RF</strong>: 0.943 | <strong>SVM</strong>: 0.478</p>
+<p>SVM misses ~52% of true low urban pixels (e.g., misclassifying them as forest). RF captures ~94% of actual low urban areas.</p>
 <p><strong>User accuracy</strong> measures the proportion of correctly predicted positives relative to all predicted positives.</p>
-<p>TP / (TP + FP)</p>
-<p>again, using the low urban class - the number of pixels correctly identified as low urban divided by the total number of pixels that are claimed to be low urban.</p>
-<p>RF model: 0.955</p>
-<p>SVM model: 0.962</p>
-<p>SVM model performs better here!</p>
-<p>what these mean in practise for the classifiying for urban low class -&gt; SVM low producer accuracy means that a lot of the urban low pixels are misclassified as a different class - however the high user accuracy means that of the pixels that are predicted urban low are very likely to be urban low.</p>
-<p>accuracy depends on the needs - producer or user ..</p>
+<p><span class="math display">\[
+  \text{User Accuracy} = \frac{TP}{TP + FP}
+  \]</span></p>
+<p>Again, using the low urban class - the number of pixels correctly identified as low urban divided by the total number of pixels that are claimed to be low urban.</p>
+<p><strong>RF</strong>: 0.955 | <strong>SVM</strong>: 0.962</p>
+<p>SVM’s and RF’s high User Accuracy means its low urban predictions are reliable here (few false positives).</p>
+<p>There is also <strong>F1 score</strong> which is the harmonic mean of precision (UA) and recall (PA). Useful for balancing UA and PA, especially in imbalanced datasets like our own.</p>
+<p><strong>RF</strong>: 0.949 | <strong>SVM</strong>: 0.639</p>
+</section>
+<section id="additional-metrics" class="level4" data-number="7.1.0.2">
+<h4 data-number="7.1.0.2" class="anchored" data-anchor-id="additional-metrics"><span class="header-section-number">7.1.0.2</span> <strong>Additional Metrics</strong></h4>
 <p><strong>Kappa</strong> <strong>coefficient</strong> is designed to express the accuracy of an image compared to the results done by chance. Ranges from 0 to 1. calls to abandon it as it may not be that useful</p>
-<p>RF: 0.977<br>
-</p>
-<p>SVM: 0.855</p>
-<p>there is also the <strong>F1 score</strong> which is the harmonic mean of precision (UA) and recall (PA). Useful for balancing UA and PA, especially in imbalanced datasets like our own.</p>
-<p>Receiver operating characteristic curve (ROC curve)</p>
-<p>Cross validation when there is spatial dependence</p>
-<p>“How can we deal with taking a sample of training data for testing when they are possibly from the same polygon of training data…”</p>
-<ul>
-<li>Consider spatial autocorrelation accuracy can be deceivingly high</li>
-</ul>
-<p>Spatial cross validation</p>
-<ul>
-<li><p>Spatially partition the folded data, folds are from cross validation</p></li>
-<li><p>Disjoint (no common boundary) using k- means clustering (number of points and a distance)</p></li>
-<li><p>Same as cross validation but with clustering to the folds</p></li>
-<li><p>Stops our training data being near each other</p></li>
-</ul>
-<p><br>
-&nbsp;</p>
+<p><span class="math display">\[
+  \kappa = \frac{\text{Overall Accuracy} - \text{Expected Accuracy}}{1 - \text{Expected Accuracy}}
+  \]</span></p>
+<p>Where expected accuracy =</p>
+<p><span class="math display">\[
+(\frac{\sum (\text{Row Total} \times \text{Column Total})}{N^2})
+\]</span></p>
+<p><strong>RF</strong>: 0.977 | <strong>SVM</strong>: 0.855</p>
+<p>Both models perform better than random chance, but Kappa is debated due to sensitivity to class distribution.</p>
+</section>
 </section>
 <section id="application" class="level2" data-number="7.2">
 <h2 data-number="7.2" class="anchored" data-anchor-id="application"><span class="header-section-number">7.2</span> Application</h2>
@@ -303,7 +332,21 @@ Green: Forest<br>
 </section>
 <section id="reflection" class="level2" data-number="7.3">
 <h2 data-number="7.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">7.3</span> Reflection</h2>
-<p>Critique cross-validation with no spatial-autocorrelation in&nbsp; diary.</p>
+<p>Critique cross-validation with no spatial-autocorrelation in diary.</p>
+<p>Cross validation when there is spatial dependence</p>
+<p>“How can we deal with taking a sample of training data for testing when they are possibly from the same polygon of training data…”</p>
+<ul>
+<li>Consider spatial autocorrelation accuracy can be deceivingly high</li>
+</ul>
+<p>Spatial cross validation</p>
+<ul>
+<li><p>Spatially partition the folded data, folds are from cross validation</p></li>
+<li><p>Disjoint (no common boundary) using k- means clustering (number of points and a distance)</p></li>
+<li><p>Same as cross validation but with clustering to the folds</p></li>
+<li><p>Stops our training data being near each other</p></li>
+</ul>
+<p><br>
+</p>
 <p>Accuracy measures rely heavily on the quality of the labeled data - &gt; ground truth - &gt; validating data can be expensive , requiring alot of manual field work.</p>
 
 
