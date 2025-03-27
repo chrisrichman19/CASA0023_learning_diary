@@ -227,11 +227,10 @@ div.csl-indent {
 <section id="summary" class="level2" data-number="8.1">
 <h2 data-number="8.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">8.1</span> Summary</h2>
 <p>This week we learned about SAR sensors and imagery which I had looked at before as in week 2, for my presentation, I researched the Sentinel-1 mission which uses this technology.</p>
-<p>Synthetic Aperture Radar (SAR) is an active remote sensing technology that emits its own energy to image the Earth’s surface, unlike passive sensors that rely on sunlight. This allows SAR to operate in day-and-night and through cloud cover, a significant advantage over optical sensors.</p>
+<p>Synthetic Aperture Radar (SAR) is an active remote sensing technology that emits its own energy to image the Earth’s surface, unlike passive sensors that rely on sunlight. The microwave signals used by SAR can penetrate through clouds, fog, smoke, and even rain, overcoming a significant limitation of optical sensors.</p>
 <p>SAR imaging involves synthesising a large antenna from the sensor’s motion, capturing both amplitude and phase data. Amplitude reflects the strength of the reflected signal, while the phase provides timing information.</p>
 <p>Different polarisations of SAR signals help identify various surface characteristics, and data can be analysed using power, amplitude, or decibel scales. However, SAR images are often affected by speckle noise, which can be reduced by averaging multiple images together.</p>
-<p>Interferometric techniques like InSAR and DInSAR use phase differences to map topography and detect ground movement. Change detection in SAR data requires specialised methods like ratio imaging and statistical analysis.</p>
-<p>Combining SAR with optical data through image fusion can enhance classification and change detection by leveraging the strengths of both data types.</p>
+<p>Interferometric techniques like InSAR and DInSAR use phase differences to map topography and detect ground movement. By comparing the phase differences between these images, InSAR can generate highly accurate maps of surface topography and detect subtle ground movements.</p>
 </section>
 <section id="application" class="level2" data-number="8.2">
 <h2 data-number="8.2" class="anchored" data-anchor-id="application"><span class="header-section-number">8.2</span> Application</h2>
@@ -240,9 +239,13 @@ div.csl-indent {
 <p>Current ways of predicting sea level rise often underestimate how much the land is moving because they rely on limited regional data, such as from spatially sparse tide gauges. The Authors found that InSar’s high spatial resolution and coverage was more effective in identifying of local VLM along the coastline compared to traditional methods.</p>
 <p><img src="images/clipboard-2294381570.png" class="img-fluid"></p>
 <p>Source: <a href="https://www.jpl.nasa.gov/news/nasa-led-study-pinpoints-areas-sinking-rising-along-california-coast/?ref=newsletter.terrawatchspace.com">NASA</a></p>
+<p>By providing a clearer and more detailed picture of the risks associated with sea-level rise at a local level, this information can help governments develop better-informed policies related to mitigation planning and land-use regulations in coastal zones.</p>
 </section>
 <section id="reflection" class="level2" data-number="8.3">
 <h2 data-number="8.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">8.3</span> Reflection</h2>
+<p>One of the most interesting aspects of SAR technology is its ability to “see” through various atmospheric and surface obstacles. This opens up a wide range of possibilities for continuous monitoring and rapid response in situations where traditional optical methods are ineffective.</p>
+<p>Despite the numerous advantages of SAR technology, there are also challenges.</p>
+<p>One significant challenge is the complexity with processing SAR data. Raw SAR data requires specialised tools and expertise for interpretation. The preprocessing steps involved, such as radiometric calibration, de-bursting, multilooking, speckle filtering, and terrain correction, can be technically demanding and time-consuming (<a href="https://geoawesome.com/eo-hub/everything-you-ever-wanted-to-know-about-sar-satellite-data-and-the-ecosystem-but-were-afraid-to-ask/">Liu, 2022</a>). This means that government agencies would have to develop specialised knowledge in remote sensing and radar ,which can pose a barrier to widespread adoption, particularly for agencies with limited resources or technical expertise.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
