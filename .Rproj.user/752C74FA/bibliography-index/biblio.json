@@ -1475,6 +1475,165 @@
             "title": "Variable vertical land motion and its impacts on sea level rise projections",
             "type": "article-journal",
             "volume": "11"
+        },
+        {
+            "DOI": "10.1109/LGRS.2018.2794545",
+            "URL": "https://ieeexplore.ieee.org/document/8286914/?arnumber=8286914",
+            "author": [
+                {
+                    "family": "Miao",
+                    "given": "Ziming"
+                },
+                {
+                    "family": "Fu",
+                    "given": "Kun"
+                },
+                {
+                    "family": "Sun",
+                    "given": "Hao"
+                },
+                {
+                    "family": "Sun",
+                    "given": "Xian"
+                },
+                {
+                    "family": "Yan",
+                    "given": "Menglong"
+                }
+            ],
+            "container-title": "IEEE Geoscience and Remote Sensing Letters",
+            "id": "miao2018",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018,
+                        4
+                    ]
+                ]
+            },
+            "note": "Conference Name: IEEE Geoscience and Remote Sensing Letters",
+            "page": "602-606",
+            "title": "Automatic water-body segmentation from high-resolution satellite images via deep networks",
+            "type": "article-journal",
+            "volume": "15"
+        },
+        {
+            "DOI": "10.1016/j.cja.2020.09.022",
+            "URL": "https://www.sciencedirect.com/science/article/pii/S1000936120304544",
+            "author": [
+                {
+                    "family": "Li",
+                    "given": "Bo"
+                },
+                {
+                    "family": "Xie",
+                    "given": "Xiaoyang"
+                },
+                {
+                    "family": "Wei",
+                    "given": "Xingxing"
+                },
+                {
+                    "family": "Tang",
+                    "given": "Wenting"
+                }
+            ],
+            "container-title": "Chinese Journal of Aeronautics",
+            "id": "li2021",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021,
+                        3,
+                        1
+                    ]
+                ]
+            },
+            "page": "145-163",
+            "title": "Ship detection and classification from optical remote sensing images: A survey",
+            "title-short": "Ship detection and classification from optical remote sensing images",
+            "type": "article-journal",
+            "volume": "34"
+        },
+        {
+            "DOI": "10.1080/20964471.2019.1657720",
+            "URL": "https://doi.org/10.1080/20964471.2019.1657720",
+            "author": [
+                {
+                    "family": "Song",
+                    "given": "Jia"
+                },
+                {
+                    "given": "Gao ",
+                    "suffix": "Shaohua"
+                },
+                {
+                    "given": "Zhu ",
+                    "suffix": "Yunqiang"
+                },
+                {
+                    "dropping-particle": "and",
+                    "family": "Ma",
+                    "given": "Chenyan"
+                }
+            ],
+            "container-title": "Big Earth Data",
+            "id": "song2019",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019,
+                        7,
+                        3
+                    ]
+                ]
+            },
+            "note": "Publisher: Taylor & Francis _eprint: https://doi.org/10.1080/20964471.2019.1657720",
+            "page": "232-254",
+            "title": "A survey of remote sensing image classification based on CNNs",
+            "type": "article-journal",
+            "volume": "3"
+        },
+        {
+            "DOI": "10.1109/JSTARS.2018.2873190",
+            "URL": "https://ieeexplore.ieee.org/document/8490712/",
+            "author": [
+                {
+                    "family": "Wu",
+                    "given": "Fei"
+                },
+                {
+                    "family": "Zhou",
+                    "given": "Zhiqiang"
+                },
+                {
+                    "family": "Wang",
+                    "given": "Bo"
+                },
+                {
+                    "family": "Ma",
+                    "given": "Jinlei"
+                }
+            ],
+            "container-title": "IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing",
+            "id": "wu2018",
+            "issue": "11",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018,
+                        11
+                    ]
+                ]
+            },
+            "note": "Conference Name: IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing",
+            "page": "4005-4015",
+            "title": "Inshore ship detection based on convolutional neural network in optical satellite images",
+            "type": "article-journal",
+            "volume": "11"
         }
     ],
     "project_biblios": [

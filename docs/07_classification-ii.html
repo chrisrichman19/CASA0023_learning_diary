@@ -255,11 +255,8 @@ window.Quarto = {
 
 <section id="summary" class="level2" data-number="7.1">
 <h2 data-number="7.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">7.1</span> Summary</h2>
-<p>This week we looked at accuracy measures for classification - going to use practical SVM and random forest model to explain different accuracy measures.</p>
-<p>In the practical last week I focused on my undergraduate city of Bristol. A simple random forest model with limited training data (3-5 polygons for each land type) - polygon data for land use types , forest, low urban, high urban, water, bare earth.</p>
-<p>Train/test split -&gt; why we do it</p>
-<p>I then found code on google earth engine for SVM and adapted for my code.</p>
-<p>comparing accuracy measures for different machine learning algorithms in practical - what does the values each mean ?</p>
+<p>This week, we explored accuracy measures for classification and will use practical applications of SVM and random forest models to explain different accuracy metrics.</p>
+<p>In last week’s practical, I focused on Bristol, my undergraduate city. I built a simple random forest model using a limited training dataset (3-5 polygons per land type), which included categories such as forest, low urban, high urban, water, and bare earth. For this week, I found SVM code on Google Earth Engine and adapted it for my analysis to compare the accuracy measures across each method.</p>
 <p>Random Forest Classifier:</p>
 <p><img src="images/clipboard-4120096112.png" class="img-fluid" width="481"></p>
 <p>Support Vector Machine (SVM):</p>
@@ -317,39 +314,28 @@ Green: Forest<br>
 </section>
 <section id="application" class="level2" data-number="7.2">
 <h2 data-number="7.2" class="anchored" data-anchor-id="application"><span class="header-section-number">7.2</span> Application</h2>
-<p>Contiuining on from last week -&gt; here are also more complicated classification use case in remote sensing: Object detection - &gt; involves identifying the locations and types of specific targets within an image and labeling them with bounding boxes. e.g., Disaster detection (landslides, ship monitoring, resource exploration)</p>
-<p>more complicated problems need more specialised techniques:</p>
-<p>moving beyond basic machine learning techniques, there has been developments in deep learning methods. ANNs and CNNs -&gt; <span class="citation" data-cites="yang">(<a href="references.html#ref-yang" role="doc-biblioref">Yang et al., n.d.</a>)</span></p>
-<p><strong>Artificial Neural Networks (ANNs)</strong>: use many hidden layers to model multiple levels of abstraction, have shown great promise in remote sensing, often outperforming methods like SVM for tasks like hyperspectral image classification<strong>. Convolutional Neural Networks (CNNs)</strong>, a type of deep learning model, are particularly good at exploiting semantic features of imagery data by directly extracting features from massive amounts of imagery. <span class="citation" data-cites="maxwell2018">(<a href="references.html#ref-maxwell2018" role="doc-biblioref">Maxwell, and Fang 2018</a>)</span>. reword</p>
-<p><u>Landslide detection. Ship detection.</u></p>
-<p>a brand new model for specifically detecting objects in satellite imagery. <span class="citation" data-cites="yang">(<a href="references.html#ref-yang" role="doc-biblioref">Yang et al., n.d.</a>)</span> RS-YOLOX CNN</p>
-<p>“Unlike traditional methods that rely on manual feature selection, modern deep learning-based models learn patterns directly from the data. The researchers improved previous YOLOX model by adding Efficient Channel Attention (ECA), which helps the model focus on important parts of an image while ignoring background noise. They also used Adaptively Spatial Feature Fusion (ASFF), which enhances the detection of small objects by combining information from different scales in an image. Additionally, they replaced the standard training loss function with Varifocal Loss (VFL) to better balance the learning of hard-to-detect objects.” - copied from Yohan Newsletter</p>
-<p>“Traditional detection algorithms are not effective in detecting objects in re‐mote sensing images. This is because traditional detection and the recognition of remote sensing image targets are mainly based on manually extracting features, and the rich,diverse, and detailed information in remote sensing images means that a single feature described manually is inadequate at fully expressing the target characteristics and relies more on expert experience” - page 2 <span class="citation" data-cites="yang">(<a href="references.html#ref-yang" role="doc-biblioref">Yang et al., n.d.</a>)</span></p>
-<p>“In addition, machine learning based on probability and statistics usually requires complex feature description, and the feature representation learned on the basis of its shallow network structure is obviously insufficient in terms of performance and generalization ability when dealing with complex target detection problems.” -page 2/3</p>
-<p>specialised solution -&gt; outperforms traditional models. Improves overall accuracy although more computationally intensive.</p>
-<p>object detection in satellite remote sensing images, which is valuable for <strong>resource exploration</strong> and <strong>natural disaster assessment</strong></p>
-<p><span class="citation" data-cites="yang">(<a href="references.html#ref-yang" role="doc-biblioref">Yang et al., n.d.</a>)</span></p>
+<p>Whilst traditional machine learning techniques like Support Vector Machines and Random Forests are powerful, there are some more complicated classification use-case in remote sensing where more advanced tools are required <span class="citation" data-cites="song2019">(<a href="references.html#ref-song2019" role="doc-biblioref">Song et al. 2019</a>)</span>.</p>
+<p>One example is object detection which involves identifying the locations and types of specific targets within an image and labeling them with bounding boxes. The use of Convolutional Neural Networks has revolutionised how objects are detected and classified in satellite imagery <span class="citation" data-cites="yang">(<a href="references.html#ref-yang" role="doc-biblioref">Yang et al., n.d.</a>)</span>.</p>
+<p>Early remote sensing workflows relied heavily on manual feature engineering, where texture and spectral signatures were used to distinguish targets like ships or landslides from their surroundings. However, as noted by <span class="citation" data-cites="yang">(<a href="references.html#ref-yang" role="doc-biblioref">Yang et al., n.d.</a>)</span>, these methods struggled with the “rich, diverse, and detailed” nature of remote sensing imagery, particularly for small or irregularly shaped objects. For instance, in ship detection, spectral thresholds often failed to differentiate ships from wave patterns or coastal clutter, leading to high false-positive rates <span class="citation" data-cites="wu2018">(<a href="references.html#ref-wu2018" role="doc-biblioref">Wu et al. 2018</a>)</span>.</p>
+<p>Wu et al.&nbsp;(2018) demonstrate how CNNs overcome these shortcomings in their study <span class="citation" data-cites="wu2018">(<a href="references.html#ref-wu2018" role="doc-biblioref">Wu et al. 2018</a>)</span>.</p>
+<p><img src="images/clipboard-3768825483.png" class="img-fluid"></p>
+<p>A CNN indentifies ship heads and estimates their orientation, bypassing background noise, leveraging CNNs’ ability to learn structural patterns automatically.</p>
+<p>A second CNN then uses the ship head’s orientation to propose regions for the full ship. It then distinguishes true ships from false positives (e.g., buildings, wave crests) by analysing relationships between the ship head and surrounding pixels.</p>
+<p>Unlike SVM or Random forest models, Wu et al.’s CNNs autonomously learns features, eliminating the need for manual feature engineering.</p>
 </section>
 <section id="reflection" class="level2" data-number="7.3">
 <h2 data-number="7.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">7.3</span> Reflection</h2>
-<p>Critique cross-validation with no spatial-autocorrelation in diary.</p>
-<p>Cross validation when there is spatial dependence</p>
-<p>“How can we deal with taking a sample of training data for testing when they are possibly from the same polygon of training data…”</p>
-<ul>
-<li>Consider spatial autocorrelation accuracy can be deceivingly high</li>
-</ul>
-<p>Spatial cross validation</p>
-<ul>
-<li><p>Spatially partition the folded data, folds are from cross validation</p></li>
-<li><p>Disjoint (no common boundary) using k- means clustering (number of points and a distance)</p></li>
-<li><p>Same as cross validation but with clustering to the folds</p></li>
-<li><p>Stops our training data being near each other</p></li>
-</ul>
+<p>In land classification, traditional cross-validation (e.g., k-fold) risks overestimating model accuracy in spatially autocorrelated data, as nearby training and test samples may share patterns (e.g., within the same land parcel), inflating performance. Spatial cross-validation (CV) addresses this by partitioning data into geographically disjoint folds, ensuring that training and test sets are spatially independent.</p>
+<p><strong>Reflection on Model Selection:</strong><br>
+Convolutional Neural Networks (CNNs) are generally more accurate for complex tasks like object detection but they demand substantial labeled data and computational resources. Random Forests (RF) and Support Vector Machines (SVM) are more efficient and interpretable, but struggle with complex spatial patterns.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
-<div id="ref-maxwell2018" class="csl-entry" role="listitem">
-Maxwell, Aaron E., Warner ,Timothy A., and Fang and Fang. 2018. <span>“Implementation of Machine-Learning Classification in Remote Sensing: An Applied Review.”</span> <em>International Journal of Remote Sensing</em> 39 (9): 2784–2817. <a href="https://doi.org/10.1080/01431161.2018.1433343">https://doi.org/10.1080/01431161.2018.1433343</a>.
+<div id="ref-song2019" class="csl-entry" role="listitem">
+Song, Jia, Gao ,Shaohua, Zhu ,Yunqiang, and Chenyan and Ma. 2019. <span>“A Survey of Remote Sensing Image Classification Based on CNNs.”</span> <em>Big Earth Data</em> 3 (3): 232–54. <a href="https://doi.org/10.1080/20964471.2019.1657720">https://doi.org/10.1080/20964471.2019.1657720</a>.
+</div>
+<div id="ref-wu2018" class="csl-entry" role="listitem">
+Wu, Fei, Zhiqiang Zhou, Bo Wang, and Jinlei Ma. 2018. <span>“Inshore Ship Detection Based on Convolutional Neural Network in Optical Satellite Images.”</span> <em>IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing</em> 11 (11): 4005–15. <a href="https://doi.org/10.1109/JSTARS.2018.2873190">https://doi.org/10.1109/JSTARS.2018.2873190</a>.
 </div>
 <div id="ref-yang" class="csl-entry" role="listitem">
 Yang, Lei, Guowu Yuan, Hao Zhou, Hongyu Liu, Jian Chen, and Hao Wu. n.d. <span>“RS-YOLOX: A High Precision Detector for Object Detection in Satellite Remote Sensing Images.”</span> <a href="https://doi.org/10.3390/app12178707">https://doi.org/10.3390/app12178707</a>.
