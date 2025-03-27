@@ -68,7 +68,7 @@ There is also **F1 score** which is the harmonic mean of precision (UA) and reca
 
 #### **Additional Metrics**
 
-**Kappa** **coefficient** is designed to express the accuracy of an image compared to the results done by chance. Ranges from 0 to 1. calls to abandon it as it may not be that useful
+**Kappa** **coefficient** is designed to express the accuracy of an image compared to the results done by chance. Ranges from 0 to 1.
 
 $$
   \kappa = \frac{\text{Overall Accuracy} - \text{Expected Accuracy}}{1 - \text{Expected Accuracy}}
@@ -82,7 +82,9 @@ $$
 
 **RF**: 0.977 \| **SVM**: 0.855
 
-Both models perform better than random chance, but Kappa is debated due to sensitivity to class distribution.
+Both models perform better than random chance, but the usefulness of Kappa is debated due to sensitivity to class distribution.
+
+Which metric you select depends on how you want to measure success. For example, a model where false alarms are problematic, user accuracy would be a better measure. However, often there will be no single metric that tells the full story.
 
 ## Application
 

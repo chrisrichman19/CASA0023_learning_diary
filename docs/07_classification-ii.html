@@ -300,7 +300,7 @@ Green: Forest<br>
 </section>
 <section id="additional-metrics" class="level4" data-number="7.1.0.2">
 <h4 data-number="7.1.0.2" class="anchored" data-anchor-id="additional-metrics"><span class="header-section-number">7.1.0.2</span> <strong>Additional Metrics</strong></h4>
-<p><strong>Kappa</strong> <strong>coefficient</strong> is designed to express the accuracy of an image compared to the results done by chance. Ranges from 0 to 1. calls to abandon it as it may not be that useful</p>
+<p><strong>Kappa</strong> <strong>coefficient</strong> is designed to express the accuracy of an image compared to the results done by chance. Ranges from 0 to 1.</p>
 <p><span class="math display">\[
   \kappa = \frac{\text{Overall Accuracy} - \text{Expected Accuracy}}{1 - \text{Expected Accuracy}}
   \]</span></p>
@@ -309,7 +309,8 @@ Green: Forest<br>
 (\frac{\sum (\text{Row Total} \times \text{Column Total})}{N^2})
 \]</span></p>
 <p><strong>RF</strong>: 0.977 | <strong>SVM</strong>: 0.855</p>
-<p>Both models perform better than random chance, but Kappa is debated due to sensitivity to class distribution.</p>
+<p>Both models perform better than random chance, but the usefulness of Kappa is debated due to sensitivity to class distribution.</p>
+<p>Which metric you select depends on how you want to measure success. For example, a model where false alarms are problematic, user accuracy would be a better measure. However, often there will be no single metric that tells the full story.</p>
 </section>
 </section>
 <section id="application" class="level2" data-number="7.2">
