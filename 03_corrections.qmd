@@ -10,9 +10,9 @@ Modern remote sensing products like Landsat’s Analysis Ready Data (ARD) come p
 
 Depending on your needs
 
--   level 0 and 1 for if you want control over atmospheric corrections
+-   level 0 and 1 for control over atmospheric corrections
 
--   level 2 - analysis ready - using NASA's ready made algorithms.
+-   level 2 is analysis ready, using NASA's ready made algorithms.
 
 #### Corrections:
 
@@ -58,7 +58,7 @@ Urban areas also introduce shadowing effects, where buildings cast shadows that 
 
 Other challenges
 
--   **Adjacency Effect**: Reflective surfaces (e.g., glass facades) scatter light into neighbouring pixels, skewing surface reflectance values.
+-   **Adjacency Effect**: Reflective surfaces (e.g., glass) scatter light into neighbouring pixels, skewing surface reflectance values.
 
 -   **Thermal Anomalies**: Concrete and metal structures absorb/re-radiate heat differently than natural terrain, distorting temperature measurements. Particularly impactful for urban heat island research.
 
